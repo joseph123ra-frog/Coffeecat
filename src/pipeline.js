@@ -11,7 +11,7 @@ import { chromium } from 'playwright';
 import { PATHS, STATUS, STYLE, env, kstDate } from './config.js';
 import { loadLedger, saveLedger, blockReason, addCost, addPost, costOf } from './budget.js';
 import { nextQuestion, updateQuestion } from './notion.js';
-import { research, totalUsage } from './research.js';
+import { research, totalUsage, HoldError } from './research.js';
 import { pickImages } from './images.js';
 import { buildCaption } from './caption.js';
 import { publishCarousel } from './instagram.js';
@@ -53,6 +53,11 @@ async function prepare() {
   let draft;
   try {
     draft = await research(item.question);
+  } catch (err) {
+    if (!(err instanceof HoldError)) throw err;
+    console.log(`보류: ${err.message}`);
+    if (item.pageId) await updateQuestion(item.pageId, { status: STATUS.held, note: `보류: ${err.message}` });
+    return output({ skip: 'true' });
   } finally {
     const usd = costOf(totalUsage());
     addCost(ledger, usd, now);

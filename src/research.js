@@ -6,7 +6,7 @@ import { readFileSync } from 'node:fs';
 import Anthropic from '@anthropic-ai/sdk';
 import { zodOutputFormat } from '@anthropic-ai/sdk/helpers/zod';
 import { z } from 'zod';
-import { MODEL, WEB_SEARCH_MAX_USES, BODY_SLIDES } from './config.js';
+import { MODEL, WEB_SEARCH_MAX_USES, BODY_SLIDES, MIN_SOURCES } from './config.js';
 
 const client = new Anthropic();
 
@@ -54,8 +54,19 @@ const Draft = z.object({
         url: z.string(),
       }),
     )
-    .describe('본문 근거 출처 2~5개. 반드시 허용된 URL 목록 안에서만'),
+    .describe('본문 근거 출처 3~5개. 반드시 허용된 URL 목록 안에서만'),
+  answerable: z
+    .boolean()
+    .describe('조사 노트만으로 질문에 근거 있는 답을 낼 수 있으면 true. "확인하지 못했다" 위주의 글이 될 상황이면 false'),
+  holdReason: z.string().describe('answerable이 false일 때 무엇이 부족한지 한 줄. true면 빈 문자열'),
 });
+
+// 근거가 부족해 게시하지 않고 보류할 때 던진다. 실패가 아니다.
+export class HoldError extends Error {}
+
+const BROADEN = `앞선 조사로는 근거가 부족했습니다. 검색 범위를 넓혀 다시 조사하세요.
+- 영어 자료, 업계·전문가 자료, 다른 표현의 검색어를 함께 써 봅니다.
+- 질문에 직접 답하는 근거(이유, 원인, 수치)를 우선 찾습니다.`;
 
 const sumUsage = (a, b) => ({
   input_tokens: (a.input_tokens ?? 0) + (b.input_tokens ?? 0),
@@ -81,8 +92,8 @@ function assertNotRefused(response) {
   }
 }
 
-async function researchNotes(question) {
-  const messages = [{ role: 'user', content: `질문 칸: ${question}` }];
+async function researchNotes(question, hint = '') {
+  const messages = [{ role: 'user', content: `질문 칸: ${question}${hint ? `\n\n${hint}` : ''}` }];
   let response;
   // 서버 쪽 검색 루프가 길어지면 pause_turn으로 끊긴다. 같은 대화를 다시 보내 이어간다.
   for (let i = 0; i < 4; i++) {
@@ -144,12 +155,27 @@ ${GUIDELINES}`,
   }
   // 지어낸 출처를 막기 위해 실제 검색 결과에 나온 URL만 남긴다.
   draft.sources = draft.sources.filter((s) => urls.has(s.url));
-  if (draft.sources.length === 0) throw new Error('검증된 출처가 하나도 없습니다.');
   return draft;
 }
 
+const shortfall = (draft) => {
+  if (!draft.answerable) return draft.holdReason || '질문에 답할 근거가 부족함';
+  if (draft.sources.length < MIN_SOURCES) return `검증된 출처가 ${draft.sources.length}개뿐 (최소 ${MIN_SOURCES}개)`;
+  return null;
+};
+
 export async function research(question) {
-  const { notes, urls } = await researchNotes(question);
-  if (urls.size === 0) throw new Error('웹 검색 결과가 없습니다.');
-  return writeDraft(question, notes, urls);
+  let { notes, urls } = await researchNotes(question);
+  let draft = await writeDraft(question, notes, urls);
+  let reason = shortfall(draft);
+  if (reason) {
+    console.log(`근거 부족(${reason}) → 범위를 넓혀 다시 조사`);
+    const more = await researchNotes(question, BROADEN);
+    notes = `${notes}\n\n## 추가 조사\n${more.notes}`;
+    urls = new Map([...urls, ...more.urls]);
+    draft = await writeDraft(question, notes, urls);
+    reason = shortfall(draft);
+  }
+  if (reason) throw new HoldError(reason);
+  return draft;
 }

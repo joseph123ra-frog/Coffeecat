@@ -16,6 +16,8 @@ export const MONTHLY_BUDGET_USD = 30;
 export const MAX_RUN_COST_USD = 1;
 export const MAX_POSTS_PER_DAY = 3;
 export const WEB_SEARCH_MAX_USES = 8;
+// 검증된 출처가 이보다 적으면 한 번 더 넓게 조사하고, 그래도 부족하면 게시를 보류한다.
+export const MIN_SOURCES = 3;
 
 export const BODY_SLIDES = 6;
 export const STYLE = 'split';
@@ -30,7 +32,7 @@ export const NOTION_PROPS = {
   url: '게시 URL',
   note: '메모',
 };
-export const STATUS = { waiting: '대기', running: '진행 중', done: '완료', failed: '실패' };
+export const STATUS = { waiting: '대기', running: '진행 중', done: '완료', failed: '실패', held: '보류' };
 
 export const PATHS = {
   ledger: 'data/usage.json',
