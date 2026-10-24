@@ -15,22 +15,39 @@ const REQUEST_RULES = `질문 칸에는 질문 뒤에 독자의 궁금한 점이
 - 그 요청은 빠짐없이 다룹니다.
 - 요청에 깔린 전제(예: "만들기 쉬울 것 같은데")가 사실과 다르면, 근거를 들어 바로잡습니다.
 - "증명", "계산" 요청은 공신력 있는 출처의 수치로 답합니다. 직접 계산한 결과는 수식 없이, 무엇을 어떻게 비교했는지 일상어로 설명할 수 있을 때만 씁니다.
-- 근거가 부족하거나 반대 근거가 더 강하면, 결론을 억지로 맞추지 말고 그렇다고 씁니다.`;
+- 반대 근거가 더 강하면 결론을 억지로 맞추지 말고 근거가 가리키는 결론을 씁니다. 근거가 부족한 부분은 한 문장으로만 밝힙니다.`;
 
-// 피드백으로 쌓아 가는 편집 지침. 조사·원고 두 단계 모두에 붙인다.
+// 피드백으로 쌓아 가는 편집 지침. 원고 단계에는 전체를, 조사 단계에는 조사에 필요한 섹션만 붙인다.
+// 문장 규칙까지 조사 단계에 주면 조사 방향이 쏠리기 때문이다.
 const GUIDELINES = readFileSync(new URL('../prompts/guidelines.md', import.meta.url), 'utf8');
+const RESEARCH_SECTIONS = ['우선순위', '질문 이해', '자료 조사'];
+const sectionsOf = (md, names) =>
+  md
+    .split(/^(?=## )/m)
+    .filter((part) => names.some((name) => part.startsWith(`## ${name}`)))
+    .map((part) => part.replace(/^# .*$/gm, '').trim())
+    .join('\n\n')
+    .trim();
+const RESEARCH_GUIDELINES = sectionsOf(GUIDELINES, RESEARCH_SECTIONS);
 
 const RESEARCH_SYSTEM = `당신은 한국어 인스타그램 매거진 '깝휘캣'의 리서처입니다.
 주어진 질문을 웹 검색으로 조사해, 6장짜리 카드뉴스 본문에 쓸 근거 노트를 만듭니다.
 - 공신력 있는 출처(공공기관, 학술 자료, 주요 언론, 공식 문서)를 우선합니다.
 - 사실마다 근거 URL을 붙입니다. 검색 결과에서 확인하지 못한 내용은 쓰지 않습니다.
 - 출처끼리 엇갈리는 내용은 엇갈린다고 적습니다.
+- '왜'를 묻는 질문은 서로 다른 설명을 3개 이상 찾아 각각의 근거와 근거 강도를 적습니다.
 - 질문 → 배경 → 핵심 이유/사실 → 의미 순으로 이야기 흐름이 생기게 정리합니다.
 ${REQUEST_RULES}
 
-${GUIDELINES}`;
+${RESEARCH_GUIDELINES}`;
 
 const Draft = z.object({
+  // 원고를 쓰기 전에 먼저 설계한다. 필드 순서대로 생성되므로 맨 앞에 둔다.
+  plan: z.object({
+    answer: z.string().describe('질문에 대한 핵심 답 한 문장'),
+    reasons: z.array(z.string()).describe('답을 뒷받침하는 서로 다른 설명·근거 3~5개. 근거가 강한 순서로'),
+    slides: z.array(z.string()).describe(`본문 ${BODY_SLIDES}장 각각에 무엇을 담을지 한 줄씩. 질문과 어떻게 이어지는지 포함`),
+  }),
   cover: z.object({
     title: z.string().describe('표지 제목. 질문 칸의 질문 부분(\' - \' 앞)을 글자 하나 바꾸지 않고 그대로'),
     subtitle: z.string().describe('표지 부제. 40자 이내'),
@@ -155,6 +172,8 @@ ${GUIDELINES}`,
   }
   // 지어낸 출처를 막기 위해 실제 검색 결과에 나온 URL만 남긴다.
   draft.sources = draft.sources.filter((s) => urls.has(s.url));
+  // 피드백 때 조사 문제인지 원고 문제인지 가릴 수 있게 노트도 함께 남긴다.
+  draft.notes = notes;
   return draft;
 }
 

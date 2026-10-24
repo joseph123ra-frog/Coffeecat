@@ -15,7 +15,7 @@ export const MONTHLY_BUDGET_USD = 30;
 // 한 번 실행에 들 수 있는 최대 비용 추정치. 남은 예산이 이보다 적으면 실행하지 않는다.
 export const MAX_RUN_COST_USD = 1;
 export const MAX_POSTS_PER_DAY = 3;
-export const WEB_SEARCH_MAX_USES = 8;
+export const WEB_SEARCH_MAX_USES = 12;
 // 검증된 출처가 이보다 적으면 한 번 더 넓게 조사하고, 그래도 부족하면 게시를 보류한다.
 export const MIN_SOURCES = 3;
 
