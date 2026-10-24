@@ -1,82 +1,80 @@
 {
-  "issue": 2,
-  "question": "필터커피는 왜 더 비쌀까? - 보통 분위기 있는 카페 가면 가끔 필터커피 메뉴가 있던데, 이건 제조하기도 훨씬 쉬울 것 같은데 왜 다른 메뉴보다 조금 더 비쌀까?",
-  "permalink": "https://www.instagram.com/p/De4KVRwm08f/",
-  "caption": "필터커피, 만들기 쉬워 보이는데 왜 더 비쌀까요? 기계가 아니라 사람의 시간과 손이 한 잔마다 들어가기 때문이에요. 여기에 원두 등급 차이도 가격에 영향을 줘요. 다만 원두를 훨씬 많이 쓰는 건 아니라는 자료도 있어요. 한국 카페의 정확한 가격 차이나 원가 구성은 확인하지 못해서 수치 없이 설명드렸어요. 다음 카페에서는 메뉴판의 원두 정보를 한번 살펴보세요.\n\n출처: 오마이뉴스, 비즈워치, 위키백과(Specialty coffee), Depths Coffee, 머니투데이(다음) 자료를 참고했습니다.\n사진: Unsplash\n\n#필터커피 #핸드드립 #커피가격 #스페셜티커피 #싱글오리진 #카페투어 #커피이야기 #바리스타 #원두 #카페메뉴 #커피공부 #드립커피 #깝휘캣\n\n*해당 콘텐츠는 AI의 조사만을 거친 게시물로, 내용에 오류가 있을 수 있습니다",
+  "issue": 3,
+  "question": "야구는 왜 재밌을까 - 다른 종목보다 특히 야구에 더 심한 불확실성 확률계산해서 증명",
+  "permalink": "https://www.instagram.com/p/De4LLbJIOdz/",
+  "caption": "야구가 왜 재밌는지 확률로 따져 봤어요. 미국 4대 리그 중 MLB는 약팀이 강팀을 이기는 비율이 44%로 가장 높았어요. 7전 4선승에서도 강팀의 승리 확률은 약 63%예요. 농구는 약 77%입니다. 다만 하키도 비슷하고, 불확실성이 재미의 원인이라고 증명된 것은 아니에요. KBO 업셋 비율은 자료가 없어 계산하지 못했고, 위 계산은 MLB 기준의 단순화한 값이에요.\n\n출처: Redner 외(arXiv), Annals of Applied Statistics, Measuring competitive balance in sports, The Ringer 자료를 참고했습니다.\n사진: Unsplash\n\n#깝휘캣 #야구 #야구카드뉴스 #MLB #KBO #프로야구 #확률 #통계 #스포츠과학 #불확실성 #업셋 #야구팬 #농구 #하키 #야구는왜재밌을까\n\n*해당 콘텐츠는 AI의 조사만을 거친 게시물로, 내용에 오류가 있을 수 있습니다",
   "draft": {
     "cover": {
-      "title": "필터커피는\n왜 더\n비쌀까?",
-      "subtitle": "쉬워 보여도 비싼 이유, 알고 보면 따로 있어요",
-      "imageQuery": "pour over coffee cafe"
+      "title": "야구는\n왜 이렇게\n불확실할까?",
+      "subtitle": "확률로 계산해 본 야구의 짜릿한 이유",
+      "imageQuery": "baseball stadium night crowd"
     },
     "bodies": [
       {
-        "title": "쉬운 건 아니에요",
-        "body": "필터커피가 쉬울 것 같다는 전제는 절반만 맞아요. 에스프레소는 기계가 뽑지만, 핸드드립은 바리스타가 한 잔씩 손으로 내려요.",
-        "imageQuery": "barista hand drip pouring"
+        "title": "약팀이 이길 확률",
+        "body": "미국 4대 리그의 실제 업셋 비율을 보면 MLB 44%, NHL 41%, NFL·NBA 37%예요. 약팀이 강팀을 이기는 일이 야구에서 가장 흔합니다.",
+        "imageQuery": "baseball underdog team celebration"
       },
       {
-        "title": "시간과 손이 들어가요",
-        "body": "핸드드립은 뜸을 들이고 천천히 물을 붓는 과정이 필요해요. 오마이뉴스는 이 시간과 정성이 인건비로 가격에 반영된다고 설명해요.",
-        "imageQuery": "slow pouring water coffee"
+        "title": "최하위 vs 1위",
+        "body": "최하위 팀이 1위 팀을 만나면 MLB에서는 30% 넘게 이겨요. NFL은 3%에 그칩니다. 한 경기 결과가 이렇게 다릅니다.",
+        "imageQuery": "baseball pitcher mound tension"
       },
       {
-        "title": "원두부터 달라요",
-        "body": "필터커피 메뉴에는 싱글오리진이나 스페셜티 원두가 쓰이는 경우가 많아요. 스페셜티는 SCA 점수 80점 이상 원두를 말해요.",
-        "imageQuery": "specialty coffee beans roasted"
+        "title": "직접 계산해 봤어요",
+        "body": "강팀 승률 p=1−q로 두고 이항분포로 계산했어요. MLB는 0.56, NBA는 0.63입니다. 경기 독립, 홈 이점 무시라는 단순 가정이에요.",
+        "imageQuery": "probability math chalkboard"
       },
       {
-        "title": "점수가 가격을 갈라요",
-        "body": "80점을 겨우 넘는 원두는 일반 원두와 가격 차이가 크지 않아요. 90점 이상은 2배 넘는 경우도 많다고 해요.",
-        "imageQuery": "coffee beans quality grading"
+        "title": "7전 4선승이면?",
+        "body": "야구는 7전 4선승에도 강팀이 이길 확률이 약 63%예요. 농구는 같은 시리즈에서 약 77%입니다. 야구는 동전 던지기에 더 가까워요.",
+        "imageQuery": "baseball playoff series scoreboard"
       },
       {
-        "title": "원두를 더 쓰는 건 아냐",
-        "body": "원두를 훨씬 많이 쓴다는 설명은 근거가 약해요. 핸드드립 18g, 에스프레소 더블샷 18g으로 양이 비슷하다는 자료가 있어요.",
-        "imageQuery": "coffee beans weighing scale"
+        "title": "긴 시즌의 반전",
+        "body": "진짜 승률 0.56인 MLB 팀도 162경기 뒤 5할 이하일 확률이 약 7.3%예요. 진짜 승률 0.63인 NBA 팀은 82경기 뒤 약 1.1%입니다.",
+        "imageQuery": "baseball season standings board"
       },
       {
-        "title": "가격엔 여러 비용이 담겨요",
-        "body": "원두 등급, 손으로 내리는 노동, 매장 운영 비용이 함께 반영돼요. 스페셜티를 써도 아메리카노와 가격이 같거나 싼 카페도 있어요. 메뉴판의 산지와 점수 표기를 보면 납득하기 쉬워요.",
-        "imageQuery": "cafe menu board coffee"
+        "title": "야구만 1등은 아니에요",
+        "body": "하키(NHL)도 비슷하게 무작위적이라서 야구가 압도적 1위는 아니에요. 재미의 이유가 불확실성이라고 증명된 것도 아닙니다. 다만 약팀이 자주 이겨 긴장이 오래가는 건 수치로 확인돼요. KBO의 업셋 비율은 자료를 찾지 못해 계산하지 못했어요.",
+        "imageQuery": "baseball fans cheering stadium"
       }
     ],
-    "caption": "필터커피, 만들기 쉬워 보이는데 왜 더 비쌀까요? 기계가 아니라 사람의 시간과 손이 한 잔마다 들어가기 때문이에요. 여기에 원두 등급 차이도 가격에 영향을 줘요. 다만 원두를 훨씬 많이 쓰는 건 아니라는 자료도 있어요. 한국 카페의 정확한 가격 차이나 원가 구성은 확인하지 못해서 수치 없이 설명드렸어요. 다음 카페에서는 메뉴판의 원두 정보를 한번 살펴보세요.",
+    "caption": "야구가 왜 재밌는지 확률로 따져 봤어요. 미국 4대 리그 중 MLB는 약팀이 강팀을 이기는 비율이 44%로 가장 높았어요. 7전 4선승에서도 강팀의 승리 확률은 약 63%예요. 농구는 약 77%입니다. 다만 하키도 비슷하고, 불확실성이 재미의 원인이라고 증명된 것은 아니에요. KBO 업셋 비율은 자료가 없어 계산하지 못했고, 위 계산은 MLB 기준의 단순화한 값이에요.",
     "hashtags": [
-      "필터커피",
-      "핸드드립",
-      "커피가격",
-      "스페셜티커피",
-      "싱글오리진",
-      "카페투어",
-      "커피이야기",
-      "바리스타",
-      "원두",
-      "카페메뉴",
-      "커피공부",
-      "드립커피",
-      "깝휘캣"
+      "깝휘캣",
+      "야구",
+      "야구카드뉴스",
+      "MLB",
+      "KBO",
+      "프로야구",
+      "확률",
+      "통계",
+      "스포츠과학",
+      "불확실성",
+      "업셋",
+      "야구팬",
+      "농구",
+      "하키",
+      "야구는왜재밌을까"
     ],
     "sources": [
       {
-        "title": "오마이뉴스",
-        "url": "https://www.ohmynews.com/NWS_Web/View/at_pg.aspx?CNTN_CD=A0002222529"
+        "title": "Redner 외(arXiv)",
+        "url": "https://arxiv.org/pdf/1209.4724"
       },
       {
-        "title": "비즈워치",
-        "url": "http://news.bizwatch.co.kr/article/consumer/2024/02/06/0017"
+        "title": "Annals of Applied Statistics",
+        "url": "https://projecteuclid.org/journals/annals-of-applied-statistics/volume-12/issue-4/How-often-does-the-best-team-win-A-unified-approach/10.1214/18-AOAS1165.full"
       },
       {
-        "title": "위키백과(Specialty coffee)",
-        "url": "https://en.wikipedia.org/wiki/Specialty_coffee"
+        "title": "Measuring competitive balance in sports",
+        "url": "https://spinup-000d1a-wp-offload-media.s3.amazonaws.com/faculty/wp-content/uploads/sites/8/2020/09/Measuring-competitive-balance-in-sports.pdf"
       },
       {
-        "title": "Depths Coffee",
-        "url": "https://depthscoffee.com/blog/hand-drip-coffee-recipe"
-      },
-      {
-        "title": "머니투데이(다음)",
-        "url": "https://v.daum.net/v/20160903060006591?f=p"
+        "title": "The Ringer",
+        "url": "https://www.theringer.com/2020/06/26/mlb/playoff-randomness-shortened-season"
       }
     ]
   }
