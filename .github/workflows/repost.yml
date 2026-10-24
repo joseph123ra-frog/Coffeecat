@@ -1,0 +1,72 @@
+name: 게시물 재게시
+
+# 잘못 올라간 게시물을, 그 호를 만든 실행의 슬라이드 원본으로 다시 게시한다.
+on:
+  workflow_dispatch:
+    inputs:
+      run_id:
+        description: '슬라이드를 만든 원래 실행 번호(run id)'
+        required: true
+      source_dir:
+        description: '원래 실행의 슬라이드 폴더 이름'
+        required: true
+      archive:
+        description: '게시 기록 파일 (예: archive/no003-2026-10-24.json)'
+        required: true
+      new_dir:
+        description: '새로 올릴 폴더 이름 (예전 주소 캐시를 피하기 위해 새 이름)'
+        required: true
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+  actions: read
+
+concurrency:
+  group: publish
+  cancel-in-progress: false
+
+jobs:
+  repost:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    environment: github-pages
+    env:
+      IG_USER_ID: ${{ secrets.IG_USER_ID }}
+      IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+      PAGES_BASE_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+
+      - name: 원래 슬라이드 내려받기
+        run: |
+          gh run download "${{ inputs.run_id }}" --repo "${{ github.repository }}" -n github-pages -D /tmp/pages
+          mkdir -p out/post/slides
+          tar -xf /tmp/pages/artifact.tar -C /tmp/pages
+          mv "/tmp/pages/${{ inputs.source_dir }}" "out/post/slides/${{ inputs.new_dir }}"
+          ls "out/post/slides/${{ inputs.new_dir }}"
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: out/post/slides
+      - uses: actions/deploy-pages@v4
+
+      - name: 재게시
+        run: node src/pipeline.js repost "${{ inputs.archive }}" "${{ inputs.new_dir }}"
+
+      - name: 기록 커밋
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add archive
+          git diff --cached --quiet && exit 0
+          git commit -qm "재게시 기록 갱신"
+          git push -q

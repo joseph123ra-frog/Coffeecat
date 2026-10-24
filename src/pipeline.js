@@ -6,6 +6,7 @@
 
 import { readFile, writeFile, mkdir, appendFile } from 'node:fs/promises';
 import { join } from 'node:path';
+import { createHash } from 'node:crypto';
 import { chromium } from 'playwright';
 import { PATHS, STATUS, STYLE, env, kstDate } from './config.js';
 import { loadLedger, saveLedger, blockReason, addCost, addPost, costOf } from './budget.js';
@@ -81,13 +82,20 @@ async function prepare() {
   await output({ skip: 'false', post_id: postId });
 }
 
-async function waitPublic(url) {
+const sha = (buf) => createHash('sha256').update(buf).digest('hex');
+
+// 공개 주소의 이미지가 방금 만든 파일과 똑같아질 때까지 기다린다.
+// 단순히 200 응답만 보면 캐시된 예전 이미지가 게시될 수 있다.
+// 주소에 파일 해시를 붙여 Instagram이 가져갈 주소와 확인하는 주소를 같게 한다.
+async function publicUrl(base, localFile) {
+  const expected = sha(await readFile(localFile));
+  const url = `${base}?v=${expected.slice(0, 12)}`;
   for (let i = 0; i < 60; i++) {
-    const res = await fetch(url, { method: 'HEAD' }).catch(() => null);
-    if (res?.ok) return;
+    const res = await fetch(url).catch(() => null);
+    if (res?.ok && sha(Buffer.from(await res.arrayBuffer())) === expected) return url;
     await sleep(10_000);
   }
-  throw new Error(`GitHub Pages에 이미지가 올라오지 않았습니다: ${url}`);
+  throw new Error(`GitHub Pages 이미지가 이번 호 파일과 다릅니다(캐시 또는 배포 지연): ${url}`);
 }
 
 async function publish() {
@@ -95,8 +103,11 @@ async function publish() {
   const { data, draft } = JSON.parse(await readFile(join(PATHS.post, 'data.json'), 'utf8'));
   const caption = await readFile(join(PATHS.post, 'caption.txt'), 'utf8');
   const base = env('PAGES_BASE_URL').replace(/\/$/, '');
-  const urls = data.slides.map((_, i) => `${base}/${meta.postId}/${i + 1}.jpg`);
-  for (const url of urls) await waitPublic(url);
+  const urls = [];
+  for (const [i] of data.slides.entries()) {
+    const name = `${meta.postId}/${i + 1}.jpg`;
+    urls.push(await publicUrl(`${base}/${name}`, join(PATHS.post, 'slides', name)));
+  }
 
   const { permalink } = await publishCarousel(urls, caption);
   await updateQuestion(meta.pageId, { status: STATUS.done, url: permalink, note: `No.${data.issue}` });
@@ -109,7 +120,7 @@ async function publish() {
   await mkdir(PATHS.archive, { recursive: true });
   await writeFile(
     join(PATHS.archive, `${meta.postId}.json`),
-    `${JSON.stringify({ issue: data.issue, question: meta.question, permalink, caption, draft }, null, 2)}\n`,
+    `${JSON.stringify({ issue: data.issue, question: meta.question, permalink, caption, draft, data }, null, 2)}\n`,
   );
   console.log(`게시 완료: ${permalink}`);
 }
@@ -126,10 +137,28 @@ async function fail() {
   await updateQuestion(meta.pageId, { status: STATUS.failed, note: `실패. 로그: ${run}` });
 }
 
-const commands = { prepare, publish, fail };
+// 이미 만든 슬라이드를 다시 게시한다 (예: 잘못 올라간 게시물 교체). Claude를 부르지 않는다.
+//   node src/pipeline.js repost <archive 파일> <슬라이드 폴더 이름>
+async function repost() {
+  const [archiveFile, dir] = process.argv.slice(3);
+  const record = JSON.parse(await readFile(archiveFile, 'utf8'));
+  const base = env('PAGES_BASE_URL').replace(/\/$/, '');
+  const urls = [];
+  for (let i = 1; i <= 8; i++) {
+    const name = `${dir}/${i}.jpg`;
+    urls.push(await publicUrl(`${base}/${name}`, join(PATHS.post, 'slides', name)));
+  }
+  const { permalink } = await publishCarousel(urls, record.caption);
+  record.replaced = [...(record.replaced ?? []), record.permalink];
+  record.permalink = permalink;
+  await writeFile(archiveFile, `${JSON.stringify(record, null, 2)}\n`);
+  console.log(`재게시 완료: ${permalink} (이전 게시물: ${record.replaced.at(-1)})`);
+}
+
+const commands = { prepare, publish, fail, repost };
 const command = commands[process.argv[2]];
 if (!command) {
-  console.error('사용법: node src/pipeline.js prepare|publish|fail');
+  console.error('사용법: node src/pipeline.js prepare|publish|fail|repost');
   process.exit(1);
 }
 command().catch((err) => {
