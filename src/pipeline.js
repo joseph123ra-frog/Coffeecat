@@ -91,7 +91,7 @@ async function waitPublic(url) {
 
 async function publish() {
   const meta = JSON.parse(await readFile(META, 'utf8'));
-  const { data } = JSON.parse(await readFile(join(PATHS.post, 'data.json'), 'utf8'));
+  const { data, draft } = JSON.parse(await readFile(join(PATHS.post, 'data.json'), 'utf8'));
   const caption = await readFile(join(PATHS.post, 'caption.txt'), 'utf8');
   const base = env('PAGES_BASE_URL').replace(/\/$/, '');
   const urls = data.slides.map((_, i) => `${base}/${meta.postId}/${i + 1}.jpg`);
@@ -104,6 +104,12 @@ async function publish() {
   ledger.issue = Math.max(ledger.issue, data.issue);
   addPost(ledger);
   await saveLedger(ledger);
+  // 나중에 본문을 고치거나 출처를 다시 확인할 수 있게 게시 기록을 남긴다.
+  await mkdir(PATHS.archive, { recursive: true });
+  await writeFile(
+    join(PATHS.archive, `${meta.postId}.json`),
+    `${JSON.stringify({ issue: data.issue, question: meta.question, permalink, caption, sources: draft.sources }, null, 2)}\n`,
+  );
   console.log(`게시 완료: ${permalink}`);
 }
 

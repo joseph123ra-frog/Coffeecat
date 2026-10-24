@@ -35,6 +35,7 @@ export const STATUS = { waiting: '대기', running: '진행 중', done: '완료'
 export const PATHS = {
   ledger: 'data/usage.json',
   post: 'out/post',
+  archive: 'archive',
 };
 
 export function env(name) {

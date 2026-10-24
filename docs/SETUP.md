@@ -27,7 +27,7 @@
 4. 계정의 Instagram 사용자 ID를 확인한다 → `IG_USER_ID`
 
 ※ Meta 화면 구성은 자주 바뀌고 이 환경에서는 원문을 열 수 없었다. 이 단계는 함께 화면을 보며 진행하는 것을 권한다.
-※ 장기 토큰은 만료 기한이 있는 것으로 알려져 있다(확인 필요). 자동 갱신은 다음 단계에서 추가한다.
+※ 장기 토큰은 60일 뒤 만료된다. `.github/workflows/refresh-token.yml`이 매월 2일·16일에 자동 갱신한다(아래 5-6 필요).
 
 ## 3. 사진 API (무료)
 - Unsplash: https://unsplash.com/developers 에서 앱 등록 → Access Key → `UNSPLASH_ACCESS_KEY`
@@ -45,6 +45,7 @@
 3. Settings → Pages → Source를 **GitHub Actions**로 바꾼다.
 4. 정기 실행(cron)은 기본 브랜치에서만 동작한다. 현재 기본 브랜치는 `claude/brave-archimedes-77048b`.
 5. Actions 탭 → '깝휘캣 자동 게시' → Run workflow로 첫 실행을 수동으로 해 본다.
+6. 토큰 자동 갱신용: Fine-grained 개인 접근 토큰(저장소 Coffeecat만, 권한 Secrets: Read and write)을 만들어 `SECRETS_PAT`로 등록한다. 이 토큰에도 만료일이 있으니 만료 전에 새로 만들어 바꾼다.
 
 ## 동작 규칙 요약
 - 매일 09:00, 13:00, 19:00 (KST) 실행. 한 번에 1개, 하루 최대 3개.

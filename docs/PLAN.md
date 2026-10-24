@@ -48,7 +48,8 @@
 - [x] Claude 조사·원고 생성 + 예산 관리 (`src/research.js`, `src/budget.js`)
 - [x] 사진 검색·출처 표기 (`src/images.js`, `src/caption.js`)
 - [x] Instagram 게시 (`src/instagram.js`)
-- [ ] Instagram 토큰 자동 갱신
+- [x] Instagram 토큰 자동 갱신 (`.github/workflows/refresh-token.yml`, `SECRETS_PAT` 필요)
+- [x] 게시 기록 보관 (`archive/<호수>.json`: 본문·출처·URL)
 - [x] GitHub Actions 일정 실행 + Pages (`.github/workflows/publish.yml`)
 - [x] 계정·키 설정 가이드 (`docs/SETUP.md`)
 - [x] 실제 계정으로 첫 연동 테스트 (2026-10-24, No.01 게시 성공, Claude 비용 $0.26)

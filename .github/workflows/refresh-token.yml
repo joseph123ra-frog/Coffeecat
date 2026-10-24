@@ -1,0 +1,35 @@
+name: 인스타 토큰 갱신
+
+# 장기 토큰은 60일 뒤 만료된다. 만료 전에 갱신하면 그날부터 다시 60일이 늘어난다.
+# 한 달에 두 번 갱신해 새 토큰을 IG_ACCESS_TOKEN 비밀값에 덮어쓴다.
+on:
+  schedule:
+    - cron: '0 18 1,15 * *'  # 매월 2일·16일 03:00 KST
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: 토큰 갱신 후 비밀값 교체
+        env:
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          # 비밀값을 바꾸려면 Secrets 쓰기 권한이 있는 개인 접근 토큰이 필요하다 (기본 GITHUB_TOKEN으로는 불가).
+          GH_TOKEN: ${{ secrets.SECRETS_PAT }}
+        run: |
+          res=$(curl -sS --get "https://graph.instagram.com/refresh_access_token" \
+            --data-urlencode "grant_type=ig_refresh_token" \
+            --data-urlencode "access_token=${IG_ACCESS_TOKEN}")
+          token=$(jq -r '.access_token // empty' <<<"$res")
+          if [ -z "$token" ]; then
+            echo "갱신 실패: $(jq -c '.error // .' <<<"$res")"
+            exit 1
+          fi
+          echo "::add-mask::$token"
+          gh secret set IG_ACCESS_TOKEN --repo "${{ github.repository }}" --body "$token"
+          days=$(( $(jq -r '.expires_in' <<<"$res") / 86400 ))
+          echo "갱신 완료. 새 토큰 유효 기간: ${days}일"
