@@ -19,7 +19,10 @@ import { renderSlides } from './render.js';
 import { styles } from '../templates/styles.js';
 
 const META = join(PATHS.post, 'meta.json');
-const coverTitle = (question) => question.split(/\s+-\s+/)[0].trim();
+const coverTitle = (question) => {
+  const title = question.split(/\s+-\s+/)[0].trim();
+  return /[?？!]$/.test(title) ? title : `${title}?`;
+};
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
 async function output(values) {
