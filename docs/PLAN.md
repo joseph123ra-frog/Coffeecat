@@ -22,23 +22,26 @@
 ② 월 예산 확인 (초과 시 종료 + Notion 기록)
 ③ Claude API: 조사 → 6장 원고·본문·해시태그·출처·사진 검색어 (JSON)
 ④ 사진 검색: Unsplash → Pexels → Wikimedia → 고양이 사진 대체
-⑤ HTML 템플릿 → Playwright → JPEG 6장 (1080×1350)
+⑤ HTML 템플릿 → Playwright → JPEG 8장 (1080×1350)
 ⑥ 저장소에 커밋 → GitHub Pages 공개 URL
-⑦ Instagram API: 항목 컨테이너 6개 → 캐러셀 컨테이너 → 게시
+⑦ Instagram API: 항목 컨테이너 8개 → 캐러셀 컨테이너 → 게시
 ⑧ Notion: '완료' + 게시 URL / 실패 시 '실패' + 사유
 ```
 
-## 슬라이드 구성 (6장)
-1. 표지: 질문 + 부제 + 사진
-2~5. 본문: 제목 + 2~3문장(120자 안팎) + 사진 (없으면 텍스트 카드)
-6. 요약: 핵심 3줄 + 출처 + 고지
+## 슬라이드 구성 (8장, C안 풀블리드 포토 계열)
+1. 표지: 질문 + 부제 + 전면 사진
+2~7. 본문 6장: 모두 같은 형식. 소제목 + 2~3문장(100자 안팎) + 사진 (없으면 텍스트 카드)
+   - 마지막 본문도 '요약' 같은 명시적 표시 없이 내용으로만 마무리
+8. 시그니처: 깝휘캣 고정 페이지 (매 호 동일)
+- 출처는 게시물 본문(캡션)에 기재
 
 ## 필요한 비밀값 (GitHub Secrets)
 `ANTHROPIC_API_KEY`, `NOTION_TOKEN`, `NOTION_DATABASE_ID`, `IG_USER_ID`, `IG_ACCESS_TOKEN`, `UNSPLASH_ACCESS_KEY`, `PEXELS_API_KEY`
 
 ## 진행 단계
 - [x] 디자인 시안 3종 (`docs/design-samples/`)
-- [ ] 시안 확정
+- [x] C안 선택, 8장 구성 확정
+- [ ] 본문 레이아웃 확정 (풀블리드 vs 70/30 분할)
 - [ ] Notion DB 구성 + 읽기/쓰기
 - [ ] Claude 조사·원고 생성 + 예산 관리
 - [ ] 사진 검색·출처 표기
