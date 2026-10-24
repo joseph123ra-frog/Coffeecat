@@ -41,11 +41,13 @@ const photo = {
   css: base,
 };
 
-const SPLIT = 945; // 1350 × 0.7
-
-const split = {
-  name: 'split',
-  label: 'C-2. 사진 70 / 글 30 분할',
+// ratio: 사진이 차지하는 세로 비율
+const makeSplit = (name, ratio) => {
+  const SPLIT = Math.round(1350 * ratio);
+  const pct = Math.round(ratio * 100);
+  return {
+  name,
+  label: `C-2. 사진 ${pct} / 글 ${100 - pct} 분할`,
   css: `${base}
 .s-body{background:#fff}
 .s-body .media{inset:auto;left:0;right:0;top:0;height:${SPLIT}px}
@@ -60,6 +62,7 @@ const split = {
 .s-body .body,.s-body.no-img .body{font-size:36px;line-height:1.6;color:#222}
 .s-body .foot{color:#8A8580}
 `,
+  };
 };
 
-export const styles = { photo, split };
+export const styles = { photo, split: makeSplit('split', 0.7), split80: makeSplit('split80', 0.8) };
