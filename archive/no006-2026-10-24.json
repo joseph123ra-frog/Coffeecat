@@ -1,0 +1,151 @@
+{
+  "issue": 6,
+  "question": "야구는 왜 재밌을까 - 다른 종목보다 특히 야구에 더 심한 불확실성 확률계산해서 증명",
+  "permalink": "https://www.instagram.com/p/De4Q5LjGxzH/",
+  "caption": "야구는 왜 이렇게 예측이 어려울까요?\n\n경기 전 승리 확률 수치에 단서가 있습니다.\n\n출처: Todd W. Schneider, arXiv(Lopez 등 연구), Skidmore College 학술자료, 한국일보 자료를 참고했습니다.\n사진: Unsplash\n\n#야구 #KBO #MLB #프로야구 #야구팬 #스포츠 #불확실성 #승률 #LG트윈스 #NBA #하키 #카드뉴스 #깝휘캣\n\n*해당 콘텐츠는 AI의 조사만을 거친 게시물로, 내용에 오류가 있을 수 있습니다",
+  "draft": {
+    "cover": {
+      "title": "야구는\n왜 이렇게\n예측이 어려울까?",
+      "subtitle": "확률 증명은 어렵지만, 공신력 있는 수치로 비교했어요",
+      "imageQuery": "baseball stadium night game"
+    },
+    "bodies": [
+      {
+        "title": "증명은 어려워요",
+        "body": "야구가 불확실성 1등이라고 확률로 증명하긴 어려워요. 연구마다 결과가 엇갈리기 때문이에요. 대신 공신력 있는 수치를 비교해 볼게요.",
+        "imageQuery": "scoreboard baseball stadium"
+      },
+      {
+        "title": "한국 사례: LG 우승",
+        "body": "2025 KBO(한국 프로야구) 개막 전, LG 우승을 예상한 전문가는 한 명도 없었어요. 하지만 LG가 우승했어요. 외국인 선수와 부상 같은 변수로 예측이 자주 빗나간다고 해요.",
+        "imageQuery": "baseball team celebration trophy"
+      },
+      {
+        "title": "경기 전 승리 확률",
+        "body": "도박 배당으로 추정한 경기 전 승리 확률은 NBA·NFL 팀이 대략 25~75%에 퍼져 있었어요. 야구는 모든 팀이 40~60% 안이었어요. 다만 배당은 시장의 예상이고, 야구 자료는 전체 경기의 약 65%만 담았어요.",
+        "imageQuery": "sports betting odds board"
+      },
+      {
+        "title": "연구가 말하는 것",
+        "body": "10년 치 NFL·NHL·NBA·MLB 경기 결과를 분석한 연구가 있어요. 최강팀이 중립 경기장에서 이길 확률의 중앙값은 NBA 67%, NFL 64%, NHL 57%였어요. 홈팀이 실력이 같은 상대를 이길 확률은 MLB 54.0%, NHL 55.5%, NFL 58.9%였고요.",
+        "imageQuery": "basketball game arena crowd"
+      },
+      {
+        "title": "하키도 비슷해요",
+        "body": "하지만 야구만 불확실한 건 아니에요. 이 연구에서 야구와 하키는 경기 결과가 무작위에 가까운 정도가 비슷했어요. 또 불확실성이 크다고 항상 재밌다는 근거도 찾지 못했어요.",
+        "imageQuery": "ice hockey game action"
+      },
+      {
+        "title": "결국 답은요",
+        "body": "결국 야구는 강팀이 이긴다고 확신하기 어려운 종목이에요. 해외 자료에서 야구 팀의 경기 전 승리 확률은 40~60%에 몰려 있었어요. 다만 하키도 비슷하게 불확실하고, 재미를 불확실성만으로 설명하긴 어려워요.",
+        "imageQuery": "baseball pitcher batter tension"
+      }
+    ],
+    "caption": "야구는 왜 이렇게 예측이 어려울까요?\n\n경기 전 승리 확률 수치에 단서가 있습니다.",
+    "hashtags": [
+      "야구",
+      "KBO",
+      "MLB",
+      "프로야구",
+      "야구팬",
+      "스포츠",
+      "불확실성",
+      "승률",
+      "LG트윈스",
+      "NBA",
+      "하키",
+      "카드뉴스",
+      "깝휘캣"
+    ],
+    "sources": [
+      {
+        "title": "Todd W. Schneider",
+        "url": "https://toddwschneider.com/posts/every-teams-chances-of-winning-in-every-minute-according-to-gamblers/"
+      },
+      {
+        "title": "arXiv(Lopez 등 연구)",
+        "url": "https://www.arxiv.org/pdf/1701.05976"
+      },
+      {
+        "title": "Skidmore College 학술자료",
+        "url": "https://creativematter.skidmore.edu/math_fac_schol/14/"
+      },
+      {
+        "title": "한국일보",
+        "url": "https://www.hankookilbo.com/news/article/amp/A2026030316110002104"
+      }
+    ]
+  },
+  "data": {
+    "issue": 6,
+    "date": "2026.10.24",
+    "slides": [
+      {
+        "type": "cover",
+        "title": "야구는\n왜 이렇게\n예측이 어려울까?",
+        "subtitle": "확률 증명은 어렵지만, 공신력 있는 수치로 비교했어요",
+        "image": {
+          "url": "https://images.unsplash.com/photo-1554187505-bf7114ee173c?ixid=M3wxMTExOTQ5fDB8MXxzZWFyY2h8MXx8YmFzZWJhbGwlMjBzdGFkaXVtJTIwbmlnaHQlMjBnYW1lfGVufDF8MXx8fDE3OTI4NDkyNDF8MA&ixlib=rb-4.1.0&w=1080&q=85&fm=jpg",
+          "credit": "Photo by Derek Story on Unsplash"
+        }
+      },
+      {
+        "type": "body",
+        "title": "증명은 어려워요",
+        "body": "야구가 불확실성 1등이라고 확률로 증명하긴 어려워요. 연구마다 결과가 엇갈리기 때문이에요. 대신 공신력 있는 수치를 비교해 볼게요.",
+        "image": {
+          "url": "https://images.unsplash.com/photo-1554356871-37514f300eb9?ixid=M3wxMTExOTQ5fDB8MXxzZWFyY2h8Mnx8c2NvcmVib2FyZCUyMGJhc2ViYWxsJTIwc3RhZGl1bXxlbnwxfDF8fHwxNzkyODQ5MjQyfDA&ixlib=rb-4.1.0&w=1080&q=85&fm=jpg",
+          "credit": "Photo by Derek Story on Unsplash"
+        }
+      },
+      {
+        "type": "body",
+        "title": "한국 사례: LG 우승",
+        "body": "2025 KBO(한국 프로야구) 개막 전, LG 우승을 예상한 전문가는 한 명도 없었어요. 하지만 LG가 우승했어요. 외국인 선수와 부상 같은 변수로 예측이 자주 빗나간다고 해요.",
+        "image": {
+          "url": "https://images.unsplash.com/photo-1788371667674-ab069795301e?ixid=M3wxMTExOTQ5fDB8MXxzZWFyY2h8MXx8YmFzZWJhbGwlMjB0ZWFtJTIwY2VsZWJyYXRpb24lMjB0cm9waHl8ZW58MXwxfHx8MTc5Mjg0OTI0M3ww&ixlib=rb-4.1.0&w=1080&q=85&fm=jpg",
+          "credit": "Photo by Zach hudson on Unsplash"
+        }
+      },
+      {
+        "type": "body",
+        "title": "경기 전 승리 확률",
+        "body": "도박 배당으로 추정한 경기 전 승리 확률은 NBA·NFL 팀이 대략 25~75%에 퍼져 있었어요. 야구는 모든 팀이 40~60% 안이었어요. 다만 배당은 시장의 예상이고, 야구 자료는 전체 경기의 약 65%만 담았어요.",
+        "image": {
+          "url": "https://images.unsplash.com/photo-1644213078733-7a0cfadc5ec9?ixid=M3wxMTExOTQ5fDB8MXxzZWFyY2h8MXx8c3BvcnRzJTIwYmV0dGluZyUyMG9kZHMlMjBib2FyZHxlbnwxfDF8fHwxNzkyODQ5MjQzfDA&ixlib=rb-4.1.0&w=1080&q=85&fm=jpg",
+          "credit": "Photo by Nataliya Melnychuk on Unsplash"
+        }
+      },
+      {
+        "type": "body",
+        "title": "연구가 말하는 것",
+        "body": "10년 치 NFL·NHL·NBA·MLB 경기 결과를 분석한 연구가 있어요. 최강팀이 중립 경기장에서 이길 확률의 중앙값은 NBA 67%, NFL 64%, NHL 57%였어요. 홈팀이 실력이 같은 상대를 이길 확률은 MLB 54.0%, NHL 55.5%, NFL 58.9%였고요.",
+        "image": {
+          "url": "https://images.unsplash.com/photo-1648999600048-5410bc413bd9?ixid=M3wxMTExOTQ5fDB8MXxzZWFyY2h8MXx8YmFza2V0YmFsbCUyMGdhbWUlMjBhcmVuYSUyMGNyb3dkfGVufDF8MXx8fDE3OTI4NDkyNDR8MA&ixlib=rb-4.1.0&w=1080&q=85&fm=jpg",
+          "credit": "Photo by Yoad Shejtman on Unsplash"
+        }
+      },
+      {
+        "type": "body",
+        "title": "하키도 비슷해요",
+        "body": "하지만 야구만 불확실한 건 아니에요. 이 연구에서 야구와 하키는 경기 결과가 무작위에 가까운 정도가 비슷했어요. 또 불확실성이 크다고 항상 재밌다는 근거도 찾지 못했어요.",
+        "image": {
+          "url": "https://images.unsplash.com/photo-1580748141549-71748dbe0bdc?ixid=M3wxMTExOTQ5fDB8MXxzZWFyY2h8MXx8aWNlJTIwaG9ja2V5JTIwZ2FtZSUyMGFjdGlvbnxlbnwxfDF8fHwxNzkyODQ5MjQ0fDA&ixlib=rb-4.1.0&w=1080&q=85&fm=jpg",
+          "credit": "Photo by LOGAN WEAVER | @LGNWVR on Unsplash"
+        }
+      },
+      {
+        "type": "body",
+        "title": "결국 답은요",
+        "body": "결국 야구는 강팀이 이긴다고 확신하기 어려운 종목이에요. 해외 자료에서 야구 팀의 경기 전 승리 확률은 40~60%에 몰려 있었어요. 다만 하키도 비슷하게 불확실하고, 재미를 불확실성만으로 설명하긴 어려워요.",
+        "image": {
+          "url": "https://images.unsplash.com/photo-1624375812928-106472d9ddb9?ixid=M3wxMTExOTQ5fDB8MXxzZWFyY2h8MXx8YmFzZWJhbGwlMjBwaXRjaGVyJTIwYmF0dGVyJTIwdGVuc2lvbnxlbnwxfDF8fHwxNzkyODQ5MjQ1fDA&ixlib=rb-4.1.0&w=1080&q=85&fm=jpg",
+          "credit": "Photo by Josh Hemsley on Unsplash"
+        }
+      },
+      {
+        "type": "signature"
+      }
+    ]
+  }
+}
