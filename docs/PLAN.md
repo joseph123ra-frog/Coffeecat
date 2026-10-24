@@ -20,7 +20,7 @@
       ▼
 ① Notion: 가장 오래된 '대기' 1개 → '진행 중' (없으면 종료)
 ② 월 예산 확인 (초과 시 종료 + Notion 기록)
-③ Claude API: 조사 → 6장 원고·본문·해시태그·출처·사진 검색어 (JSON)
+③ Claude API: 조사 → 표지·본문 6장 원고, 캡션·해시태그·출처·사진 검색어 (JSON)
 ④ 사진 검색: Unsplash → Pexels → Wikimedia → 고양이 사진 대체
 ⑤ HTML 템플릿 → Playwright → JPEG 8장 (1080×1350)
 ⑥ 저장소에 커밋 → GitHub Pages 공개 URL
