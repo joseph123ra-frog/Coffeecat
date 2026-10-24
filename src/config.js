@@ -20,7 +20,7 @@ export const WEB_SEARCH_MAX_USES = 8;
 export const BODY_SLIDES = 6;
 export const STYLE = 'split';
 // 시그니처 페이지에 넣을 인스타그램 아이디. 계정이 정해지면 바꾼다.
-export const HANDLE = '@아이디';
+export const HANDLE = '@kkaphwi.cat';
 
 export const DISCLAIMER = '*해당 콘텐츠는 AI의 조사만을 거친 게시물로, 내용에 오류가 있을 수 있습니다';
 
