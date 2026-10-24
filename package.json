@@ -1,0 +1,14 @@
+{
+  "name": "coffeecat",
+  "version": "0.1.0",
+  "private": true,
+  "description": "깝휘캣: 질문 한 줄로 6장짜리 인스타그램 매거진을 자동 제작·게시",
+  "type": "module",
+  "scripts": {
+    "render": "node src/render.js",
+    "samples": "node src/render.js samples/sample.json --all-styles --out out/samples"
+  },
+  "dependencies": {
+    "playwright": "1.63.0"
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "issue": 1,
+  "date": "2026.10.25",
+  "dummy": true,
+  "slides": [
+    {
+      "type": "cover",
+      "title": "고양이는 왜\n상자를 좋아할까?",
+      "subtitle": "좁은 곳에 들어가는 습성, 정말 이유가 있을까",
+      "image": { "placeholder": "실사 사진 영역", "credit": "Photo by 작가명 on Unsplash" }
+    },
+    {
+      "type": "body",
+      "title": "숨을 곳이 주는 안정감",
+      "body": "시안용 더미 문구입니다. 실제 게시물에서는 조사한 내용이 2~3문장으로 들어갑니다. 한 장에 핵심 하나만 담습니다.",
+      "image": { "placeholder": "실사 사진 영역", "credit": "Photo by 작가명 on Pexels" }
+    },
+    {
+      "type": "body",
+      "title": "체온을 지키는 공간",
+      "body": "시안용 더미 문구입니다. 본문은 최대 120자 안팎으로 제한해 모바일에서 한눈에 읽히게 합니다.",
+      "image": { "placeholder": "실사 사진 영역", "credit": "Wikimedia Commons · CC BY-SA 4.0" }
+    },
+    {
+      "type": "body",
+      "title": "사냥꾼의 매복 본능",
+      "body": "시안용 더미 문구입니다. 관련 사진을 찾지 못하면 위처럼 고양이 사진에 자체 밈 문구를 얹습니다.",
+      "image": { "placeholder": "고양이 사진 (대체 이미지)", "meme": "관련 사진은 못 찾았다냥", "credit": "Photo by 작가명 on Unsplash" }
+    },
+    {
+      "type": "body",
+      "title": "그래서 집사가 할 일",
+      "body": "시안용 더미 문구입니다. 마지막 본문 장에는 실생활 팁이나 시사점을 담습니다.",
+      "image": null
+    },
+    {
+      "type": "summary",
+      "title": "한 줄 요약",
+      "points": ["숨을 곳은 안정감을 준다", "좁은 공간은 체온 유지에 유리하다", "상자는 매복 장소가 된다"],
+      "sources": ["출처 1 · 예시 기관명 (2026)", "출처 2 · 예시 학술지 (2025)"]
+    }
+  ]
+}
