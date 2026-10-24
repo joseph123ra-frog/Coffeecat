@@ -1,7 +1,7 @@
 {
   "issue": 3,
   "question": "야구는 왜 재밌을까 - 다른 종목보다 특히 야구에 더 심한 불확실성 확률계산해서 증명",
-  "permalink": "https://www.instagram.com/p/De4LLbJIOdz/",
+  "permalink": "https://www.instagram.com/p/De4Lx7LIOCc/",
   "caption": "야구가 왜 재밌는지 확률로 따져 봤어요. 미국 4대 리그 중 MLB는 약팀이 강팀을 이기는 비율이 44%로 가장 높았어요. 7전 4선승에서도 강팀의 승리 확률은 약 63%예요. 농구는 약 77%입니다. 다만 하키도 비슷하고, 불확실성이 재미의 원인이라고 증명된 것은 아니에요. KBO 업셋 비율은 자료가 없어 계산하지 못했고, 위 계산은 MLB 기준의 단순화한 값이에요.\n\n출처: Redner 외(arXiv), Annals of Applied Statistics, Measuring competitive balance in sports, The Ringer 자료를 참고했습니다.\n사진: Unsplash\n\n#깝휘캣 #야구 #야구카드뉴스 #MLB #KBO #프로야구 #확률 #통계 #스포츠과학 #불확실성 #업셋 #야구팬 #농구 #하키 #야구는왜재밌을까\n\n*해당 콘텐츠는 AI의 조사만을 거친 게시물로, 내용에 오류가 있을 수 있습니다",
   "draft": {
     "cover": {
@@ -77,5 +77,8 @@
         "url": "https://www.theringer.com/2020/06/26/mlb/playoff-randomness-shortened-season"
       }
     ]
-  }
+  },
+  "replaced": [
+    "https://www.instagram.com/p/De4LLbJIOdz/"
+  ]
 }
