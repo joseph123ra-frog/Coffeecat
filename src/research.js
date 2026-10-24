@@ -2,6 +2,7 @@
 // 두 단계로 나눈 이유: 웹 검색 결과에는 인용(citations)이 붙는데,
 // 구조화 출력(output_config.format)은 인용과 같이 쓸 수 없다.
 
+import { readFileSync } from 'node:fs';
 import Anthropic from '@anthropic-ai/sdk';
 import { zodOutputFormat } from '@anthropic-ai/sdk/helpers/zod';
 import { z } from 'zod';
@@ -16,13 +17,18 @@ const REQUEST_RULES = `질문 칸에는 질문 뒤에 독자의 궁금한 점이
 - "증명", "계산" 요청은 공신력 있는 출처의 수치로 답합니다. 직접 계산하면 사용한 수치와 계산 과정을 밝힙니다.
 - 근거가 부족하거나 반대 근거가 더 강하면, 결론을 억지로 맞추지 말고 그렇다고 씁니다.`;
 
+// 피드백으로 쌓아 가는 편집 지침. 조사·원고 두 단계 모두에 붙인다.
+const GUIDELINES = readFileSync(new URL('../prompts/guidelines.md', import.meta.url), 'utf8');
+
 const RESEARCH_SYSTEM = `당신은 한국어 인스타그램 매거진 '깝휘캣'의 리서처입니다.
 주어진 질문을 웹 검색으로 조사해, 6장짜리 카드뉴스 본문에 쓸 근거 노트를 만듭니다.
 - 공신력 있는 출처(공공기관, 학술 자료, 주요 언론, 공식 문서)를 우선합니다.
 - 사실마다 근거 URL을 붙입니다. 검색 결과에서 확인하지 못한 내용은 쓰지 않습니다.
 - 출처끼리 엇갈리는 내용은 엇갈린다고 적습니다.
 - 질문 → 배경 → 핵심 이유/사실 → 의미 순으로 이야기 흐름이 생기게 정리합니다.
-${REQUEST_RULES}`;
+${REQUEST_RULES}
+
+${GUIDELINES}`;
 
 const Draft = z.object({
   cover: z.object({
@@ -119,7 +125,9 @@ async function writeDraft(question, notes, urls) {
     system: `당신은 한국어 인스타그램 매거진 '깝휘캣'의 에디터입니다.
 조사 노트만을 근거로 카드뉴스 원고를 씁니다. 노트에 없는 사실은 쓰지 않습니다.
 말투는 친근하지만 정확하게, 문장은 짧게 씁니다. 글자 수 제한을 반드시 지킵니다.
-${REQUEST_RULES}`,
+${REQUEST_RULES}
+
+${GUIDELINES}`,
     messages: [
       {
         role: 'user',

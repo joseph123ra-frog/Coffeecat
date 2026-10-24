@@ -108,7 +108,7 @@ async function publish() {
   await mkdir(PATHS.archive, { recursive: true });
   await writeFile(
     join(PATHS.archive, `${meta.postId}.json`),
-    `${JSON.stringify({ issue: data.issue, question: meta.question, permalink, caption, sources: draft.sources }, null, 2)}\n`,
+    `${JSON.stringify({ issue: data.issue, question: meta.question, permalink, caption, draft }, null, 2)}\n`,
   );
   console.log(`게시 완료: ${permalink}`);
 }
