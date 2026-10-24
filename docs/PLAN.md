@@ -11,6 +11,7 @@
 | 실행 | GitHub Actions + Claude API (Sonnet 5.5 + 웹 검색) |
 | 예산 | 이 프로젝트 월 $30 상한. 초과 시 자동 중단 |
 | 이미지 | Unsplash → Pexels → Wikimedia Commons 순 검색. 없으면 같은 출처의 고양이 사진 + 자체 밈 문구. AI 생성 이미지 미사용 |
+| 디자인 | C-2: 표지 전면 사진 / 본문 사진 70 + 흰 공간 30 / 시그니처 고정 |
 | 호스팅 | GitHub Pages (공개 저장소) |
 
 ## 흐름
@@ -41,11 +42,13 @@
 ## 진행 단계
 - [x] 디자인 시안 3종 (`docs/design-samples/`)
 - [x] C안 선택, 8장 구성 확정
-- [x] 본문 레이아웃: C-2 분할 (사진 위·소제목 얹기 / 아래 흰 공간에 본문). 비율 70:30 vs 80:20 검토 중
+- [x] 본문 레이아웃: C-2 분할 (사진 위·소제목 얹기 / 아래 흰 공간에 본문). 비율 70:30 확정. 사진 없으면 항상 고양이 사진
 - [x] 시그니처 문구 확정, 로고 없이 글자 로고 사용
-- [ ] Notion DB 구성 + 읽기/쓰기
-- [ ] Claude 조사·원고 생성 + 예산 관리
-- [ ] 사진 검색·출처 표기
-- [ ] Instagram 게시 + 토큰 갱신
-- [ ] GitHub Actions 일정 실행 + Pages
-- [ ] 계정·키 설정 가이드
+- [x] Notion DB 읽기/쓰기 (`src/notion.js`)
+- [x] Claude 조사·원고 생성 + 예산 관리 (`src/research.js`, `src/budget.js`)
+- [x] 사진 검색·출처 표기 (`src/images.js`, `src/caption.js`)
+- [x] Instagram 게시 (`src/instagram.js`)
+- [ ] Instagram 토큰 자동 갱신
+- [x] GitHub Actions 일정 실행 + Pages (`.github/workflows/publish.yml`)
+- [x] 계정·키 설정 가이드 (`docs/SETUP.md`)
+- [ ] 실제 계정으로 첫 연동 테스트

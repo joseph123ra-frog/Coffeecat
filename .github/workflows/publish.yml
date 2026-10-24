@@ -1,0 +1,76 @@
+name: 깝휘캣 자동 게시
+
+on:
+  schedule:
+    - cron: '0 0 * * *'   # 09:00 KST
+    - cron: '0 10 * * *'  # 19:00 KST
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: publish
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    environment: github-pages
+    env:
+      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+      NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+      NOTION_DATABASE_ID: ${{ secrets.NOTION_DATABASE_ID }}
+      IG_USER_ID: ${{ secrets.IG_USER_ID }}
+      IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+      UNSPLASH_ACCESS_KEY: ${{ secrets.UNSPLASH_ACCESS_KEY }}
+      PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+      PAGES_BASE_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}
+      GITHUB_RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - run: npx playwright install --with-deps chromium
+
+      - name: 조사·제작
+        id: prepare
+        run: node src/pipeline.js prepare
+
+      # 이번 호 이미지만 GitHub Pages에 배포한다 (이전 호 이미지는 게시 후 필요 없으므로 덮어씀)
+      - name: Pages 배포 준비
+        if: steps.prepare.outputs.skip == 'false'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: out/post/slides
+
+      - name: GitHub Pages에 이미지 올리기
+        if: steps.prepare.outputs.skip == 'false'
+        uses: actions/deploy-pages@v4
+
+      - name: Instagram 게시
+        if: steps.prepare.outputs.skip == 'false'
+        run: node src/pipeline.js publish
+
+      - name: 실패 기록
+        if: failure()
+        run: node src/pipeline.js fail
+
+      - name: 사용량 기록 커밋
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/usage.json 2>/dev/null || exit 0
+          git diff --cached --quiet && exit 0
+          git commit -qm "사용량 기록 갱신"
+          git push -q

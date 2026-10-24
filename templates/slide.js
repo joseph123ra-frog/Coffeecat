@@ -1,5 +1,7 @@
 // 슬라이드 1장을 HTML로 만든다. 마크업은 공통이고 스타일(CSS)만 바뀐다.
 
+import { HANDLE, DISCLAIMER } from '../src/config.js';
+
 const FONTS =
   'https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&family=Noto+Serif+KR:wght@700;900&display=block';
 
@@ -33,8 +35,8 @@ function content(slide, index, total) {
         <div class="sig-en">COFFEE CAT MAGAZINE</div>
         <p class="sig-tag">궁금한 건 못 참는 고양이가<br>대신 찾아봤다냥</p>
         <div class="sig-cta">팔로우하고 다음 호 받아보기</div>
-        <div class="sig-handle">@아이디</div>
-        <p class="notice">*해당 콘텐츠는 AI의 조사만을 거친 게시물로, 내용에 오류가 있을 수 있습니다</p>
+        <div class="sig-handle">${esc(HANDLE)}</div>
+        <p class="notice">${esc(DISCLAIMER)}</p>
       </div>`;
     default:
       return `<div class="text">
