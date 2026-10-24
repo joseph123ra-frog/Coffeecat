@@ -49,7 +49,8 @@
 - [x] 사진 검색·출처 표기 (`src/images.js`, `src/caption.js`)
 - [x] Instagram 게시 (`src/instagram.js`)
 - [x] Instagram 토큰 자동 갱신 (`.github/workflows/refresh-token.yml`, `SECRETS_PAT` 필요)
-- [x] 게시 기록 보관 (`archive/<호수>.json`: 본문·출처·URL)
+- [x] 게시 기록 보관 (`archive/noXXX-날짜.json`: 질문·원고·캡션·출처·URL)
+- [x] 피드백 스킬 `/coffeecat-feedback` → `prompts/guidelines.md` 갱신, 기록은 `feedback/log.md`
 - [x] GitHub Actions 일정 실행 + Pages (`.github/workflows/publish.yml`)
 - [x] 계정·키 설정 가이드 (`docs/SETUP.md`)
 - [x] 실제 계정으로 첫 연동 테스트 (2026-10-24, No.01 게시 성공, Claude 비용 $0.26)
