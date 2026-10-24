@@ -51,4 +51,4 @@
 - [ ] Instagram 토큰 자동 갱신
 - [x] GitHub Actions 일정 실행 + Pages (`.github/workflows/publish.yml`)
 - [x] 계정·키 설정 가이드 (`docs/SETUP.md`)
-- [ ] 실제 계정으로 첫 연동 테스트
+- [x] 실제 계정으로 첫 연동 테스트 (2026-10-24, No.01 게시 성공, Claude 비용 $0.26)
