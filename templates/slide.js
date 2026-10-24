@@ -14,9 +14,8 @@ function media(image) {
   const inner = image.url
     ? `<img src="${esc(image.url)}" alt="">`
     : `<div class="ph"><span>${esc(image.placeholder || '사진 영역')}</span></div>`;
-  const meme = image.meme ? `<div class="meme">${esc(image.meme)}</div>` : '';
   const credit = image.credit ? `<span class="credit">${esc(image.credit)}</span>` : '';
-  return `<div class="media">${inner}${meme}${credit}</div>`;
+  return `<div class="media">${inner}${credit}</div>`;
 }
 
 function content(slide, index, total) {
@@ -63,8 +62,6 @@ html,body{width:1080px;height:1350px;overflow:hidden}
 .ph{width:100%;height:100%;display:flex;align-items:center;justify-content:center}
 .ph span{font-size:30px;letter-spacing:.02em}
 .credit{position:absolute;right:20px;bottom:16px;font-size:18px;color:#fff;opacity:.85;text-shadow:0 1px 4px rgba(0,0,0,.6)}
-.meme{position:absolute;left:0;right:0;top:36px;text-align:center;font-family:'Noto Sans KR';font-weight:900;font-size:64px;color:#fff;
-  -webkit-text-stroke:3px #000;paint-order:stroke fill}
 .dummy{position:absolute;left:50%;top:0;transform:translateX(-50%);background:#ff0;color:#000;font-size:18px;padding:4px 14px;z-index:9}
 ${style.css}
 </style></head><body>

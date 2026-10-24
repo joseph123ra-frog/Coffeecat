@@ -28,7 +28,6 @@ const Draft = z.object({
         title: z.string().describe('소제목. 12자 이내'),
         body: z.string().describe('본문. 2~3문장, 100자 이내'),
         imageQuery: z.string().describe('사진 검색어. 영어 2~4단어'),
-        catMeme: z.string().describe('관련 사진이 없을 때 고양이 사진에 얹을 밈 문구. 14자 이내, 냥체'),
       }),
     )
     .describe(`정확히 ${BODY_SLIDES}개. 하나의 흐름으로 이어지고, 마지막 장은 요약이라는 표시 없이 내용으로 마무리`),

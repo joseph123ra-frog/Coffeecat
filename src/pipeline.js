@@ -56,12 +56,7 @@ async function prepare() {
     console.log(`Claude 비용: $${usd.toFixed(4)}`);
   }
 
-  const images = await pickImages([
-    { query: draft.cover.imageQuery, catMeme: '' },
-    ...draft.bodies.map((b) => ({ query: b.imageQuery, catMeme: b.catMeme })),
-  ]);
-  // 표지는 밈 문구 없이 사진만 쓴다.
-  delete images[0].meme;
+  const images = await pickImages([draft.cover.imageQuery, ...draft.bodies.map((b) => b.imageQuery)]);
 
   const data = {
     issue: ledger.issue + 1,

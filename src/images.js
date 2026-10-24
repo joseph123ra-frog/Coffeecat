@@ -1,8 +1,7 @@
 // 사진 검색: Unsplash → Pexels → Wikimedia Commons 순.
-// 관련 사진이 없으면 같은 출처에서 고양이 사진을 가져와 밈 문구를 얹는다.
+// 관련 사진이 없으면 같은 출처에서 웃긴 고양이 사진을 대신 쓴다. 슬라이드 글은 그대로 들어간다.
 
 const UA = 'CoffeecatMagazine/0.1 (https://github.com/joseph123ra-frog/Coffeecat)';
-const UTM = 'utm_source=coffeecat&utm_medium=referral';
 
 async function getJson(url, headers = {}) {
   const res = await fetch(url, { headers: { 'User-Agent': UA, ...headers } });
@@ -83,21 +82,16 @@ async function firstUnused(query, used, { random = false } = {}) {
   return null;
 }
 
-// slots: [{ query, catMeme? }] → [{ url, credit, meme? }]
-export async function pickImages(slots) {
+// queries: 슬라이드별 검색어 → [{ url, credit }]
+export async function pickImages(queries) {
   const used = new Set();
   const picked = [];
-  for (const slot of slots) {
-    let image = await firstUnused(slot.query, used);
-    let meme;
-    if (!image) {
-      image = await firstUnused('funny cat', used, { random: true });
-      meme = slot.catMeme;
-    }
-    if (!image) throw new Error(`사진을 하나도 찾지 못했습니다 (검색어: ${slot.query}). 사진 API 상태를 확인하세요.`);
+  for (const query of queries) {
+    const image = (await firstUnused(query, used)) ?? (await firstUnused('funny cat', used, { random: true }));
+    if (!image) throw new Error(`사진을 하나도 찾지 못했습니다 (검색어: ${query}). 사진 API 상태를 확인하세요.`);
     used.add(image.id);
     await image.onUse?.().catch(() => {});
-    picked.push({ url: image.url, credit: image.credit, ...(meme ? { meme } : {}) });
+    picked.push({ url: image.url, credit: image.credit });
   }
   return picked;
 }

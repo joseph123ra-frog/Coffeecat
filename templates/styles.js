@@ -14,7 +14,6 @@ const base = `
 .ph{background:radial-gradient(circle at 30% 30%,#7C6A58,#3B332C 70%);color:rgba(255,255,255,.55)}
 .ph span{transform:translateY(-200px)}
 .credit{z-index:2;top:110px;bottom:auto}
-.meme{top:140px;z-index:2}
 .text{position:absolute;left:64px;right:64px;bottom:150px;z-index:2}
 .kicker{font-size:24px;font-weight:700;color:${GOLD};letter-spacing:.12em;margin-bottom:22px}
 h1{font-weight:900;font-size:100px;line-height:1.15;letter-spacing:-.02em}

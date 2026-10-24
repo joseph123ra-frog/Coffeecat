@@ -10,7 +10,7 @@
 | 게시 | 하루 2회 (09:00 / 19:00 KST). 대기 질문 없으면 건너뜀, 하루 최대 2개 |
 | 실행 | GitHub Actions + Claude API (Sonnet 5.5 + 웹 검색) |
 | 예산 | 이 프로젝트 월 $30 상한. 초과 시 자동 중단 |
-| 이미지 | Unsplash → Pexels → Wikimedia Commons 순 검색. 없으면 같은 출처의 고양이 사진 + 자체 밈 문구. AI 생성 이미지 미사용 |
+| 이미지 | Unsplash → Pexels → Wikimedia Commons 순 검색. 없으면 같은 출처의 웃긴 고양이 사진 (글은 그대로). AI 생성 이미지 미사용 |
 | 디자인 | C-2: 표지 전면 사진 / 본문 사진 70 + 흰 공간 30 / 시그니처 고정 |
 | 호스팅 | GitHub Pages (공개 저장소) |
 
@@ -22,7 +22,7 @@
 ① Notion: 가장 오래된 '대기' 1개 → '진행 중' (없으면 종료)
 ② 월 예산 확인 (초과 시 종료 + Notion 기록)
 ③ Claude API: 조사 → 표지·본문 6장 원고, 캡션·해시태그·출처·사진 검색어 (JSON)
-④ 사진 검색: Unsplash → Pexels → Wikimedia → 고양이 사진 대체
+④ 사진 검색: Unsplash → Pexels → Wikimedia → 웃긴 고양이 사진으로 대체
 ⑤ HTML 템플릿 → Playwright → JPEG 8장 (1080×1350)
 ⑥ 저장소에 커밋 → GitHub Pages 공개 URL
 ⑦ Instagram API: 항목 컨테이너 8개 → 캐러셀 컨테이너 → 게시
@@ -42,7 +42,7 @@
 ## 진행 단계
 - [x] 디자인 시안 3종 (`docs/design-samples/`)
 - [x] C안 선택, 8장 구성 확정
-- [x] 본문 레이아웃: C-2 분할 (사진 위·소제목 얹기 / 아래 흰 공간에 본문). 비율 70:30 확정. 사진 없으면 항상 고양이 사진
+- [x] 본문 레이아웃: C-2 분할 (사진 위·소제목 얹기 / 아래 흰 공간에 본문). 비율 70:30 확정. 사진 없으면 웃긴 고양이 사진 + 원래 글
 - [x] 시그니처 문구 확정, 로고 없이 글자 로고 사용
 - [x] Notion DB 읽기/쓰기 (`src/notion.js`)
 - [x] Claude 조사·원고 생성 + 예산 관리 (`src/research.js`, `src/budget.js`)

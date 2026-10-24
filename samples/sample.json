@@ -24,8 +24,8 @@
     {
       "type": "body",
       "title": "사냥꾼의 매복 본능",
-      "body": "시안용 더미 문구입니다. 관련 사진을 찾지 못하면 위처럼 고양이 사진에 자체 밈 문구를 얹습니다.",
-      "image": { "placeholder": "고양이 사진 (대체 이미지)", "meme": "관련 사진은 못 찾았다냥", "credit": "Photo by 작가명 on Unsplash" }
+      "body": "시안용 더미 문구입니다. 관련 사진을 찾지 못하면 이 장처럼 웃긴 고양이 사진이 들어가고, 글은 그대로입니다.",
+      "image": { "placeholder": "웃긴 고양이 사진 (대체 이미지)", "credit": "Photo by 작가명 on Unsplash" }
     },
     {
       "type": "body",
