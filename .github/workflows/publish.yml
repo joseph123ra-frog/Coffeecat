@@ -3,6 +3,7 @@ name: 깝휘캣 자동 게시
 on:
   schedule:
     - cron: '0 0 * * *'   # 09:00 KST
+    - cron: '0 4 * * *'   # 13:00 KST
     - cron: '0 10 * * *'  # 19:00 KST
   workflow_dispatch: {}
 

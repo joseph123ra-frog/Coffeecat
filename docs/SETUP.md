@@ -43,10 +43,10 @@
 2. Settings → Secrets and variables → Actions 에 위 6개 값을 등록한다.
    `ANTHROPIC_API_KEY`, `NOTION_TOKEN`, `NOTION_DATABASE_ID`, `IG_USER_ID`, `IG_ACCESS_TOKEN`, `UNSPLASH_ACCESS_KEY` (선택: `PEXELS_API_KEY`)
 3. Settings → Pages → Source를 **GitHub Actions**로 바꾼다.
-4. 정기 실행(cron)은 기본 브랜치(main)에서만 동작하므로, 작업 브랜치를 main에 합친다.
+4. 정기 실행(cron)은 기본 브랜치에서만 동작한다. 현재 기본 브랜치는 `claude/brave-archimedes-77048b`.
 5. Actions 탭 → '깝휘캣 자동 게시' → Run workflow로 첫 실행을 수동으로 해 본다.
 
 ## 동작 규칙 요약
-- 매일 09:00, 19:00 (KST) 실행. 한 번에 1개, 하루 최대 2개.
+- 매일 09:00, 13:00, 19:00 (KST) 실행. 한 번에 1개, 하루 최대 3개.
 - 대기 질문이 없거나 월 예산이 남지 않으면 아무것도 하지 않는다.
 - 인스타그램 아이디: @kkaphwi.cat (`src/config.js`의 `HANDLE`)
