@@ -32,7 +32,7 @@ ${GUIDELINES}`;
 
 const Draft = z.object({
   cover: z.object({
-    title: z.string().describe('표지 제목. 질문 칸의 질문 부분을 살린 짧은 의문형. 한 줄 9자 이내, 최대 3줄, 줄바꿈은 \\n'),
+    title: z.string().describe('표지 제목. 질문 칸의 질문 부분(\' - \' 앞)을 글자 하나 바꾸지 않고 그대로'),
     subtitle: z.string().describe('표지 부제. 40자 이내'),
     imageQuery: z.string().describe('표지 사진 검색어. 영어 2~4단어'),
   }),

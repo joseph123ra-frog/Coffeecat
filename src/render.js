@@ -18,6 +18,17 @@ export async function renderSlides(browser, data, style, outDir) {
   for (const [index, slide] of data.slides.entries()) {
     await page.setContent(slideHtml({ data, slide, index, style }), { waitUntil: 'networkidle' });
     await page.evaluate(() => document.fonts.ready);
+    // 표지 제목이 3줄을 넘으면 3줄에 들어갈 때까지 글자를 줄인다.
+    await page.evaluate(() => {
+      const h1 = document.querySelector('.s-cover h1');
+      if (!h1) return;
+      let size = parseFloat(getComputedStyle(h1).fontSize);
+      const lineHeight = () => parseFloat(getComputedStyle(h1).lineHeight);
+      while (size > 56 && h1.getBoundingClientRect().height > lineHeight() * 3 + 2) {
+        size -= 4;
+        h1.style.fontSize = `${size}px`;
+      }
+    });
     // 본문이 넘치면 하단 페이지 번호에 닿지 않을 때까지 글자를 줄인다.
     await page.evaluate(() => {
       const body = document.querySelector('.s-body .body');

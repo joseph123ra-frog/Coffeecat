@@ -19,6 +19,7 @@ import { renderSlides } from './render.js';
 import { styles } from '../templates/styles.js';
 
 const META = join(PATHS.post, 'meta.json');
+const coverTitle = (question) => question.split(/\s+-\s+/)[0].trim();
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
 async function output(values) {
@@ -71,7 +72,8 @@ async function prepare() {
     issue: ledger.issue + 1,
     date: kstDate(now).dotted,
     slides: [
-      { type: 'cover', title: draft.cover.title, subtitle: draft.cover.subtitle, image: images[0] },
+      // 표지 제목은 Claude가 바꾸지 않도록 질문 칸의 질문 부분(' - ' 앞)을 그대로 쓴다.
+      { type: 'cover', title: coverTitle(item.question), subtitle: draft.cover.subtitle, image: images[0] },
       ...draft.bodies.map((b, i) => ({ type: 'body', title: b.title, body: b.body, image: images[i + 1] })),
       { type: 'signature' },
     ],
