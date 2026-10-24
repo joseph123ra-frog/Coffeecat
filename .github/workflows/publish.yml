@@ -5,7 +5,16 @@ on:
     - cron: '0 0 * * *'   # 09:00 KST
     - cron: '0 4 * * *'   # 13:00 KST
     - cron: '0 10 * * *'  # 19:00 KST
-  workflow_dispatch: {}
+  workflow_dispatch:
+    inputs:
+      question:
+        description: '질문을 직접 넣어 실행 (비우면 Notion 대기 질문). Notion 상태는 바꾸지 않음'
+        required: false
+        default: ''
+      ignore_daily_limit:
+        description: '하루 게시 한도 무시 (월 예산 한도는 그대로)'
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -29,6 +38,8 @@ jobs:
       IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
       UNSPLASH_ACCESS_KEY: ${{ secrets.UNSPLASH_ACCESS_KEY }}
       PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+      QUESTION: ${{ inputs.question }}
+      IGNORE_DAILY_LIMIT: ${{ inputs.ignore_daily_limit }}
       PAGES_BASE_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}
       GITHUB_RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
     steps:

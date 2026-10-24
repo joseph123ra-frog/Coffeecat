@@ -31,13 +31,13 @@ export function costOf(usage) {
 }
 
 // 실행해도 되는지 판단한다. 안 되면 사유 문자열을, 되면 null을 돌려준다.
-export function blockReason(ledger, now = new Date()) {
+export function blockReason(ledger, now = new Date(), { ignoreDailyLimit = false } = {}) {
   const { month, day } = kstDate(now);
   const spent = ledger.months[month]?.usd ?? 0;
   if (spent + MAX_RUN_COST_USD > MONTHLY_BUDGET_USD) {
     return `이번 달 예산 소진 ($${spent.toFixed(2)} / $${MONTHLY_BUDGET_USD})`;
   }
-  if ((ledger.days[day] ?? 0) >= MAX_POSTS_PER_DAY) return `오늘 게시 한도(${MAX_POSTS_PER_DAY}개) 도달`;
+  if (!ignoreDailyLimit && (ledger.days[day] ?? 0) >= MAX_POSTS_PER_DAY) return `오늘 게시 한도(${MAX_POSTS_PER_DAY}개) 도달`;
   return null;
 }
 

@@ -29,12 +29,14 @@ async function output(values) {
 
 async function prepare() {
   const ledger = await loadLedger();
-  const blocked = blockReason(ledger);
+  // 수동 실행에서 질문을 직접 넣으면 Notion을 거치지 않는다 (지침 비교용 재제작 등).
+  const manual = process.env.QUESTION?.trim();
+  const blocked = blockReason(ledger, new Date(), { ignoreDailyLimit: process.env.IGNORE_DAILY_LIMIT === 'true' });
   if (blocked) {
     console.log(`건너뜀: ${blocked}`);
     return output({ skip: 'true' });
   }
-  const item = await nextQuestion();
+  const item = manual ? { pageId: null, question: manual } : await nextQuestion();
   if (!item) {
     console.log('건너뜀: 대기 중인 질문 없음');
     return output({ skip: 'true' });
@@ -45,7 +47,7 @@ async function prepare() {
   const postId = `no${String(ledger.issue + 1).padStart(3, '0')}-${kstDate(now).day}`;
   await mkdir(PATHS.post, { recursive: true });
   await writeFile(META, JSON.stringify({ ...item, postId }, null, 2));
-  await updateQuestion(item.pageId, { status: STATUS.running, note: '' });
+  if (item.pageId) await updateQuestion(item.pageId, { status: STATUS.running, note: '' });
   console.log(`질문: ${item.question}`);
 
   let draft;
@@ -110,7 +112,7 @@ async function publish() {
   }
 
   const { permalink } = await publishCarousel(urls, caption);
-  await updateQuestion(meta.pageId, { status: STATUS.done, url: permalink, note: `No.${data.issue}` });
+  if (meta.pageId) await updateQuestion(meta.pageId, { status: STATUS.done, url: permalink, note: `No.${data.issue}` });
 
   const ledger = await loadLedger();
   ledger.issue = Math.max(ledger.issue, data.issue);
@@ -133,6 +135,7 @@ async function fail() {
     console.log('기록할 질문이 없습니다.');
     return;
   }
+  if (!meta.pageId) return;
   const run = process.env.GITHUB_RUN_URL ?? '';
   await updateQuestion(meta.pageId, { status: STATUS.failed, note: `실패. 로그: ${run}` });
 }
