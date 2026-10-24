@@ -45,7 +45,7 @@ const Draft = z.object({
       }),
     )
     .describe(`정확히 ${BODY_SLIDES}개. 하나의 흐름으로 이어지고, 마지막 장은 요약이라는 표시 없이 내용으로 마무리`),
-  caption: z.string().describe('게시물 본문. 3~5문장, 600자 이내. 해시태그·출처·고지 문구는 넣지 않음'),
+  caption: z.string().describe('게시물 본문. 질문 한 줄 + 빈 줄 + 답의 단서 한 줄의 짧은 후킹. 슬라이드 결론을 반복하지 않음. 해시태그·출처·고지 문구는 넣지 않음'),
   hashtags: z.array(z.string()).describe('해시태그 10~15개. # 없이'),
   sources: z
     .array(
