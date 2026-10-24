@@ -34,7 +34,12 @@ const Draft = z.object({
   caption: z.string().describe('게시물 본문. 3~5문장, 600자 이내. 해시태그·출처·고지 문구는 넣지 않음'),
   hashtags: z.array(z.string()).describe('해시태그 10~15개. # 없이'),
   sources: z
-    .array(z.object({ title: z.string(), url: z.string() }))
+    .array(
+      z.object({
+        title: z.string().describe('기관·매체 이름만 짧게. 예: BBC, 국립생태원, 미국수의학회'),
+        url: z.string(),
+      }),
+    )
     .describe('본문 근거 출처 2~5개. 반드시 허용된 URL 목록 안에서만'),
 });
 
