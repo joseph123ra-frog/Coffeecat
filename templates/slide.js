@@ -26,18 +26,22 @@ function content(slide, index, total) {
         <h1>${lines(slide.title)}</h1>
         ${slide.subtitle ? `<p class="sub">${esc(slide.subtitle)}</p>` : ''}
       </div>`;
-    case 'summary':
-      return `<div class="text">
-        <div class="kicker">${no} / ${String(total).padStart(2, '0')}</div>
-        <h2>${esc(slide.title)}</h2>
-        <ol class="points">${slide.points.map((p) => `<li>${esc(p)}</li>`).join('')}</ol>
-        <div class="sources"><b>출처</b>${slide.sources.map((s) => `<span>${esc(s)}</span>`).join('')}</div>
-        <p class="notice">*AI가 조사한 콘텐츠로, 내용에 오류가 있을 수 있습니다.</p>
+    case 'signature':
+      // 매 호 마지막에 고정으로 들어가는 시그니처 페이지
+      return `<div class="sig">
+        <div class="sig-mark">깝휘캣</div>
+        <div class="sig-en">COFFEE CAT MAGAZINE</div>
+        <p class="sig-tag">궁금한 건 못 참는 고양이가<br>대신 찾아봤다냥</p>
+        <div class="sig-cta">팔로우하고 다음 호 받아보기</div>
+        <div class="sig-handle">@아이디</div>
+        <p class="notice">*해당 콘텐츠는 AI의 조사만을 거친 게시물로, 내용에 오류가 있을 수 있습니다</p>
       </div>`;
     default:
       return `<div class="text">
-        <div class="kicker">${no} / ${String(total).padStart(2, '0')}</div>
-        <h2>${esc(slide.title)}</h2>
+        <div class="head">
+          <div class="kicker">${no} / ${String(total).padStart(2, '0')}</div>
+          <h2>${esc(slide.title)}</h2>
+        </div>
         <p class="body">${lines(slide.body)}</p>
       </div>`;
   }
@@ -64,9 +68,9 @@ ${style.css}
 </style></head><body>
 <div class="slide ${cls}">
   ${data.dummy ? '<div class="dummy">시안용 더미 텍스트</div>' : ''}
-  <header class="mast"><span class="brand">깝휘캣</span><span class="issue">No.${String(data.issue).padStart(2, '0')} · ${esc(data.date)}</span></header>
-  ${slide.type === 'summary' ? '' : media(slide.image)}
+  ${slide.type === 'signature' ? '' : `<header class="mast"><span class="brand">깝휘캣</span><span class="issue">No.${String(data.issue).padStart(2, '0')} · ${esc(data.date)}</span></header>`}
+  ${slide.type === 'signature' ? '' : media(slide.image)}
   ${content(slide, index, total)}
-  <footer class="foot"><span>${index + 1}/${total}</span><span>${index + 1 < total ? '넘겨서 계속 →' : '저장하고 다음 호도 받아보기'}</span></footer>
+  ${slide.type === 'signature' ? '' : `<footer class="foot"><span>${index + 1}/${total}</span><span>넘겨서 계속 →</span></footer>`}
 </div></body></html>`;
 }

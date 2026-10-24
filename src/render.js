@@ -26,10 +26,10 @@ export async function renderSlides(browser, data, style, outDir) {
   return files;
 }
 
-// 6장을 3×2로 줄여 한 장에 모은다. 시안 비교용.
+// 전체 장을 4열로 줄여 한 장에 모은다. 시안 비교용.
 async function contactSheet(browser, files, label, outFile) {
   const scale = 1 / 3;
-  const cols = 3;
+  const cols = 4;
   const gap = 16;
   const w = Math.round(W * scale);
   const h = Math.round(H * scale);
