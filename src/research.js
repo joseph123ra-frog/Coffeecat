@@ -9,16 +9,24 @@ import { MODEL, WEB_SEARCH_MAX_USES, BODY_SLIDES } from './config.js';
 
 const client = new Anthropic();
 
+// 질문 칸은 '질문 - 궁금한 점·꼭 넣을 내용' 형태로 적힐 수 있다. 두 단계 모두에 같은 규칙을 준다.
+const REQUEST_RULES = `질문 칸에는 질문 뒤에 독자의 궁금한 점이나 꼭 넣을 내용이 함께 적혀 있을 수 있습니다.
+- 그 요청은 빠짐없이 다룹니다.
+- 요청에 깔린 전제(예: "만들기 쉬울 것 같은데")가 사실과 다르면, 근거를 들어 바로잡습니다.
+- "증명", "계산" 요청은 공신력 있는 출처의 수치로 답합니다. 직접 계산하면 사용한 수치와 계산 과정을 밝힙니다.
+- 근거가 부족하거나 반대 근거가 더 강하면, 결론을 억지로 맞추지 말고 그렇다고 씁니다.`;
+
 const RESEARCH_SYSTEM = `당신은 한국어 인스타그램 매거진 '깝휘캣'의 리서처입니다.
 주어진 질문을 웹 검색으로 조사해, 6장짜리 카드뉴스 본문에 쓸 근거 노트를 만듭니다.
 - 공신력 있는 출처(공공기관, 학술 자료, 주요 언론, 공식 문서)를 우선합니다.
 - 사실마다 근거 URL을 붙입니다. 검색 결과에서 확인하지 못한 내용은 쓰지 않습니다.
 - 출처끼리 엇갈리는 내용은 엇갈린다고 적습니다.
-- 질문 → 배경 → 핵심 이유/사실 → 의미 순으로 이야기 흐름이 생기게 정리합니다.`;
+- 질문 → 배경 → 핵심 이유/사실 → 의미 순으로 이야기 흐름이 생기게 정리합니다.
+${REQUEST_RULES}`;
 
 const Draft = z.object({
   cover: z.object({
-    title: z.string().describe('표지 제목. 한 줄 9자 이내, 최대 3줄, 줄바꿈은 \\n'),
+    title: z.string().describe('표지 제목. 질문 칸의 질문 부분을 살린 짧은 의문형. 한 줄 9자 이내, 최대 3줄, 줄바꿈은 \\n'),
     subtitle: z.string().describe('표지 부제. 40자 이내'),
     imageQuery: z.string().describe('표지 사진 검색어. 영어 2~4단어'),
   }),
@@ -68,7 +76,7 @@ function assertNotRefused(response) {
 }
 
 async function researchNotes(question) {
-  const messages = [{ role: 'user', content: `질문: ${question}` }];
+  const messages = [{ role: 'user', content: `질문 칸: ${question}` }];
   let response;
   // 서버 쪽 검색 루프가 길어지면 pause_turn으로 끊긴다. 같은 대화를 다시 보내 이어간다.
   for (let i = 0; i < 4; i++) {
@@ -110,11 +118,12 @@ async function writeDraft(question, notes, urls) {
     output_config: { effort: 'medium', format: zodOutputFormat(Draft) },
     system: `당신은 한국어 인스타그램 매거진 '깝휘캣'의 에디터입니다.
 조사 노트만을 근거로 카드뉴스 원고를 씁니다. 노트에 없는 사실은 쓰지 않습니다.
-말투는 친근하지만 정확하게, 문장은 짧게 씁니다. 글자 수 제한을 반드시 지킵니다.`,
+말투는 친근하지만 정확하게, 문장은 짧게 씁니다. 글자 수 제한을 반드시 지킵니다.
+${REQUEST_RULES}`,
     messages: [
       {
         role: 'user',
-        content: `질문: ${question}\n\n## 조사 노트\n${notes}\n\n## 허용된 출처 URL\n${allowed}`,
+        content: `질문 칸: ${question}\n\n## 조사 노트\n${notes}\n\n## 허용된 출처 URL\n${allowed}`,
       },
     ],
   });
