@@ -1,4 +1,4 @@
-// 사진 검색: Unsplash → Pexels → Wikimedia Commons 순.
+// 사진 검색: Unsplash → Pexels → Wikimedia Commons 순. 키가 없는 출처는 건너뛴다.
 // 관련 사진이 없으면 같은 출처에서 웃긴 고양이 사진을 대신 쓴다. 슬라이드 글은 그대로 들어간다.
 
 const UA = 'CoffeecatMagazine/0.1 (https://github.com/joseph123ra-frog/Coffeecat)';

@@ -31,7 +31,7 @@
 
 ## 3. 사진 API (무료)
 - Unsplash: https://unsplash.com/developers 에서 앱 등록 → Access Key → `UNSPLASH_ACCESS_KEY`
-- Pexels: https://www.pexels.com/api/ 에서 키 발급 → `PEXELS_API_KEY`
+- Pexels: 2026-10 현재 신규 API 키 발급이 중단돼 있어 건너뛴다. 발급이 재개되면 `PEXELS_API_KEY`만 추가하면 자동으로 쓰인다.
 - Wikimedia Commons: 키 불필요
 
 ## 4. Claude API
@@ -40,8 +40,8 @@
 
 ## 5. GitHub
 1. 저장소를 공개(Public)로 둔다.
-2. Settings → Secrets and variables → Actions 에 위 7개 값을 등록한다.
-   `ANTHROPIC_API_KEY`, `NOTION_TOKEN`, `NOTION_DATABASE_ID`, `IG_USER_ID`, `IG_ACCESS_TOKEN`, `UNSPLASH_ACCESS_KEY`, `PEXELS_API_KEY`
+2. Settings → Secrets and variables → Actions 에 위 6개 값을 등록한다.
+   `ANTHROPIC_API_KEY`, `NOTION_TOKEN`, `NOTION_DATABASE_ID`, `IG_USER_ID`, `IG_ACCESS_TOKEN`, `UNSPLASH_ACCESS_KEY` (선택: `PEXELS_API_KEY`)
 3. Settings → Pages → Source를 **GitHub Actions**로 바꾼다.
 4. 정기 실행(cron)은 기본 브랜치(main)에서만 동작하므로, 작업 브랜치를 main에 합친다.
 5. Actions 탭 → '깝휘캣 자동 게시' → Run workflow로 첫 실행을 수동으로 해 본다.

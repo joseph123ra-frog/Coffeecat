@@ -10,7 +10,7 @@
 | 게시 | 하루 2회 (09:00 / 19:00 KST). 대기 질문 없으면 건너뜀, 하루 최대 2개 |
 | 실행 | GitHub Actions + Claude API (Sonnet 5.5 + 웹 검색) |
 | 예산 | 이 프로젝트 월 $30 상한. 초과 시 자동 중단 |
-| 이미지 | Unsplash → Pexels → Wikimedia Commons 순 검색. 없으면 같은 출처의 웃긴 고양이 사진 (글은 그대로). AI 생성 이미지 미사용 |
+| 이미지 | Unsplash → (Pexels: 신규 키 발급 중단으로 보류) → Wikimedia Commons 순 검색. 없으면 같은 출처의 웃긴 고양이 사진 (글은 그대로). AI 생성 이미지 미사용 |
 | 디자인 | C-2: 표지 전면 사진 / 본문 사진 70 + 흰 공간 30 / 시그니처 고정 |
 | 호스팅 | GitHub Pages (공개 저장소) |
 
@@ -37,7 +37,7 @@
 - 출처는 게시물 본문(캡션)에 기재
 
 ## 필요한 비밀값 (GitHub Secrets)
-`ANTHROPIC_API_KEY`, `NOTION_TOKEN`, `NOTION_DATABASE_ID`, `IG_USER_ID`, `IG_ACCESS_TOKEN`, `UNSPLASH_ACCESS_KEY`, `PEXELS_API_KEY`
+`ANTHROPIC_API_KEY`, `NOTION_TOKEN`, `NOTION_DATABASE_ID`, `IG_USER_ID`, `IG_ACCESS_TOKEN`, `UNSPLASH_ACCESS_KEY` (선택: `PEXELS_API_KEY`)
 
 ## 진행 단계
 - [x] 디자인 시안 3종 (`docs/design-samples/`)
