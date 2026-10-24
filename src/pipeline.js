@@ -40,7 +40,8 @@ async function prepare() {
   }
 
   const now = new Date();
-  const postId = `${kstDate(now).day}-${item.pageId.replace(/-/g, '').slice(0, 8)}`;
+  // 호수로 이름을 붙여 기록이 겹치지 않게 하고, 피드백 때 'No.3'처럼 찾기 쉽게 한다.
+  const postId = `no${String(ledger.issue + 1).padStart(3, '0')}-${kstDate(now).day}`;
   await mkdir(PATHS.post, { recursive: true });
   await writeFile(META, JSON.stringify({ ...item, postId }, null, 2));
   await updateQuestion(item.pageId, { status: STATUS.running, note: '' });
