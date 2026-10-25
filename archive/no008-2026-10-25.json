@@ -1,0 +1,176 @@
+{
+  "issue": 8,
+  "question": "아주 오래 자면 오히려 왜 더 졸릴까?",
+  "permalink": "https://www.instagram.com/p/De52QhZlsAo/",
+  "caption": "아주 오래 잤는데 왜 더 졸릴까요?\n\n잠의 양보다 구조와 타이밍에 단서가 있습니다.\n\n출처: Mayo Clinic Proceedings, Nature and Science of Sleep, 미국수면의학회, 농민신문, WebMD 자료를 참고했습니다.\n사진: Unsplash\n\n#수면 #과수면 #수면관성 #생체리듬 #사회적시차 #주말늦잠 #수면무호흡증 #낮잠 #피곤 #졸림 #건강정보 #수면습관 #깝휘캣\n\n*해당 콘텐츠는 AI의 조사만을 거친 게시물로, 내용에 오류가 있을 수 있습니다",
+  "draft": {
+    "plan": {
+      "answer": "아주 오래 자면 수면 관성, 생체시계 어긋남, 잠의 질 저하, 숨은 수면 질환 요인이 겹쳐 오히려 더 졸릴 수 있다.",
+      "reasons": [
+        "숨은 수면 질환: 의학 리뷰와 수면 단체 자료가 근거이며, 졸려서 오래 자는 반대 방향 관계일 수 있음(근거 높음)",
+        "수면 관성: 깬 뒤에도 뇌 앞부분이 덜 깬 상태로 남음(근거 중상)",
+        "생체리듬 교란: 늦잠과 주말 몰아자기가 몸속 시계를 어긋나게 함(근거 중간)",
+        "잠의 질 저하: 길게 누워 있어도 자주 깨는 잠은 회복이 줄어듦(근거 중간~낮음)",
+        "오래 잔다고 더 졸린다는 직접 비교 연구는 확인하지 못함(한계)"
+      ],
+      "slides": [
+        "잠은 시간보다 구조: 깊은 잠과 렘수면이 반복되는 구조가 흐트러지면 오래 자도 개운하지 않아 질문과 이어짐",
+        "숨은 질환: 수면무호흡증, 기면증 등이 있으면 졸려서 오래 자는 것이라 인과 방향이 반대일 수 있음",
+        "수면 관성: 깬 직후 뇌혈류와 뇌파 연구로 본 덜 깬 뇌, 낮잠 길이별 회복 시간 비교",
+        "생체리듬 교란: 늦잠과 주말 몰아자기, 사회적 시차와 건강 지표의 연관",
+        "잠의 질 저하: 자주 깨는 잠, 코골이, 늦은 밤 스마트폰 빛 요인과 반복 알람",
+        "결론적으로 여러 요인이 겹친 결과이며, 다만 오래 잘수록 졸림이 커진다는 직접 비교 연구는 없다는 한계"
+      ]
+    },
+    "cover": {
+      "title": "아주 오래 자면 오히려 왜 더 졸릴까?",
+      "subtitle": "잠의 양보다 구조와 타이밍이 열쇠예요",
+      "imageQuery": "sleepy person oversleeping bed"
+    },
+    "bodies": [
+      {
+        "title": "잠은 시간보다 구조",
+        "body": "잠은 얕은 잠, 깊은 잠, 렘수면(꿈꾸는 잠)이 반복되는 구조예요. 이 리듬이 깨지면 8~9시간을 자도 개운하지 않을 수 있어요. 오래 잔 뒤 더 졸린 이유도 여기서 시작돼요.",
+        "imageQuery": "sleep cycle brain waves"
+      },
+      {
+        "title": "졸려서 오래 자는 경우",
+        "body": "수면무호흡증, 기면증, 우울·불안, 갑상선 질환이 과수면과 연결될 수 있어요. 이때는 오래 자서 졸린 게 아니라 졸려서 오래 자는 거예요. 낮잠으로도 졸림이 안 풀리면 의심 신호예요.",
+        "imageQuery": "doctor sleep clinic patient"
+      },
+      {
+        "title": "깬 뒤에도 덜 깬 뇌",
+        "body": "수면 관성은 깬 직후 뇌가 각성 상태로 완전히 바뀌지 못해 멍한 상태예요. 뇌혈류 연구에서는 눈을 뜬 뒤에도 뇌 앞부분이 몇 분간 뒤처졌고, 깊은 잠의 느린 뇌파도 깬 직후 이어졌어요.",
+        "imageQuery": "groggy waking up morning"
+      },
+      {
+        "title": "어긋난 몸속 시계",
+        "body": "늦잠이나 주말 몰아자기는 몸속 시계를 흐트러뜨려요. 주말에 늦게 자고 일어나는 사회적 시차는 나쁜 기분, 건강 악화와 연관됐어요. 다만 졸림을 직접 잰 연구는 아니고 상관관계예요.",
+        "imageQuery": "alarm clock weekend sleep in"
+      },
+      {
+        "title": "길지만 얕은 잠",
+        "body": "오래 누워 있어도 자주 깨면 회복이 줄어요. 코골이, 호흡 장애, 늦은 밤 스마트폰 빛, 들쭉날쭉한 수면 시간이 잠의 리듬을 흔들 수 있어요. 다만 이 설명은 비전문 매체 근거가 많아요.",
+        "imageQuery": "phone in bed night"
+      },
+      {
+        "title": "여러 요인이 겹쳐요",
+        "body": "결론적으로 수면 관성, 생체시계 어긋남, 잠의 질 저하, 숨은 질환 요인이 겹쳐 더 졸릴 수 있어요. 다만 오래 잘수록 졸림이 커지는지 직접 비교한 연구는 확인하지 못했어요.",
+        "imageQuery": "tired woman yawning morning"
+      }
+    ],
+    "caption": "아주 오래 잤는데 왜 더 졸릴까요?\n\n잠의 양보다 구조와 타이밍에 단서가 있습니다.",
+    "hashtags": [
+      "수면",
+      "과수면",
+      "수면관성",
+      "생체리듬",
+      "사회적시차",
+      "주말늦잠",
+      "수면무호흡증",
+      "낮잠",
+      "피곤",
+      "졸림",
+      "건강정보",
+      "수면습관",
+      "깝휘캣"
+    ],
+    "sources": [
+      {
+        "title": "Mayo Clinic Proceedings",
+        "url": "https://www.mayoclinicproceedings.org/article/S0025-6196(20)30984-8/fulltext"
+      },
+      {
+        "title": "Nature and Science of Sleep",
+        "url": "https://www.tandfonline.com/doi/full/10.2147/NSS.S188911"
+      },
+      {
+        "title": "미국수면의학회",
+        "url": "https://aasm.org/social-jet-lag-is-associated-with-worse-mood-poorer-health-and-heart-disease/"
+      },
+      {
+        "title": "농민신문",
+        "url": "https://www.nongmin.com/article/20230407500435"
+      },
+      {
+        "title": "WebMD",
+        "url": "https://www.webmd.com/sleep-disorders/sleep-apnea-daytime-sleepiness"
+      }
+    ],
+    "answerable": true,
+    "holdReason": "",
+    "notes": "# 근거 노트: 아주 오래 자면 오히려 왜 더 졸릴까?\n\n**한 줄 결론:** 졸림의 원인은 잠의 양보다 잠의 구조, 생체시계 타이밍, 수면 질환으로 보입니다. 이 노트는 단일 원인을 확정한 자료가 아니라, 서로 다른 설명 4개를 모은 것입니다.\n\n## 1. 배경: 질문의 전제\n- 오래 잤다고 잘 잔 것은 아닙니다. 수면은 비렘수면, 깊은 수면, 렘수면이 반복되는 구조입니다. 이 리듬이 깨지면 8~9시간을 자도 개운하지 않을 수 있습니다. (https://koriscience.com/why-tired-after-long-sleep-sleep-quality-kr/, 민간 블로그성 자료라 근거 강도는 낮음)\n- 이 노트에서 확인한 자료는 대부분 '왜 더 졸린지'를 설명합니다. 오래 잘수록 졸림이 커진다는 점을 직접 비교 실험으로 보인 자료는 확인하지 못했습니다. 이 부분은 근거가 부족합니다.\n\n## 2. 핵심 이유: 서로 다른 설명 4가지\n\n### 설명 ① 수면 관성: 깨어난 뒤에도 뇌가 덜 깬 상태\n- 수면 관성은 깨어난 직후 뇌가 수면에서 각성으로 완전히 전환하지 못해 생기는 멍하고 나른한 상태입니다. (https://www.turmerry.com/blogs/dreamerry/sleep-inertia)\n- 뇌혈류 연구에서는 눈을 뜬 뒤에도 뇌 앞부분이 몇 분간 뒤처졌습니다. 뇌파 연구에서는 깊은 잠의 특징인 느린 델타파가 깬 직후 몇 분까지 이어졌습니다. (https://acibademinternational.com/blog/sleep-inertia-why-you-wake-up-groggy-and-how-to-shorten-it/)\n- 아데노신(졸음을 일으키는 물질)이 가설로 제시됩니다. 수면이 부족했던 사람은 깰 때 아데노신이 많이 남아 있어 졸림이 더 심할 수 있습니다. (https://en.wikipedia.org/wiki/Sleep_inertia, 2차 자료)\n- 한국 자료도 있습니다. 깊은 잠에서 알람으로 억지로 깨면 수면 관성이 상당히 오래 갑니다. (https://namu.wiki/w/%EC%9E%A0, 위키형 자료라 낮은 신뢰도)\n- **근거 강도: 중상.** 리뷰 논문이 있습니다. Hilditch & McHill(2019, *Nature and Science of Sleep*)은 수면 관성의 지속 시간이 수면 시간, 생체시계 시점, 앞선 수면 이력에 영향을 받는다고 정리했습니다. (https://www.tandfonline.com/doi/full/10.2147/NSS.S188911)\n- 단, 이 논문이 \"오래 잘수록 수면 관성이 더 심해진다\"고 말하는지는 확인하지 못했습니다. 이 연결은 확인된 사실이 아니라 해석입니다.\n- 참고 수치: 낮잠 연구에서 10분 낮잠은 바로 수행 능력이 좋아졌습니다. 30분 낮잠은 깬 뒤 35분에서 최대 95분이 지나서야 좋아졌고, 과제에 따라 달랐습니다. (같은 논문)\n\n### 설명 ② 생체리듬 교란: 늦잠과 주말 몰아자기\n- 오래 자면 몸속 시계가 흐트러져 상쾌하게 깨기 어려워진다는 설명이 있습니다. (https://www.christieclinic.com/News/6127/Can-Sleeping-Too-Much-Make-You-More-Tired/news-detail/, 병원 블로그라 근거 약함)\n- 사회적 시차(주말에 평일보다 늦게 자고 늦게 일어나는 것)와 관련한 근거도 있습니다. 미국수면의학회(AASM)가 소개한 예비 연구 결과에 따르면 사회적 시차는 나쁜 기분, 나쁜 건강, 심장질환과 연관됩니다. (https://aasm.org/social-jet-lag-is-associated-with-worse-mood-poorer-health-and-heart-disease/)\n- 한국 자료인 농민신문 칼럼 「맛있는 잠」은 주말에 몰아 자면 더 피곤하다고 설명하고, 부족한 잠은 20~30분 낮잠으로 보충하라고 권합니다. (https://www.nongmin.com/article/20230407500435)\n- **근거 강도: 중간.** 사회적 시차와 건강 지표의 연관은 연구가 있습니다. 다만 그 연구가 졸림 자체를 직접 측정했는지는 확인하지 못했습니다. 상관관계이지 인과관계가 아닙니다.\n- 한국 자료는 일반 건강 정보 수준이며, 학술 근거는 이번 검색에서 찾지 못했습니다.\n\n### 설명 ③ 잠의 질 저하: 길게 누워 있어도 자주 깨는 잠\n- 오래 자는 것이 자주 깨는 파편화된 수면의 신호일 수 있습니다. 본인이 모르게 자주 깨면 회복이 줄어 피곤합니다. (https://www.christieclinic.com/News/6127/Can-Sleeping-Too-Much-Make-You-More-Tired/news-detail/)\n- 코골이와 호흡 장애, 늦은 밤 스마트폰 빛, 들쭉날쭉한 수면 시간이 수면 주기를 흔들 수 있습니다. (https://koriscience.com/why-tired-after-long-sleep-sleep-quality-kr/)\n- 5분 간격 알람 반복도 사례로 있습니다. 한 국내 건강 정보 글은 이것이 수면 관성을 길게 하고 피로를 높인다고 소개합니다. 그 글은 하버드대 연구를 인용했다고 하지만, 원 연구는 확인하지 못했습니다. (https://allspine.com/info/info03.html?jb_code=70&jb_idx=16180&search_key=&search_keyword=&page=2, 2차 자료라 **근거 약함**)\n- **근거 강도: 중간~낮음.** 임상적으로 설득력은 있지만, 이번에 확인한 출처는 대부분 비전문 매체입니다.\n\n### 설명 ④ 숨은 질환: 졸림이 원인이고 긴 수면이 결과\n- 과도한 낮 졸림의 원인은 다양합니다. Mayo Clinic Proceedings의 임상 리뷰는 수면 부족, 수면호흡장애, 일주기리듬 수면-각성 장애 등을 꼽습니다. (https://www.mayoclinicproceedings.org/article/S0025-6196(20)30984-8/fulltext)\n- 수면무호흡증, 기면증, 우울·불안, 갑상선 질환 등이 과수면과 연결될 수 있습니다. 약물이 원인이 되기도 합니다. (https://www.webmd.com/sleep-disorders/sleep-apnea-daytime-sleepiness, https://www.thensf.org/excessive-daytime-sleepiness-narcolepsy-and-idiopathic-hypersomnia/)\n- 이 경우 인과 방향이 반대일 수 있습니다. 오래 자서 졸린 것이 아니라 졸려서 오래 자는 것입니다. 낮잠으로 졸림이 풀리지 않거나 아침에 일어나기 어렵다면 의심 신호입니다. (WebMD)\n- **근거 강도: 높음.** 의학 리뷰와 공신력 있는 수면 단체 자료가 근거입니다. 다만 이것은 질환이 있는 사람에게 해당하는 설명이며, 건강한 사람의 늦잠에는 적용되지 않습니다.\n\n### 보조 요인 (근거 약함)\n- 오래 자면 활동량이 줄어 몸이 더 처진다는 설명이 있습니다. (https://www.christieclinic.com/News/6127/Can-Sleeping-Too-Much-Make-You-More-Tired/news-detail/, 병원 블로그 수준)\n\n## 3. 출처 간 엇갈림과 한계\n- **지속 시간:** 수면 관성은 보통 30분 안에 가라앉는 것으로 알려져 있습니다. 연구에 따라 15~20분 만에 회복했다는 결과도 있습니다. 반면 30분 낮잠 뒤에는 최대 95분까지 이어졌다는 결과도 있어 조건에 따라 큰 차이가 납니다. (https://www.frontiersin.org/journals/physiology/articles/10.3389/fphys.2026.1855408/xml, https://www.tandfonline.com/doi/full/10.2147/NSS.S188911)\n- **'과수면'의 정의:** 자료마다 기준이 다릅니다. 이번 검색에서는 \"몇 시간부터 과수면인지\" 하나로 합의된 수치를 확인하지 못했습니다.\n- **확인하지 못한 것:** 건강한 성인을 대상으로 '수면 시간이 길수록 졸림이 커지는지'를 직접 비교한 연구는 찾지 못했습니다.\n\n## 4. 의미: 카드뉴스 6장 흐름 제안\n1. **표지:** 아주 오래 자면 오히려 왜 더 졸릴까?\n2. **배경:** 잠은 시간보다 구조로 결정됩니다. 깊은 잠과 렘수면이 반복되는 구조가 흐트러지면 오래 자도 개운하지 않습니다.\n3. **이유 ① 수면 관성:** 깬 뒤에도 뇌 앞부분이 한동안 덜 깨어 있습니다.\n4. **이유 ② 생체리듬:** 늦잠이나 주말 몰아자기가 몸속 시계를 어긋나게 합니다.\n5. **이유 ③과 ④:** 잠의 질이 떨어지거나 수면무호흡증 같은 질환이 숨어 있을 수 있습니다. 이 경우는 졸려서 오래 자는 것입니다.\n6. **마무리:** 기상 시간을 일정하게 유지하고 낮잠은 짧게 자세요. 낮 졸림이 계속되면 수면 클리닉에서 진료를 받으세요. 단, 이 처방은 위 자료들에서 도출한 일반 권고입니다.\n\n**카드 문구 주의:** \"오래 자면 반드시 더 졸리다\"는 단정은 피하세요. 근거가 가리키는 것은 \"원인이 여러 가지이고 질환 신호일 수 있다\"는 쪽입니다."
+  },
+  "data": {
+    "issue": 8,
+    "date": "2026.10.25",
+    "slides": [
+      {
+        "type": "cover",
+        "title": "아주 오래 자면 오히려 왜 더 졸릴까?",
+        "subtitle": "잠의 양보다 구조와 타이밍이 열쇠예요",
+        "image": {
+          "url": "https://images.unsplash.com/photo-1536700725792-2c26f8a41917?ixid=M3wxMTExOTQ5fDB8MXxzZWFyY2h8MXx8c2xlZXB5JTIwcGVyc29uJTIwb3ZlcnNsZWVwaW5nJTIwYmVkfGVufDF8MXx8fDE3OTI5MDIzODh8MA&ixlib=rb-4.1.0&w=1080&q=85&fm=jpg",
+          "credit": "Photo by DANNY G on Unsplash"
+        }
+      },
+      {
+        "type": "body",
+        "title": "잠은 시간보다 구조",
+        "body": "잠은 얕은 잠, 깊은 잠, 렘수면(꿈꾸는 잠)이 반복되는 구조예요. 이 리듬이 깨지면 8~9시간을 자도 개운하지 않을 수 있어요. 오래 잔 뒤 더 졸린 이유도 여기서 시작돼요.",
+        "image": {
+          "url": "https://images.unsplash.com/photo-1556750539-dc6305f4f248?ixid=M3wxMTExOTQ5fDB8MXxzZWFyY2h8MXx8c2xlZXAlMjBjeWNsZSUyMGJyYWluJTIwd2F2ZXN8ZW58MXwxfHx8MTc5MjkwMjM4OHww&ixlib=rb-4.1.0&w=1080&q=85&fm=jpg",
+          "credit": "Photo by Isabella Fischer on Unsplash"
+        }
+      },
+      {
+        "type": "body",
+        "title": "졸려서 오래 자는 경우",
+        "body": "수면무호흡증, 기면증, 우울·불안, 갑상선 질환이 과수면과 연결될 수 있어요. 이때는 오래 자서 졸린 게 아니라 졸려서 오래 자는 거예요. 낮잠으로도 졸림이 안 풀리면 의심 신호예요.",
+        "image": {
+          "url": "https://images.unsplash.com/photo-1592947945242-69312358628b?ixid=M3wxMTExOTQ5fDB8MXxzZWFyY2h8MXx8ZG9jdG9yJTIwc2xlZXAlMjBjbGluaWMlMjBwYXRpZW50fGVufDF8MXx8fDE3OTI5MDIzODl8MA&ixlib=rb-4.1.0&w=1080&q=85&fm=jpg",
+          "credit": "Photo by Mark Williams on Unsplash"
+        }
+      },
+      {
+        "type": "body",
+        "title": "깬 뒤에도 덜 깬 뇌",
+        "body": "수면 관성은 깬 직후 뇌가 각성 상태로 완전히 바뀌지 못해 멍한 상태예요. 뇌혈류 연구에서는 눈을 뜬 뒤에도 뇌 앞부분이 몇 분간 뒤처졌고, 깊은 잠의 느린 뇌파도 깬 직후 이어졌어요.",
+        "image": {
+          "url": "https://images.unsplash.com/photo-1741202138198-b3d676656f7c?ixid=M3wxMTExOTQ5fDB8MXxzZWFyY2h8MXx8Z3JvZ2d5JTIwd2FraW5nJTIwdXAlMjBtb3JuaW5nfGVufDF8MXx8fDE3OTI5MDIzODl8MA&ixlib=rb-4.1.0&w=1080&q=85&fm=jpg",
+          "credit": "Photo by Bobby Thapa on Unsplash"
+        }
+      },
+      {
+        "type": "body",
+        "title": "어긋난 몸속 시계",
+        "body": "늦잠이나 주말 몰아자기는 몸속 시계를 흐트러뜨려요. 주말에 늦게 자고 일어나는 사회적 시차는 나쁜 기분, 건강 악화와 연관됐어요. 다만 졸림을 직접 잰 연구는 아니고 상관관계예요.",
+        "image": {
+          "url": "https://images.unsplash.com/photo-1559575478-195bd74b0a57?ixid=M3wxMTExOTQ5fDB8MXxzZWFyY2h8MXx8YWxhcm0lMjBjbG9jayUyMHdlZWtlbmQlMjBzbGVlcCUyMGlufGVufDF8MXx8fDE3OTI5MDIzOTB8MA&ixlib=rb-4.1.0&w=1080&q=85&fm=jpg",
+          "credit": "Photo by Maks Styazhkin on Unsplash"
+        }
+      },
+      {
+        "type": "body",
+        "title": "길지만 얕은 잠",
+        "body": "오래 누워 있어도 자주 깨면 회복이 줄어요. 코골이, 호흡 장애, 늦은 밤 스마트폰 빛, 들쭉날쭉한 수면 시간이 잠의 리듬을 흔들 수 있어요. 다만 이 설명은 비전문 매체 근거가 많아요.",
+        "image": {
+          "url": "https://images.unsplash.com/photo-1675510183225-76c920848c29?ixid=M3wxMTExOTQ5fDB8MXxzZWFyY2h8MXx8cGhvbmUlMjBpbiUyMGJlZCUyMG5pZ2h0fGVufDF8MXx8fDE3OTI5MDIzOTB8MA&ixlib=rb-4.1.0&w=1080&q=85&fm=jpg",
+          "credit": "Photo by Kajetan Sumila on Unsplash"
+        }
+      },
+      {
+        "type": "body",
+        "title": "여러 요인이 겹쳐요",
+        "body": "결론적으로 수면 관성, 생체시계 어긋남, 잠의 질 저하, 숨은 질환 요인이 겹쳐 더 졸릴 수 있어요. 다만 오래 잘수록 졸림이 커지는지 직접 비교한 연구는 확인하지 못했어요.",
+        "image": {
+          "url": "https://images.unsplash.com/photo-1635719903325-eee182dfce90?ixid=M3wxMTExOTQ5fDB8MXxzZWFyY2h8MXx8dGlyZWQlMjB3b21hbiUyMHlhd25pbmclMjBtb3JuaW5nfGVufDF8MXx8fDE3OTI5MDIzOTF8MA&ixlib=rb-4.1.0&w=1080&q=85&fm=jpg",
+          "credit": "Photo by Poonam on Unsplash"
+        }
+      },
+      {
+        "type": "signature"
+      }
+    ]
+  }
+}
