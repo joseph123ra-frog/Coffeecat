@@ -1,0 +1,175 @@
+{
+  "issue": 7,
+  "question": "카라멜이 뭘까 - 밀크캬라멜, 카라멜향, 카라멜화 등 다양한 의미로 카라멜이라는 단어를 사용하는데 '카라멜' 이란 뭘까? 어원 포함",
+  "permalink": "https://www.instagram.com/p/De5bI0IGdyY/",
+  "caption": "카라멜이 뭘까?\n\n사탕, 콜라, 라떼에 같은 이름이 붙은 이유에 단서가 있습니다.\n\n출처: Wiktionary, Dictionary.com, 위키백과, 식품안전나라, 뉴스클레임 자료를 참고했습니다.\n사진: Unsplash\n\n#깝휘캣 #캐러멜 #카라멜 #어원 #캐러멜화 #캐러멜색소 #밀크캐러멜 #식품상식 #카드뉴스 #단어의비밀 #설탕 #음식과학\n\n*해당 콘텐츠는 AI의 조사만을 거친 게시물로, 내용에 오류가 있을 수 있습니다",
+  "draft": {
+    "plan": {
+      "answer": "캐러멜은 설탕을 가열해 갈색으로 변한 것과 그 결과물, 그리고 그것을 닮은 색·향·색소를 두루 가리키는 말이고, 어원은 사탕수수(갈대) 쪽이 유력하지만 확정되지 않았다.",
+      "reasons": [
+        "영어 사전은 캐러멜을 가열한 설탕 액체, 쫀득한 사탕, 황갈색 색 이름의 세 가지 뜻으로 푼다.",
+        "위키백과는 캐러멜을 설탕 같은 당을 가열해 만드는 식재료의 범위로 설명한다. 단일 물질이 아니라 가열한 설탕류 전체를 뜻한다.",
+        "캐러멜화는 설탕이 갈색으로 변하고 향 성분이 생기는 반응이다. 소스, 사탕, 색소, 향이 모두 여기서 갈라져 나온다.",
+        "캐러멜색소는 식약처 고시상 4종(I~IV)이고, 캐러멜 향은 캐러멜화의 향 성분을 합성하거나 조합한 경우가 많아 사탕과 다른 물건이다.",
+        "어원은 영어←프랑스어←스페인어←포르투갈어까지는 일치하지만, 그 이전은 라틴어 calamellus(갈대), 중세 라틴어 cannamellis(사탕수수+꿀), 아랍어설로 갈린다."
+      ],
+      "slides": [
+        "표기 바로잡기: 질문의 '카라멜'은 흔한 변형 표기이고 표준 표기는 '캐러멜'이라는 점과, 식약처 문서에 '카라멜색소'가 남아 있다는 점을 알린다.",
+        "뜻 정리: 영어 사전이 푸는 세 가지 뜻(액체, 사탕, 색 이름)과 가열한 설탕류 전체를 뜻하는 넓은 말이라는 점을 보여 준다.",
+        "어원: 영어←프랑스어←스페인어←포르투갈어 경로와 갈대·사탕수수 가설, 아랍어설, 정설이 없다는 점을 다룬다.",
+        "캐러멜화: 대략 150~180°C에서 설탕이 갈색이 되고 향 성분이 생기는 반응이며, 이것이 소스·사탕·향의 뿌리임을 잇는다.",
+        "같은 이름 다른 정체: 사탕, 소스, 색소 4종, 향이 각각 무엇인지 비교하고, 색소 안전성 논란이 엇갈린다는 한계를 덧붙인다.",
+        "결론: 결국 캐러멜은 가열한 설탕과 그 닮은 것들을 두루 가리키는 말이라는 답과, 어원이 가설 단계라는 한계로 마무리한다."
+      ]
+    },
+    "cover": {
+      "title": "카라멜이 뭘까?",
+      "subtitle": "사탕·색소·향·어원까지, 한 단어 속 여러 뜻",
+      "imageQuery": "caramel sauce dripping spoon"
+    },
+    "bodies": [
+      {
+        "title": "표기부터 헷갈려요",
+        "body": "표준 표기는 '캐러멜'이에요. '카라멜', '캬라멜'은 영어 발음을 옮기다 생긴 흔한 변형 표기예요. 다만 식약처 문서에는 아직 '카라멜색소'라고 적혀 있어요.",
+        "imageQuery": "caramel candies wrapped"
+      },
+      {
+        "title": "뜻이 세 가지예요",
+        "body": "영어 사전은 캐러멜을 세 가지로 풀어요. 설탕을 가열해 만든 액체, 쫀득한 사탕, 황갈색 색 이름이에요. 위키백과는 가열한 설탕류 전체를 뜻하는 넓은 말이라고 해요.",
+        "imageQuery": "caramel color swatch brown"
+      },
+      {
+        "title": "어원은 갈대?",
+        "body": "영어는 프랑스어, 스페인어, 포르투갈어를 거쳐 왔어요. 그 앞은 갈대를 뜻하는 라틴어 calamellus가 유력해요. 사탕수수+꿀이라는 설과 아랍어설도 있어서 정설은 없어요.",
+        "imageQuery": "sugar cane field"
+      },
+      {
+        "title": "설탕이 갈색 되는 반응",
+        "body": "캐러멜의 뿌리는 캐러멜화(설탕이 열에 갈색으로 변하는 반응)예요. 자료마다 다르지만 대략 150~180°C에서 시작해요. 이때 갈색과 함께 여러 향 성분이 생겨요.",
+        "imageQuery": "melting sugar pan caramelization"
+      },
+      {
+        "title": "같은 이름 다른 정체",
+        "body": "푸딩 위 캐러멜은 가열한 설탕이에요. 콜라의 캐러멜은 식약처 고시상 4종으로 나뉜 색소예요. 라떼의 캐러멜 향은 캐러멜화의 향 성분을 합성하거나 조합한 경우가 많아요. 다만 색소 일부의 안전성은 기관마다 의견이 엇갈려요.",
+        "imageQuery": "cola glass caramel latte"
+      },
+      {
+        "title": "결국 가열한 설탕",
+        "body": "결국 캐러멜은 설탕을 가열해 갈색이 된 것과 그것을 닮은 색·향·색소를 두루 가리키는 말이에요. 다만 어원은 사탕수수(갈대) 쪽이 유력할 뿐 아직 확정되지 않았어요.",
+        "imageQuery": "caramel pudding flan"
+      }
+    ],
+    "caption": "카라멜이 뭘까?\n\n사탕, 콜라, 라떼에 같은 이름이 붙은 이유에 단서가 있습니다.",
+    "hashtags": [
+      "깝휘캣",
+      "캐러멜",
+      "카라멜",
+      "어원",
+      "캐러멜화",
+      "캐러멜색소",
+      "밀크캐러멜",
+      "식품상식",
+      "카드뉴스",
+      "단어의비밀",
+      "설탕",
+      "음식과학"
+    ],
+    "sources": [
+      {
+        "title": "Wiktionary",
+        "url": "https://en.wiktionary.org/wiki/caramel"
+      },
+      {
+        "title": "Dictionary.com",
+        "url": "https://www.dictionary.com/browse/caramel"
+      },
+      {
+        "title": "위키백과",
+        "url": "https://en.wikipedia.org/wiki/Caramelization"
+      },
+      {
+        "title": "식품안전나라",
+        "url": "https://www.foodsafetykorea.go.kr/upload/residue/2-4-442.pdf"
+      },
+      {
+        "title": "뉴스클레임",
+        "url": "https://www.newsclaim.co.kr/news/articleView.html?idxno=3056592"
+      }
+    ],
+    "answerable": true,
+    "holdReason": "",
+    "notes": "# 근거 노트: 카라멜이 뭘까 (어원 포함)\n\n## 0. 먼저 바로잡을 점\n- **표준 표기는 '캐러멜'입니다.** \n'캐러멜'과 '카라멜' 중 올바른 표기는 '캐러멜'이다.\n \n'카라멜'은 영어 발음을 잘못 옮긴 비표준 표현이다.\n (뉴스클레임 https://www.newsclaim.co.kr/news/articleView.html?idxno=3056592)\n- 반면 식약처 문서에는 아직 '카라멜색소'라는 표기가 남아 있습니다. 식품안전나라의 고시 원문 제목이 \"카라멜색소 Caramel Color INS No.: 150a(I), 150b(II), 150c(III), 150d(IV)\"입니다. (https://www.foodsafetykorea.go.kr/upload/residue/2-4-442.pdf)\n- 카드뉴스에서는 '캐러멜'로 쓰고, '카라멜·캬라멜'은 흔한 변형 표기라고 한 줄로 언급하는 것을 권합니다.\n- 북한식 표현은 '기름사탕'과 '캬라멜'입니다. (한국어 위키백과 https://ko.wikipedia.org/wiki/캐러멜)\n\n## 1. 배경: 한 단어에 뜻이 여러 개\n- 영어 사전은 이 단어를 세 가지로 풉니다. \n캐러멜은 향미를 내거나 디저트 위에 붓는 데 쓰는 것이고, 부드럽고 쫀득한 사탕 모양으로 만들기도 하며, 그 우유빛 갈색 자체를 가리키기도 한다.\n (Dictionary.com https://www.dictionary.com/browse/caramel)\n  1. 설탕을 색이 변할 때까지 가열해 만든 액체로, 식품의 색과 맛을 내는 데 씁니다.\n  2. 설탕·버터·우유 등으로 만든 쫀득한 사탕입니다.\n  3. 황갈색 계열의 색 이름입니다.\n- 위키백과는 캐러멜을 \n설탕 같은 당을 가열해 만드는 \"식재료의 범위\"\n로 설명합니다. 단일 물질이 아니라 가열한 설탕류 전체를 뜻하는 넓은 말입니다. (https://en.wikipedia.org/wiki/Caramel)\n\n## 2. 핵심: 쓰임새별 '카라멜'의 정체\n\n| 쓰임 | 정체 | 근거 |\n|---|---|---|\n| **카라멜화** (반응) | 설탕을 가열해 갈색으로 변하는 비효소적 갈변 반응 | 아래 |\n| **카라멜 (원료·소스)** | 카라멜화한 설탕 자체. 크림을 섞으면 카라멜 소스 | Wikipedia |\n| **밀크캐러멜 (사탕)** | 카라멜화한 설탕에 우유·버터 등을 더한 과자 | 나무위키, 일반 설명 |\n| **캐러멜색소** | 당류를 열처리해 만든 착색료 (식품첨가물) | 식약처 |\n| **캐러멜 향·맛** | 카라멜화에서 생기는 향 성분을 흉내 낸 향 | 특허·향료 자료 |\n| **캐러멜색** | 색 이름 | 사전 |\n\n### 2-1. 카라멜화 (반응)\n- 위키백과는 카라멜화를 \n요리에서 버터 같은 풍미와 갈색을 얻으려고 널리 쓰는, 설탕의 갈변 과정\n이라고 설명합니다. (https://en.wikipedia.org/wiki/Caramelization)\n- 갈색은 카라멜란, 카라멜렌, 카라멜린이라는 세 종류의 고분자가 만듭니다. (같은 출처)\n- 온도 기준은 자료마다 조금 다릅니다.\n  - ScienceABC는 \n설탕이 약 170 °C에서 갈색으로 변한다\n고 합니다. (https://www.scienceabc.com/pure-sciences/sugar-turn-brown-melted-caramelization-maillard-reaction)\n  - 한국어 위키백과도 약 170°C(340°F)까지 천천히 가열한다고 적었습니다.\n  - Encyclopedia.com은 \n카라멜화가 약 310°F(약 154°C)에서 시작하고, 자당의 연한 카라멜 단계는 356°F(약 180°C)\n라고 합니다. (https://www.encyclopedia.com/food/encyclopedias-almanacs-transcripts-and-maps/caramelization)\n  - 당 종류별로도 달라서, 포도당·맥아당 등은 시작 온도가 다릅니다. (Steemit 글이라 신뢰도는 낮음)\n  - 정리하면 \"대략 150~180°C 사이에서 시작해 갈색이 진해진다\"가 가장 안전한 표현입니다.\n- 향 성분: \n카라멜화 중에는 단순당이 여러 향미 화합물로 바뀐다.\n 그중 하나가 디아세틸(biacetyl)입니다. (Encyclopedia.com)\n- 주의: 카라멜화는 마이야르 반응(아미노산이 관여하는 갈변)과 다릅니다. 밀크캐러멜은 우유 단백질 때문에 두 반응이 함께 일어납니다. 이 부분은 이번 검색에서 직접 확인한 근거가 약하므로, 쓴다면 \"함께 일어난다고 알려져 있다\" 정도로 쓰세요.\n\n### 2-2. 캐러멜색소 (식품첨가물)\n- 위키백과는 \n캐러멜색소를 당류를 열처리해 만드는 수용성 식용 색소\n라고 설명합니다. \n산, 알칼리, 염류가 함께 있는 경우가 많다.\n (https://en.wikipedia.org/wiki/Caramel_color)\n- 식약처 고시상 4종(I~IV, INS 150a~d)입니다. (식품안전나라 PDF)\n  - \n식약처는 4종의 일일섭취허용량(ADI)이 서로 다른데도 하나로 통합돼 있어 이를 국제기준으로 세분화한다고 했다.\n (식품저널 https://www.foodnews.co.kr/news/articleView.html?idxno=93270)\n  - 이 개정안은 위해평가를 더 정확하게 하려는 취지입니다.\n- III·IV형은 암모늄 화합물을 쓰는 공정에서 4-메틸이미다졸(4-MI)이 생긴다는 논란이 있습니다. (헬스경향 https://www.k-health.com/news/articleView.html?idxno=28827)\n  - **엇갈리는 점:** 같은 기사에 따르면 미국 FDA와 유럽식품안전청은 비교적 안전하다고 결론 냈지만, 미국 소비자단체 등은 여전히 문제를 제기합니다.\n- 사용 제한: 홍삼 등 건강기능식품과 천연식품에는 쓰지 못합니다. (컨슈머치 https://www.consumuch.com/news/articleView.html?idxno=33998, 라이프인 https://www.lifein.news/news/articleView.html?idxno=242)\n- 포인트: 짜장면이나 콜라의 검은색은 사탕이 아니라 이 색소 덕분입니다. 이름만 같고 용도는 완전히 다릅니다.\n\n### 2-3. 캐러멜 향·맛\n- 카라멜 같은 향은 고리형 엔올론류(말톨, 이소말톨, 푸라논 등)가 낸다고 특허 문헌에 나옵니다. (USPTO 11284634 https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/11284634)\n- 푸라네올(Furaneol)을 평가한 향료 전문가 패널은 이를 \"전형적인 카라멜, 과일 향, 약간 탄 느낌, 달콤함, 딸기 같은 향\"이라고 묘사했습니다. (USPTO 4889735 https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/4889735)\n- 한 제과업체 블로그는 천연 캐러멜 향에는 카라멜화한 설탕·유제품·바닐라가 들어가고, 인공 향에는 디아세틸·에틸말톨 등이 쓰인다고 설명합니다. (Bequet https://bequetconfections.com/blogs/news/what-is-natural-caramel-flavor-how-it-differs-from-artificial-caramel-flavoring) 업체 마케팅성 글이라 근거 강도는 낮습니다.\n- 정리: '카라멜 향'은 반드시 카라멜에서 온 것이 아닙니다. 카라멜화의 향 성분을 합성하거나 조합한 경우가 많습니다.\n\n### 2-4. 밀크캐러멜 (사탕)\n- 한국어 위키백과는 \n설탕을 졸여서 만드는, 베이지에서 어두운 갈색의 사탕\n이라고 합니다. 일반 사탕과 달리 약간 쫄깃하고 치아 사이에 끼기 쉽다고 덧붙입니다.\n- 나무위키는 설탕과 우유를 섞어 황갈색이 될 때까지 졸이는 과자이며, 달고나보다 부드럽고 끈적하다고 합니다. (https://namu.wiki/w/캐러멜) 위키 계열이라 근거 강도는 보통입니다.\n- 한국 식품공전의 '캐러멜류' 법적 정의는 이번 검색에서 확인하지 못했습니다. 카드에 쓰려면 별도 확인이 필요합니다.\n\n## 3. 어원: 정설이 없고 가설이 여럿\n이 단어의 어원은 확정되지 않았습니다. 이동 경로(영어 ← 프랑스어 ← 스페인어 ← 포르투갈어)는 비교적 일치하지만, 그 이전은 가설이 갈립니다.\n\n| 가설 | 내용 | 근거 강도 |\n|---|---|---|\n| ① 라틴어 *calamellus* | 후기 라틴어로 '갈대(calamus)'의 지소형. 사탕수수 줄기를 가리킨다는 해석 | 위키낱말사전의 1순위 설명. 비교적 널리 인용됨 |\n| ② 중세 라틴어 *cannamellis* | canna(사탕수수)+mella(꿀)의 합성어 | OED를 인용한 위키백과와 위키낱말사전에서 대안 설로 제시 |\n| ③ 아랍어 기원 | 위키백과는 일부 사전이 아랍어 *kora-moḥalláh*(단 것의 덩어리)와 연결한다고 소개 | 가장 약함. 나무위키는 '쿠랏 알 밀흐(단 소금 덩어리)'로 적었는데 표기와 뜻이 서로 다름 |\n\n- 경로: \n영어 caramel은 프랑스어 caramel에서, 프랑스어는 스페인어 caramelo에서, 스페인어는 포르투갈어 caramelo에서 왔고, 포르투갈어는 후기 라틴어 calamellus에서 변형된 것이다.\n (Wiktionary https://en.wiktionary.org/wiki/caramel)\n- ①은 \nchalumeau, shawm 같은 악기 이름과 같은 뿌리의 이중어(doublet)\n이기도 합니다. 카라멜이 갈대 피리와 어원이 같다는 점은 카드의 흥미로운 포인트입니다.\n- 한국어 위키백과는 영어 caramel이 프랑스어에서, 18세기쯤 스페인어 caramelo에서 왔다고 설명합니다. (https://ko.wikipedia.org/wiki/캐러멜)\n- 어원 전문 사이트 etymologist.ai도 \"genuinely disputed(정말로 논쟁 중)\"라고 평가합니다. (https://etymologist.ai/word/caramel)\n- 나무위키가 말하는 '카라멜루스(설탕 막대기)'는 ①·② 계열의 설명으로 보입니다. 다만 다른 출처에서 같은 형태는 확인하지 못했습니다.\n\n## 4. 의미: 카드 마지막 메시지\n- '카라멜'은 하나의 물질 이름이 아니라 \"설탕을 가열해 갈색으로 변하는 현상과, 그 결과물, 그리고 그것을 닮은 것들\"을 두루 가리키는 말입니다.\n  - 반응: 카라멜화\n  - 결과물: 소스와 사탕\n  - 공산품: 색소\n  - 흉내: 향\n  - 색: 색 이름\n- 같은 단어라도 맥락에 따라 가리키는 것이 다릅니다.\n  - 캐러멜 마키아토의 '캐러멜'은 시럽과 향입니다.\n  - 콜라의 '캐러멜'은 색소입니다.\n  - 푸딩 위의 '캐러멜'은 카라멜화한 설탕입니다.\n- 어원은 사탕수수(갈대) 쪽이 유력하지만 확정되지는 않았습니다.\n\n## 5. 카드 구성 제안 (6장)\n1. 표지: 카라멜이 뭘까?\n2. 표기부터 헷갈린다. 정답은 캐러멜이고, 카라멜은 흔한 비표준 표기\n3. 어원: 사탕수수·갈대 → 포르투갈어 → 스페인어 → 프랑스어 → 영어, 그리고 아랍어설. 정설은 없음\n4. 카라멜화: 설탕이 갈색이 되고 향이 생기는 반응 (온도는 대략 150~180°C로 자료마다 다름)\n5. 같은 이름 다른 정체: 사탕, 소스, 색소(4종), 향\n6. 정리: 카라멜은 '가열한 설탕과 그 닮은 것들'. 콜라의 색과 라떼의 향은 사탕과 다른 물건\n\n## 6. 한계\n- 한국 식품공전의 '캐러멜류' 정의는 확인하지 못했습니다.\n- 카라멜화 온도는 출처마다 다릅니다(약 154~180°C).\n- 어원은 가설 단계입니다.\n- 여러 출처가 위키·블로그·특허 문헌이라, 공신력 있는 근거는 식약처 자료와 언론 기사가 중심입니다."
+  },
+  "data": {
+    "issue": 7,
+    "date": "2026.10.25",
+    "slides": [
+      {
+        "type": "cover",
+        "title": "카라멜이 뭘까?",
+        "subtitle": "사탕·색소·향·어원까지, 한 단어 속 여러 뜻",
+        "image": {
+          "url": "https://images.unsplash.com/photo-1568657704598-602700bd9694?ixid=M3wxMTExOTQ5fDB8MXxzZWFyY2h8MXx8Y2FyYW1lbCUyMHNhdWNlJTIwZHJpcHBpbmclMjBzcG9vbnxlbnwxfDF8fHwxNzkyODg4MTU3fDA&ixlib=rb-4.1.0&w=1080&q=85&fm=jpg",
+          "credit": "Photo by Yulia Khlebnikova on Unsplash"
+        }
+      },
+      {
+        "type": "body",
+        "title": "표기부터 헷갈려요",
+        "body": "표준 표기는 '캐러멜'이에요. '카라멜', '캬라멜'은 영어 발음을 옮기다 생긴 흔한 변형 표기예요. 다만 식약처 문서에는 아직 '카라멜색소'라고 적혀 있어요.",
+        "image": {
+          "url": "https://images.unsplash.com/photo-1633057167397-150d8e714546?ixid=M3wxMTExOTQ5fDB8MXxzZWFyY2h8MXx8Y2FyYW1lbCUyMGNhbmRpZXMlMjB3cmFwcGVkfGVufDF8MXx8fDE3OTI4ODgxNTh8MA&ixlib=rb-4.1.0&w=1080&q=85&fm=jpg",
+          "credit": "Photo by Mesha Mittanasala on Unsplash"
+        }
+      },
+      {
+        "type": "body",
+        "title": "뜻이 세 가지예요",
+        "body": "영어 사전은 캐러멜을 세 가지로 풀어요. 설탕을 가열해 만든 액체, 쫀득한 사탕, 황갈색 색 이름이에요. 위키백과는 가열한 설탕류 전체를 뜻하는 넓은 말이라고 해요.",
+        "image": {
+          "url": "https://images.unsplash.com/photo-1571829604981-ea159f94e5ad?ixid=M3wxMTExOTQ5fDB8MXxzZWFyY2h8MXx8Y2FyYW1lbCUyMGNvbG9yJTIwc3dhdGNoJTIwYnJvd258ZW58MXwxfHx8MTc5Mjg4ODE1OHww&ixlib=rb-4.1.0&w=1080&q=85&fm=jpg",
+          "credit": "Photo by Felipe Santana on Unsplash"
+        }
+      },
+      {
+        "type": "body",
+        "title": "어원은 갈대?",
+        "body": "영어는 프랑스어, 스페인어, 포르투갈어를 거쳐 왔어요. 그 앞은 갈대를 뜻하는 라틴어 calamellus가 유력해요. 사탕수수+꿀이라는 설과 아랍어설도 있어서 정설은 없어요.",
+        "image": {
+          "url": "https://images.unsplash.com/photo-1573605954553-a39394846cfc?ixid=M3wxMTExOTQ5fDB8MXxzZWFyY2h8MXx8c3VnYXIlMjBjYW5lJTIwZmllbGR8ZW58MXwxfHx8MTc5Mjg4ODE1OXww&ixlib=rb-4.1.0&w=1080&q=85&fm=jpg",
+          "credit": "Photo by Milly Vueti on Unsplash"
+        }
+      },
+      {
+        "type": "body",
+        "title": "설탕이 갈색 되는 반응",
+        "body": "캐러멜의 뿌리는 캐러멜화(설탕이 열에 갈색으로 변하는 반응)예요. 자료마다 다르지만 대략 150~180°C에서 시작해요. 이때 갈색과 함께 여러 향 성분이 생겨요.",
+        "image": {
+          "url": "https://images.unsplash.com/photo-1602016753543-5b80eb8a35e2?ixid=M3wxMTExOTQ5fDB8MXxzZWFyY2h8MXx8bWVsdGluZyUyMHN1Z2FyJTIwcGFuJTIwY2FyYW1lbGl6YXRpb258ZW58MXwxfHx8MTc5Mjg4ODE1OXww&ixlib=rb-4.1.0&w=1080&q=85&fm=jpg",
+          "credit": "Photo by Thomas Ashlock on Unsplash"
+        }
+      },
+      {
+        "type": "body",
+        "title": "같은 이름 다른 정체",
+        "body": "푸딩 위 캐러멜은 가열한 설탕이에요. 콜라의 캐러멜은 식약처 고시상 4종으로 나뉜 색소예요. 라떼의 캐러멜 향은 캐러멜화의 향 성분을 합성하거나 조합한 경우가 많아요. 다만 색소 일부의 안전성은 기관마다 의견이 엇갈려요.",
+        "image": {
+          "url": "https://images.unsplash.com/photo-1786783506850-eb8d9d583ee2?ixid=M3wxMTExOTQ5fDB8MXxzZWFyY2h8MXx8Y29sYSUyMGdsYXNzJTIwY2FyYW1lbCUyMGxhdHRlfGVufDF8MXx8fDE3OTI4ODgxNjB8MA&ixlib=rb-4.1.0&w=1080&q=85&fm=jpg",
+          "credit": "Photo by TuanAnh Blue on Unsplash"
+        }
+      },
+      {
+        "type": "body",
+        "title": "결국 가열한 설탕",
+        "body": "결국 캐러멜은 설탕을 가열해 갈색이 된 것과 그것을 닮은 색·향·색소를 두루 가리키는 말이에요. 다만 어원은 사탕수수(갈대) 쪽이 유력할 뿐 아직 확정되지 않았어요.",
+        "image": {
+          "url": "https://images.unsplash.com/photo-1653988354010-39637252a2db?ixid=M3wxMTExOTQ5fDB8MXxzZWFyY2h8MXx8Y2FyYW1lbCUyMHB1ZGRpbmclMjBmbGFufGVufDF8MXx8fDE3OTI4ODgxNjB8MA&ixlib=rb-4.1.0&w=1080&q=85&fm=jpg",
+          "credit": "Photo by Max Griss on Unsplash"
+        }
+      },
+      {
+        "type": "signature"
+      }
+    ]
+  }
+}
