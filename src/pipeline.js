@@ -160,7 +160,10 @@ async function fail() {
 //   node src/pipeline.js repost <archive 파일> <슬라이드 폴더 이름>
 async function repost() {
   const [archiveFile, dir] = process.argv.slice(3);
-  const record = JSON.parse(await readFile(archiveFile, 'utf8'));
+  // 기록 파일이 없으면(기록 선저장 이전 실패 건) 워크플로 입력으로 받은 본문을 쓴다.
+  const record = await readFile(archiveFile, 'utf8')
+    .then(JSON.parse)
+    .catch(() => ({ caption: env('CAPTION'), question: process.env.QUESTION ?? '' }));
   const base = env('PAGES_BASE_URL').replace(/\/$/, '');
   const urls = [];
   for (let i = 1; i <= 8; i++) {

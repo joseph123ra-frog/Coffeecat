@@ -16,6 +16,14 @@ on:
       new_dir:
         description: '새로 올릴 폴더 이름 (예전 주소 캐시를 피하기 위해 새 이름)'
         required: true
+      caption:
+        description: '기록 파일이 없을 때만: 게시물 본문'
+        required: false
+        default: ''
+      question:
+        description: '기록 파일이 없을 때만: 질문'
+        required: false
+        default: ''
 
 permissions:
   contents: write
@@ -37,6 +45,8 @@ jobs:
       IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
       PAGES_BASE_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}
       GH_TOKEN: ${{ github.token }}
+      CAPTION: ${{ inputs.caption }}
+      QUESTION: ${{ inputs.question }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
