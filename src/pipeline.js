@@ -84,6 +84,12 @@ async function prepare() {
   const caption = buildCaption(draft, images.map((i) => i.credit));
   await writeFile(join(PATHS.post, 'data.json'), JSON.stringify({ data, draft }, null, 2));
   await writeFile(join(PATHS.post, 'caption.txt'), caption);
+  // 게시 전에 기록부터 남긴다. 게시 단계가 실패해도 재게시 작업(repost.yml)으로 다시 올릴 수 있다.
+  await mkdir(PATHS.archive, { recursive: true });
+  await writeFile(
+    join(PATHS.archive, `${postId}.json`),
+    `${JSON.stringify({ issue: data.issue, question: item.question, permalink: null, caption, draft, data }, null, 2)}\n`,
+  );
 
   const browser = await chromium.launch();
   try {

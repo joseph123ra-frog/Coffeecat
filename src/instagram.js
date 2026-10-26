@@ -43,7 +43,25 @@ export async function publishCarousel(imageUrls, caption) {
   });
   await waitFinished(carousel);
 
-  const { id: mediaId } = await call('POST', `/${user}/media_publish`, { creation_id: carousel });
+  const mediaId = await publishWithRetry(user, carousel, caption);
   const { permalink } = await call('GET', `/${mediaId}`, { fields: 'permalink' });
   return { mediaId, permalink };
+}
+
+// 처리 완료(FINISHED) 직후에도 media_publish가 'Media ID is not available'로 실패할 때가 있다.
+// 그 사이 실제로는 게시됐을 수 있으므로, 다시 시도하기 전에 최근 게시물에 같은 본문이 있는지 먼저 본다.
+async function publishWithRetry(user, carousel, caption) {
+  for (let attempt = 1; ; attempt++) {
+    try {
+      const { id } = await call('POST', `/${user}/media_publish`, { creation_id: carousel });
+      return id;
+    } catch (err) {
+      if (attempt >= 4) throw err;
+      console.warn(`게시 재시도 ${attempt}/3: ${err.message}`);
+      await sleep(20_000 * attempt);
+      const { data = [] } = await call('GET', `/${user}/media`, { fields: 'id,caption', limit: '3' });
+      const already = data.find((m) => m.caption === caption);
+      if (already) return already.id;
+    }
+  }
 }
