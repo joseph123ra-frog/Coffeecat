@@ -1,0 +1,28 @@
+{
+  "months": {
+    "2026-10": {
+      "usd": 0,
+      "runs": 1
+    }
+  },
+  "usedBackups": [
+    "001.json",
+    "002.json"
+  ],
+  "history": [
+    {
+      "no": 1,
+      "date": "2026-10-27",
+      "title": "사라진 참치 츄르 사건",
+      "source": "backup",
+      "usd": 0
+    },
+    {
+      "no": 2,
+      "date": "2026-10-28",
+      "title": "옮겨진 책갈피 사건",
+      "source": "backup",
+      "usd": 0
+    }
+  ]
+}

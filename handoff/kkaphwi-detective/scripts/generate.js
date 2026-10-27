@@ -10,7 +10,16 @@ import { z } from 'zod';
 import { MODEL, PRICE, MONTHLY_BUDGET_USD, MAX_RUN_COST_USD, MAX_ATTEMPTS, PICKS, PATHS, kstDate, addDays } from './config.js';
 import { Case, IDS, checkCase, playerText, toPublic } from './case.js';
 
-const client = new Anthropic();
+const client = process.env.ANTHROPIC_API_KEY ? new Anthropic({ maxRetries: 0, timeout: 120000 }) : null;
+let activeLedger;
+let reserved = 0;
+let charged = 0;
+let apiUnavailable = false;
+const runMonth = kstDate().month;
+const roundUp = n => Math.ceil(n * 1e6) / 1e6;
+async function saveLedger() {
+  await writeFile(PATHS.ledger, `${JSON.stringify(activeLedger, null, 2)}\n`);
+}
 
 // 사건이 매일 비슷해지지 않도록 장소와 사건 종류를 코드에서 골라 준다.
 const PLACES = ['할머니 집 부엌', '동네 고양이 카페', '골목 생선가게', '도서관 창가', '꽃집 온실', '빵집 진열대', '학교 과학실', '캠핑장 텐트', '세탁소', '아파트 옥상 정원', '바닷가 민박집', '고양이 미용실', '동네 문구점', '수족관 매표소', '시골 외갓집 마루'];
@@ -50,19 +59,38 @@ const costOf = (u) =>
   (u.input * PRICE.inputPerMTok + u.output * PRICE.outputPerMTok + u.cacheWrite * PRICE.cacheWritePerMTok + u.cacheRead * PRICE.cacheReadPerMTok) / 1e6;
 
 async function ask(system, content, format, effort) {
-  const response = await client.beta.messages.parse({
-    model: MODEL,
-    max_tokens: 16000,
-    betas: ['server-side-fallback-2026-07-01'],
-    fallbacks: 'default',
-    output_config: { effort, format: betaZodOutputFormat(format) },
-    system,
-    messages: [{ role: 'user', content }],
-  });
+  const output_config = { effort, format: betaZodOutputFormat(format) };
+  const messages = [{ role: 'user', content }];
+  const max_tokens = format === Case ? 6000 : 2000;
+  // 응답 전에 중단되더라도 비용이 사라지지 않게 호출 최대액을 먼저 기록한다.
+  const count = await client.beta.messages.countTokens({ model: MODEL, system, messages, output_config });
+  const reserve = roundUp(((count.input_tokens + 1024) * PRICE.inputPerMTok + max_tokens * PRICE.outputPerMTok) / 1e6);
+  const month = activeLedger.months[runMonth];
+  if (month.usd + reserve > MONTHLY_BUDGET_USD || charged + reserved + reserve > MAX_RUN_COST_USD) {
+    throw new Error('예산 상한으로 예비 사건 사용');
+  }
+  reserved += reserve;
+  month.usd = roundUp(month.usd + reserve);
+  await saveLedger();
+  let response;
+  try {
+    // 다른 모델로 자동 전환하면 단가가 바뀌므로 지정한 모델만 호출한다.
+    response = await client.beta.messages.create({ model: MODEL, max_tokens, output_config, system, messages });
+  } catch (error) {
+    apiUnavailable = true;
+    // 청구 여부가 불확실하면 예약액을 유지하고 이 실행에서는 재전송하지 않는다.
+    throw new Error(`API 응답을 확인하지 못함 (${error.status ?? '연결 오류'}). 예약 비용 유지`);
+  }
   record(response.usage);
-  if (response.stop_reason === 'refusal') throw new Error(`요청 거절: ${response.stop_details?.explanation ?? '사유 없음'}`);
-  if (!response.parsed_output) throw new Error('JSON을 해석하지 못함');
-  return response.parsed_output;
+  const actual = costOf({ input: response.usage.input_tokens ?? 0, output: response.usage.output_tokens ?? 0,
+    cacheWrite: response.usage.cache_creation_input_tokens ?? 0, cacheRead: response.usage.cache_read_input_tokens ?? 0 });
+  reserved = Math.max(0, reserved - reserve);
+  charged += actual;
+  month.usd = roundUp(Math.max(0, month.usd - reserve + actual));
+  await saveLedger();
+  if (response.stop_reason !== 'end_turn') throw new Error(`생성 중단: ${response.stop_reason}`);
+  const text = response.content.filter(block => block.type === 'text').map(block => block.text).join('');
+  return format.parse(JSON.parse(text));
 }
 
 const solve = (c, clueIdx) =>
@@ -87,7 +115,8 @@ async function makeCase(recentTitles, feedback) {
   if (errors.length) return { c, problem: errors.join(' / ') };
 
   // 단서를 전부 봤을 때와, 꼭 필요한 단서만 봤을 때 모두 같은 범인이 나와야 한다.
-  const [all, minimal] = await Promise.all([solve(c), solve(c, cover)]);
+  const all = await solve(c);
+  const minimal = await solve(c, cover);
   const name = (id) => c.suspects.find((s) => s.id === id)?.name ?? id;
   if (all.culprit !== c.culprit) return { c, problem: `단서 전부로 푼 답(${name(all.culprit)})이 정답(${name(c.culprit)})과 다름: ${all.reasoning}` };
   if (minimal.culprit !== c.culprit) return { c, problem: `필요한 단서 ${cover.length}개로 푼 답(${name(minimal.culprit)})이 정답과 다름: ${minimal.reasoning}` };
@@ -109,16 +138,22 @@ async function pickBackup(ledger) {
   const unused = files.filter((f) => !ledger.usedBackups.includes(f));
   const file = unused[0] ?? ledger.usedBackups.find((f) => files.includes(f));
   ledger.usedBackups = [...ledger.usedBackups.filter((f) => f !== file), file];
-  return Case.parse(JSON.parse(await readFile(`${PATHS.backups}/${file}`, 'utf8')));
+  const c = Case.parse(JSON.parse(await readFile(`${PATHS.backups}/${file}`, 'utf8')));
+  const { errors } = checkCase(c);
+  if (errors.length) throw new Error(`예비 사건 오류: ${errors.join(' / ')}`);
+  return c;
 }
 
 async function caseFor(date, ledger) {
-  const { month } = kstDate();
-  const spent = () => ledger.months[month]?.usd ?? 0;
+  const spent = () => ledger.months[runMonth]?.usd ?? 0;
   const recent = ledger.history.slice(-14).map((h) => h.title);
   let feedback = '';
   for (let i = 1; i <= MAX_ATTEMPTS; i++) {
-    if (spent() + costOf(usage) + MAX_RUN_COST_USD / MAX_ATTEMPTS > MONTHLY_BUDGET_USD) {
+    if (!client || apiUnavailable) {
+      console.log('API 사용 불가 → 예비 사건 사용');
+      break;
+    }
+    if (spent() >= MONTHLY_BUDGET_USD || charged + reserved >= MAX_RUN_COST_USD) {
       console.log(`이번 달 예산 부족 ($${spent().toFixed(2)} / $${MONTHLY_BUDGET_USD}) → 예비 사건 사용`);
       break;
     }
@@ -140,7 +175,11 @@ async function caseFor(date, ledger) {
 }
 
 async function main() {
-  const ledger = await loadLedger();
+  const ledger = activeLedger = await loadLedger();
+  const monthRecord = ledger.months[runMonth] ??= { usd: 0, runs: 0 };
+  if (!Number.isFinite(monthRecord.usd) || monthRecord.usd < 0) throw new Error('비용 기록 오류');
+  monthRecord.runs += 1;
+  await saveLedger();
   const today = kstDate().day;
   await mkdir(PATHS.cases, { recursive: true });
   let latest = null;
@@ -152,21 +191,19 @@ async function main() {
     }
     const before = costOf(usage);
     const { c, source } = await caseFor(date, ledger);
-    const no = ledger.history.length + 1;
+    const no = Math.max(0, ...ledger.history.map(h => h.no)) + 1;
     await writeFile(path, `${JSON.stringify(toPublic(c, { no, date }), null, 2)}\n`);
     ledger.history.push({ no, date, title: c.title, source, usd: Math.round((costOf(usage) - before) * 10000) / 10000 });
     if (date === today) latest = path;
+    await saveLedger();
   }
   // 오늘 사건 파일을 latest.json으로도 둔다. 사이트는 날짜 파일이 없을 때 이것을 읽는다.
   const todayPath = latest ?? `${PATHS.cases}/${today}.json`;
   if (existsSync(todayPath)) await writeFile(`${PATHS.cases}/latest.json`, await readFile(todayPath));
 
-  const { month } = kstDate();
-  const m = (ledger.months[month] ??= { usd: 0, runs: 0 });
-  m.usd = Math.round((m.usd + costOf(usage)) * 10000) / 10000;
-  m.runs += 1;
+  const m = ledger.months[runMonth];
   await writeFile(PATHS.ledger, `${JSON.stringify(ledger, null, 2)}\n`);
-  console.log(`이번 실행 비용 $${costOf(usage).toFixed(4)} · 이번 달 누적 $${m.usd.toFixed(2)} / $${MONTHLY_BUDGET_USD}`);
+  console.log(`이번 실행 비용 $${costOf(usage).toFixed(4)} · 미확인 예약 포함 이번 달 기록 $${m.usd.toFixed(4)} / $${MONTHLY_BUDGET_USD}`);
 }
 
 main().catch((err) => {

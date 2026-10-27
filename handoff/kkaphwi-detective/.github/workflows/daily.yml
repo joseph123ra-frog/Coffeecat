@@ -1,0 +1,58 @@
+name: 매일 새 사건과 게임 배포
+
+on:
+  schedule:
+    - cron: '7 12 * * *' # 한국 시간 21:07
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: daily
+  cancel-in-progress: false
+
+jobs:
+  daily:
+    if: github.repository == 'joseph123ra-frog/kkaphwi-detective' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run check
+      - run: npm test
+      - name: 오늘과 내일 사건 준비
+        id: generate
+        run: npm run generate
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+      - name: 사건과 비용 기록 저장
+        if: always() && steps.generate.outcome != 'skipped'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add site/cases data/usage.json
+          if ! git diff --cached --quiet; then
+            git commit -m "오늘과 내일 사건·사용량 갱신"
+            git push
+          fi
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+      - name: 게임 전용 Pages 배포
+        id: deployment
+        uses: actions/deploy-pages@v4

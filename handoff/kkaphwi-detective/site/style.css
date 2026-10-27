@@ -116,3 +116,13 @@ button.suspect.selected { border-color: var(--gold); background: #2c261d; }
 .card-img { width: 100%; border-radius: 14px; margin-top: 16px; display: block; }
 .next { text-align: center; color: var(--muted); font-size: 14px; margin-top: 24px; }
 .next b { color: var(--text); }
+
+.compact { margin-top: 8px; font-size: 13px; }
+.suspects { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.mini-suspects { flex-wrap: wrap; overflow-x: visible; }
+.card-img { height: auto; }
+.confess, .solution, .intro, h1 { overflow-wrap: anywhere; }
+.btn, .clue button, .suspect { touch-action: manipulation; }
+:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }
+main:focus { outline: none; }
+.sticky { padding-bottom: max(16px, env(safe-area-inset-bottom)); }
