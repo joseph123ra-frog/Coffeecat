@@ -36,7 +36,7 @@
 
 ## 4. Claude API
 - https://platform.claude.com 에서 이 프로젝트 전용 API 키를 만든다 → `ANTHROPIC_API_KEY`
-- 코드에 월 $30 상한이 들어가 있다(`src/config.js`). 콘솔에서도 별도 한도를 걸 수 있는지 확인 권장.
+- 코드에 월 $40 상한이 들어가 있다 (월 $100 중 ZGOO AI Cortex $50, 개인 프로젝트 $50 = 깝휘캣 $40 + 게임 2개 $10)(`src/config.js`). 콘솔에서도 별도 한도를 걸 수 있는지 확인 권장.
 
 ## 5. GitHub
 1. 저장소를 공개(Public)로 둔다.

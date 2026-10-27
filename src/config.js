@@ -11,7 +11,8 @@ export const PRICE = {
   perWebSearch: 10 / 1000,
 };
 
-export const MONTHLY_BUDGET_USD = 30;
+// Claude API 월 $100을 ZGOO AI Cortex와 $50씩 나눈다. 개인 프로젝트 몫 $50 중 깝휘캣 $40, 나머지 $10은 밸런스 게임·탐정 게임.
+export const MONTHLY_BUDGET_USD = 40;
 // 한 번 실행에 들 수 있는 최대 비용 추정치. 남은 예산이 이보다 적으면 실행하지 않는다.
 export const MAX_RUN_COST_USD = 1;
 export const MAX_POSTS_PER_DAY = 3;
