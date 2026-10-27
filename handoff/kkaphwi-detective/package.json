@@ -1,0 +1,15 @@
+{
+  "name": "kkaphwi-detective",
+  "version": "0.1.0",
+  "private": true,
+  "description": "깝휘캣 탐정 게임: 매일 하나씩 새로 나오는 고양이 추리 사건",
+  "type": "module",
+  "scripts": {
+    "generate": "node scripts/generate.js",
+    "check": "node scripts/check-backups.js"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "1.3.0",
+    "zod": "4.6.7"
+  }
+}
