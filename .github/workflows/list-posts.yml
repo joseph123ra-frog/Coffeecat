@@ -1,0 +1,23 @@
+name: 게시물 목록 확인
+
+# 계정에 올라가 있는 게시물 링크와 캡션 첫 줄을 최신순으로 보여 준다.
+on:
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+jobs:
+  list:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: 목록
+        env:
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+        run: |
+          curl -sS --get "https://graph.instagram.com/v25.0/$IG_USER_ID/media" \
+            --data-urlencode "fields=permalink,timestamp,caption" --data-urlencode "limit=50" \
+            --data-urlencode "access_token=$IG_ACCESS_TOKEN" \
+            | jq -r '.data[] | "\(.timestamp)  \(.permalink)  \(.caption | split("\n")[0])"'
