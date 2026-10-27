@@ -1,0 +1,84 @@
+name: 번호 정리 (1회용)
+
+# 2026-10-27 번호 정리: No.07·08·09 → No.04·05·06.
+# 04·05는 저장된 원고로 다시 렌더링, 06은 원고가 없어 남아 있는 슬라이드의 호수 표기만 덮어쓴다.
+# 새로 게시한 뒤 예전 게시물 삭제를 시도한다.
+on:
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+  actions: read
+
+concurrency:
+  group: publish
+  cancel-in-progress: false
+
+jobs:
+  renumber:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    environment: github-pages
+    env:
+      IG_USER_ID: ${{ secrets.IG_USER_ID }}
+      IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+      PAGES_BASE_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+
+      - name: 슬라이드 만들기
+        run: |
+          node src/pipeline.js rerender archive/no004-2026-10-25.json no004-renum
+          node src/pipeline.js rerender archive/no005-2026-10-25.json no005-renum
+          gh run download 40308103142 --repo "${{ github.repository }}" -n github-pages -D /tmp/pages
+          tar -xf /tmp/pages/artifact.tar -C /tmp/pages
+          node src/pipeline.js patchissue /tmp/pages/no009-2026-10-26 no006-renum "No.06 · 2026.10.26"
+          ls out/post/slides/*
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: out/post/slides
+      - uses: actions/deploy-pages@v4
+
+      - name: 새 번호로 게시 (04 → 05 → 06 순서)
+        run: |
+          node src/pipeline.js repost archive/no004-2026-10-25.json no004-renum
+          node src/pipeline.js repost archive/no005-2026-10-25.json no005-renum
+          node src/pipeline.js repost archive/no006-2026-10-26.json no006-renum
+
+      - name: 예전 게시물 삭제 시도
+        continue-on-error: true
+        run: |
+          api=https://graph.instagram.com/v25.0
+          media=$(curl -sS --get "$api/$IG_USER_ID/media" --data-urlencode "fields=id,permalink" \
+            --data-urlencode "limit=50" --data-urlencode "access_token=$IG_ACCESS_TOKEN")
+          status=0
+          for f in archive/no004-2026-10-25.json archive/no005-2026-10-25.json archive/no006-2026-10-26.json; do
+            link=$(jq -r '.oldPermalink' "$f")
+            code=$(sed -E 's#.*/p/([^/?]+).*#\1#' <<<"$link")
+            id=$(jq -r --arg c "$code" '.data[] | select(.permalink | contains("/" + $c)) | .id' <<<"$media")
+            if [ -z "$id" ]; then echo "못 찾음: $link"; status=1; continue; fi
+            res=$(curl -sS -X DELETE "$api/$id" --data-urlencode "access_token=$IG_ACCESS_TOKEN")
+            echo "$link → $res"
+            jq -e '.success == true' <<<"$res" >/dev/null || status=1
+          done
+          exit $status
+
+      - name: 기록 커밋
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add archive
+          git diff --cached --quiet && exit 0
+          git commit -qm "번호 정리 게시 기록 갱신"
+          git push -q

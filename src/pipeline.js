@@ -171,13 +171,58 @@ async function repost() {
     urls.push(await publicUrl(`${base}/${name}`, join(PATHS.post, 'slides', name)));
   }
   const { permalink } = await publishCarousel(urls, record.caption);
-  record.replaced = [...(record.replaced ?? []), record.permalink];
+  if (record.permalink) record.replaced = [...(record.replaced ?? []), record.permalink];
   record.permalink = permalink;
   await writeFile(archiveFile, `${JSON.stringify(record, null, 2)}\n`);
-  console.log(`재게시 완료: ${permalink} (이전 게시물: ${record.replaced.at(-1)})`);
+  console.log(`재게시 완료: ${permalink}`);
 }
 
-const commands = { prepare, publish, fail, repost };
+// 저장된 원고로 슬라이드를 다시 렌더링한다 (번호 정리 등). Claude를 부르지 않는다.
+//   node src/pipeline.js rerender <archive 파일> <슬라이드 폴더 이름>
+async function rerender() {
+  const [archiveFile, dir] = process.argv.slice(3);
+  const { data } = JSON.parse(await readFile(archiveFile, 'utf8'));
+  const browser = await chromium.launch();
+  try {
+    await renderSlides(browser, data, styles[STYLE], join(PATHS.post, 'slides', dir));
+  } finally {
+    await browser.close();
+  }
+}
+
+// 원고가 없는 게시물의 슬라이드에서 오른쪽 위 호수 표기만 새 번호로 덮어쓴다.
+//   node src/pipeline.js patchissue <원본 폴더> <슬라이드 폴더 이름> <새 표기, 예: "No.06 · 2026.10.26">
+async function patchissue() {
+  const [srcDir, dir, label] = process.argv.slice(3);
+  const outDir = join(PATHS.post, 'slides', dir);
+  await mkdir(outDir, { recursive: true });
+  const browser = await chromium.launch();
+  const page = await browser.newPage({ viewport: { width: 1080, height: 1350 } });
+  try {
+    for (let i = 1; i <= 8; i++) {
+      const src = `data:image/jpeg;base64,${(await readFile(join(srcDir, `${i}.jpg`))).toString('base64')}`;
+      // 마지막 시그니처 장에는 호수 표기가 없다.
+      const overlay =
+        i === 8
+          ? ''
+          : `<div style="position:absolute;right:52px;top:48px;padding:8px 12px;color:#fff;font:24px 'Noto Sans KR';letter-spacing:.06em;
+              backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);background:rgba(20,19,19,.35);border-radius:6px">${label}</div>`;
+      await page.setContent(
+        `<!doctype html><html><head><meta charset="utf-8">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400&display=block">
+        <style>*{margin:0}body{width:1080px;height:1350px;position:relative}img{display:block}</style></head>
+        <body><img src="${src}" width="1080" height="1350">${overlay}</body></html>`,
+        { waitUntil: 'networkidle' },
+      );
+      await page.evaluate(() => document.fonts.ready);
+      await page.screenshot({ path: join(outDir, `${i}.jpg`), type: 'jpeg', quality: 92 });
+    }
+  } finally {
+    await browser.close();
+  }
+}
+
+const commands = { prepare, publish, fail, repost, rerender, patchissue };
 const command = commands[process.argv[2]];
 if (!command) {
   console.error('사용법: node src/pipeline.js prepare|publish|fail|repost');
