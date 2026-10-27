@@ -27,8 +27,12 @@ jobs:
             --data-urlencode "limit=50" --data-urlencode "access_token=$IG_ACCESS_TOKEN")
           status=0
           for link in $PERMALINKS; do
-            id=$(jq -r --arg l "$link" '.data[] | select(.permalink == $l) | .id' <<<"$media")
-            if [ -z "$id" ]; then echo "못 찾음: $link"; status=1; continue; fi
+            code=$(sed -E 's#.*/p/([^/?]+).*#\1#' <<<"$link")
+            id=$(jq -r --arg c "$code" '.data[] | select(.permalink | contains("/" + $c)) | .id' <<<"$media")
+            if [ -z "$id" ]; then
+              echo "못 찾음: $link"; echo "현재 계정 게시물:"; jq -r '.data[] | .permalink' <<<"$media"
+              status=1; continue
+            fi
             res=$(curl -sS -X DELETE "$api/$id" --data-urlencode "access_token=$IG_ACCESS_TOKEN")
             echo "$link → $res"
             jq -e '.success == true' <<<"$res" >/dev/null || status=1
