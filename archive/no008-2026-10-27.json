@@ -1,0 +1,167 @@
+{
+  "issue": 8,
+  "question": "왜 한국 아파트 이름은 점점 길어질까?",
+  "permalink": "https://www.instagram.com/p/De_pn-MFvKc/",
+  "caption": "아파트 이름이 점점 길어지는 이유, 왜 그럴까요?\n이름 구조와 건설사 사정에 단서가 있습니다.\n\n출처: 한국경제, 아시아경제, 스트레이트뉴스, 부동산학연구(KISS), 비즈한국 자료를 참고했습니다.\n사진: Unsplash\n\n#부동산 #아파트이름 #펫네임 #건설사브랜드 #깝휘캣\n\n*해당 콘텐츠는 AI의 조사만을 거친 게시물로, 내용에 오류가 있을 수 있습니다",
+  "draft": {
+    "plan": {
+      "answer": "한국 아파트 이름은 조립식 작명 구조, 펫네임·외래어 홍보, 건설사 컨소시엄, 이름이 집값을 올린다는 인식 요인이 겹쳐 길어졌다.",
+      "reasons": [
+        "이름 구조가 '지역명+건설사'에서 지역명·브랜드·펫네임·차수를 이어 붙이는 조립식으로 바뀌었다(서울시 자료와 여러 언론이 일치).",
+        "펫네임(애칭)과 외래어로 공원·숲·학군 같은 입지 장점을 알리고 단지를 고급스럽게 차별화한다(업계 해석과 전문가 인터뷰 중심).",
+        "건설사가 둘 이상 참여하는 컨소시엄(공동시공)이 이름을 나열하면서 20자를 넘기기도 한다(사례 중심).",
+        "브랜드 이름이 집값에 영향을 준다는 인식이 있다. 다만 연구는 '브랜드'의 효과이고 '길이'의 효과는 아니며, 효과도 약 1년의 단기다.",
+        "반론: 서울 10대 건설사 분양 단지의 평균 이름 길이는 2023년 9.53자에서 올해 7자로 줄었다. 표본이 작아 전국 추세로 보기는 어렵다."
+      ],
+      "slides": [
+        "질문과 배경: 이름이 실제로 얼마나 길어졌는지 1990년대 4.2자, 2019년 9.84자, 최장 25자로 보여 준다.",
+        "이유 ① 이름이 지역명+브랜드+펫네임+차수로 이어 붙이는 조립식이 된 과정과, 2000년 브랜드 시대가 질문과 이어지는 점.",
+        "이유 ② 펫네임과 외래어로 입지 장점을 알리고 고급스럽게 보이려는 전략.",
+        "이유 ③ 건설사가 함께 짓는 컨소시엄이 이름을 길게 만든 사례.",
+        "이유 ④ 이름이 집값을 올린다는 인식과, 브랜드 변경 연구(약 7.8%, 약 1년 단기) 및 길이와는 별개라는 한계.",
+        "결론적으로 여러 요인이 겹친 결과이고, 서울에서는 짧아진 흐름도 있으며 서울시가 권고형 가이드라인을 냈다는 점으로 마무리."
+      ]
+    },
+    "cover": {
+      "title": "왜 한국 아파트 이름은 점점 길어질까?",
+      "subtitle": "지역명·브랜드·펫네임이 이어 붙은 이름의 비밀",
+      "imageQuery": "Korean apartment complex buildings"
+    },
+    "bodies": [
+      {
+        "title": "4.2자에서 9.84자로",
+        "body": "1990년대 아파트 이름은 평균 4.2자였어요. 2019년 분양 단지는 평균 9.84자로 두 배 넘게 늘었어요. 최장 사례는 전남 나주의 25자 이름이에요.",
+        "imageQuery": "long apartment name sign Korea"
+      },
+      {
+        "title": "이름이 조립식이 됐어요",
+        "body": "예전엔 '압구정 현대'처럼 지역명과 건설사 이름이면 충분했어요. 지금은 지역명, 건설사, 브랜드, 펫네임(애칭), 차수를 이어 붙여요. 이 구조 변화가 길어진 가장 큰 이유예요.",
+        "imageQuery": "apartment entrance name signboard"
+      },
+      {
+        "title": "펫네임으로 입지를 홍보",
+        "body": "공원 근처면 '파크뷰', 숲이 있으면 '포레', 학군이 좋으면 '에듀'를 붙여요. 업계는 단지 차별화·고급화 전략으로 봐요. 다만 길게 지으면 분양이 잘된다는 실증 자료는 확인하지 못했어요.",
+        "imageQuery": "apartment park view forest"
+      },
+      {
+        "title": "건설사가 모이면 길어져요",
+        "body": "건설사가 둘만 돼도 이름이 이어져요. 월드건설과 반도건설이 함께 지은 동탄 단지는 이름이 20자를 넘겼어요. 컨소시엄(여러 건설사의 공동시공)이 이름을 길게 만든 요인이에요.",
+        "imageQuery": "construction company apartment site"
+      },
+      {
+        "title": "이름이 집값을 올릴까",
+        "body": "애칭 있는 아파트일수록 값이 오른다는 분위기가 있어요. 더 알려진 브랜드로 이름을 바꾼 아파트는 안 바꾼 주변 아파트보다 약 7.8% 올랐다는 연구가 있어요. 하지만 이는 브랜드 효과이고, 효과도 약 1년의 단기예요.",
+        "imageQuery": "apartment price rising chart"
+      },
+      {
+        "title": "결론적으로 요인이 겹쳤어요",
+        "body": "결론적으로 조립식 작명, 펫네임 홍보, 컨소시엄, 브랜드 인식 요인이 겹쳐 이름이 길어졌어요. 다만 서울 10대 건설사 분양 단지는 9.53자에서 7자로 줄었고, 서울시 가이드라인은 강제가 아닌 권고예요.",
+        "imageQuery": "Seoul apartment skyline"
+      }
+    ],
+    "caption": "아파트 이름이 점점 길어지는 이유, 왜 그럴까요?\n이름 구조와 건설사 사정에 단서가 있습니다.",
+    "hashtags": [
+      "부동산",
+      "아파트이름",
+      "펫네임",
+      "건설사브랜드"
+    ],
+    "sources": [
+      {
+        "title": "한국경제",
+        "url": "https://www.hankyung.com/article/2023012521737"
+      },
+      {
+        "title": "아시아경제",
+        "url": "https://www.asiae.co.kr/article/2023042314420253629"
+      },
+      {
+        "title": "스트레이트뉴스",
+        "url": "https://www.straightnews.co.kr/news/articleView.html?idxno=207385"
+      },
+      {
+        "title": "부동산학연구(KISS)",
+        "url": "https://kiss.kstudy.com/Detail/Ar?key=3874838"
+      },
+      {
+        "title": "비즈한국",
+        "url": "https://bizhankook.com/articles/seoul-apartment-names-shortened.html"
+      }
+    ],
+    "answerable": true,
+    "holdReason": "",
+    "notes": "조사를 시작합니다.\nReturns JSON string.\n# 근거 노트: 왜 한국 아파트 이름은 점점 길어질까?\n\n## 1. 질문 → 배경: 이름이 실제로 길어졌나\n- **1990년대 이전에는 단순했다.** 서울시에 따르면 \n1990년대 후반까지는 주로 지역명과 건설사 이름으로 아파트 이름을 지었다. 예는 '압구정 현대 아파트'다.\n (https://www.hankyung.com/article/2023012521737)\n- **글자 수는 두 배 이상 늘었다.** \n부동산인포에 따르면 2019년 분양 아파트 이름의 전국 평균은 9.84자다. 1990년대의 4.2자보다 두 배 이상 늘었다.\n (https://www.asiae.co.kr/article/2023042314420253629)\n  - 리얼캐스트(부동산114 자료)는 평균 글자 수를 1990년대 4.2자, 2000년대 6.1자, 2018년 9.32자로 집계했다. (https://www.dtnews24.com/news/articleView.html?idxno=729139)\n- **10자 넘는 이름이 절반을 넘는다.** \n지난해 전국에서 분양한 400개 단지 중 이름이 10자가 넘는 곳은 204곳으로, 절반이 넘는다.\n (https://www.wikitree.co.kr/articles/560108)\n- **최장 사례는 25자다.** \n전남 나주의 '광주전남공동혁신도시 빛가람 대방엘리움 로얄카운티 1차(2차)'가 총 25자다.\n (https://www.hankyung.com/article/2023012521737)\n\n## 2. 핵심 이유 (서로 다른 설명 4가지)\n\n### 설명 ① 이름 구조가 '지역명+건설사'에서 '조립식'으로 바뀜 (근거 강도: 높음)\n- 요즘 이름은 \n지역명에 택지지구, 브랜드, 차수, 설계 특징까지 담다 보니 길어졌다.\n (wikitree 위 URL)\n- 한국경제는 \n최근 이름이 지역(랜드마크)명, 건설사명, 브랜드명, 애칭(펫네임) 순으로 이뤄지는 사례가 많다\n고 정리했다. (https://www.hankyung.com/article/2023052845971)\n- 2000년에 브랜드 시대가 열렸다. \n삼성물산과 대림산업이 각각 래미안, e-편한세상을 내놓았다.\n (https://contents.kakaopay.com/contents/1038)\n- 이 설명은 여러 언론과 서울시 자료가 일치한다.\n\n### 설명 ② 펫네임(애칭)·외래어로 입지 장점을 홍보 (근거 강도: 중간~높음)\n- \n펫네임에는 규칙이 있다. 공원 근처면 '파크뷰', 숲이 있으면 '포레', 학군이 좋으면 '에듀', 대로변이면 '센트럴'을 쓴다.\n (https://www.asiae.co.kr/article/2023042314420253629)\n- 업계는 이를 \n단지의 차별화·고급화 전략\n으로 본다. (https://www.straightnews.co.kr/news/articleView.html?idxno=207385)\n- 외국어 이름의 효과에 대한 해석도 있다.\n  - 한 부동산법 교수는 \n소비자가 외국어 이름이 단지를 더 고급스럽고 덜 낡아 보이게 한다고 믿는 경향이 있다\n고 말했다. (https://www.koreatimes.co.kr/www/tech/2024/12/129_375598.html)\n- 다만 이 설명은 전문가 인터뷰와 업계 해석에 의존한다. 이름을 길게 지으면 분양 성적이 좋아진다는 실증 자료는 찾지 못했다.\n\n### 설명 ③ 건설사 컨소시엄(공동시공) 증가 (근거 강도: 중간~높음, 사례 중심)\n- \n건설사가 둘만 돼도 '래미안힐스테이트'·'래미안푸르지오'처럼 길어진다.\n (asiae 위 URL)\n- '동탄 시범 다은마을 월드메르디앙 반도유보라'는 \n월드건설과 반도건설이 함께 지으면서 20자를 넘겼다.\n (https://www.hankyung.com/article/2023012521737)\n- 컨소시엄 이름은 건설사 이름을 나열하거나 제3의 이름을 새로 만드는 방식이다. 후자는 3개 이상 건설사가 참여한 초대형 단지에서 나타난다. 이는 커뮤니티 글(에펨코리아)의 설명이라 신뢰도는 낮다. 스트레이트뉴스가 같은 구분을 확인해 준다. (https://www.straightnews.co.kr/news/articleView.html?idxno=207385)\n\n### 설명 ④ '이름이 집값을 올린다'는 인식 (근거 강도: 중간, 연구는 있으나 '길이'와는 별개)\n- 업계는 \n'애칭을 가진 아파트일수록 가격이 오른다'는 분위기\n를 배경으로 푼다. (https://www.hankyung.com/article/2023012521737)\n- 학술 근거는 부동산학연구(2021)의 현동우 논문이다.\n  - 이름을 바꾼 사례를 시간에 따라 비교했다. \n명칭 변경이 브랜드와 관련된 경우에만 유의한 결과가 나왔다.\n (https://kiss.kstudy.com/Detail/Ar?key=3874838)\n  - 언론은 이 논문을 인용해, 인지도가 더 높은 브랜드로 바꾼 아파트가 바꾸지 않은 주변 아파트보다 \n약 7.8% 가격 상승 효과가 있었다\n고 전했다. (https://www.asiae.co.kr/article/2023042314420253629)\n  - 같은 논문 초록은 \n브랜드 효과가 명칭 변경 직후 나타나지만 1년 정도의 단기에 그친다\n고 밝힌다. (KISS 위 URL)\n- 한계도 있다. 이 연구가 보여주는 것은 '브랜드 이름'의 효과다. 이름이 길수록 값이 오른다는 증거는 아니다. 언론이 쓰는 \"길고 복잡할수록 오른다\"는 표현은 업계의 인식으로 보는 편이 정확하다.\n- 보조 근거도 있다. 광주 봉선동 연구는 브랜드가 \n물리적·입지적 특성보다 가격에 가장 큰 영향을 미쳤다\n고 분석했다. (https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE09252506)\n- 설문 결과도 있다. 카카오페이 콘텐츠에 따르면 \n같은 입지에서 아파트를 살 때 브랜드를 가장 먼저 본다는 응답이 46%였다.\n (https://contents.kakaopay.com/contents/1038)\n\n## 3. 엇갈리는 내용·반대 근거\n- **최근에는 서울에서 오히려 짧아졌다는 분석이 있다.**\n  - 비즈한국은 청약홈 자료를 분석했다. 10대 건설사가 시공한 서울 민영 분양아파트의 평균 단지명 길이는 \n2023년 9.53자에서 올해 7자로 2.53자(26.5%) 줄었다.\n\n  - 배경으로는 \n핵심 입지 중심의 선별 수주와 고급 주거 브랜드 적용 확대\n를 꼽았다. 외래어 중심 작명 관행은 여전했다. (https://bizhankook.com/articles/seoul-apartment-names-shortened.html)\n  - 표본이 작다는 한계가 있다. 2023년 17건과 올해 16건, 서울, 10대 건설사만 비교했다. 전국 평균과 같은 추세라고 볼 수 없다.\n  - 건설사별로 간결하게 짓는 곳도 있다. 대표 사례는 \n지난해 청약 최고 경쟁률 212대 1을 기록한 '르엘대치'\n다. (wikitree 위 URL)\n- **\"길이\" 자체를 노린 것인지는 불분명하다.** 길어짐은 브랜드·펫네임·컨소시엄 같은 요소가 쌓인 부산물일 가능성이 크다. 길이 자체가 목적이라는 직접 증거는 찾지 못했다.\n\n## 4. 의미: 길어진 이름의 부작용과 대응\n- **시민 불편이 크다.** r114에 따르면 \n서울시 조사에서 시민의 72.3%가 외래어 아파트 이름을 인지하기 어렵다고 답했다.\n (https://r114.com/trends/wiki/sale/38a4a6fa-284b-8097-9c7c-e31cc9e09723)\n  - \"시어머니가 못 찾아오게\"라는 우스갯소리가 퍼졌다. (https://www.1boonnews.com/news/articleView.html?idxno=5493)\n- **차별화 목적이 무색해졌다.** \n차별화를 위해 만든 화려한 이름이 오히려 타박을 받고 있다는 지적이 나온다.\n (wikitree)\n- **공공성 문제도 있다.** \n대단지 아파트 이름은 도로명으로도 쓰여 주소로서 공공성이 담보돼야 한다는 지적이 나온다.\n (https://news.sbs.co.kr/news/endPage.do?news_id=N1007467348)\n- **서울시가 가이드라인을 냈다.** 2024년 2월 '새로 쓰는 공동주택 이름 길라잡이'를 냈다.\n  - 다섯 가지 가이드는 \n어려운 외국어 자제, 고유지명 활용, 펫네임 자제, 적정 글자 수 준수, 주민이 원하는 이름을 위한 제정 절차 이행\n이다. (https://v.daum.net/v/20240228091323316)\n  - 2023년 토론 단계의 안에는 \n펫네임 수식어를 최대 10자 이내로 하는 내용\n이 포함될 전망이었다. 확정본에도 이 기준이 들어갔는지는 확인하지 못했다. (https://www.khan.co.kr/article/202312181115001)\n  - 한계가 있다. \n강제가 아닌 권고라서, 민간 건설사와 입주자가 동참해야 한다.\n (경향신문 위 URL)\n  - 반대 의견도 있다. 서울시의원은 아파트가 사유재산이라는 점과 이름에 따라 가치가 달라진다는 점을 들었다. 글자 수 제한은 고유성을 해친다는 입장이다. (asiae 위 URL)\n- **해외 비교는 부족하다.** 국내 외래어 이름을 다룬 영문 매체(Korea Herald, Korea Times)는 찾았다. 다른 나라 아파트 이름 길이와 직접 비교한 자료는 이번 검색에서 확인하지 못했다.\n\n## 카드뉴스 6장 흐름 제안\n1. 질문: 왜 한국 아파트 이름은 점점 길어질까?\n2. 배경: 4.2자(1990년대) → 9.84자(2019년), 최장 25자\n3. 이유 ①②: 이름이 조립식이 됨 (지역명+브랜드+펫네임+차수)\n4. 이유 ③④: 컨소시엄과 '이름이 집값을 올린다'는 인식 (7.8% 연구, 단 효과는 약 1년의 단기)\n5. 반전: 서울 10대 건설사 분양 단지는 오히려 짧아짐 (9.53자 → 7자, 표본이 작음)\n6. 의미: 시민 불편, 서울시의 권고형 가이드라인, 실효성의 한계"
+  },
+  "data": {
+    "issue": 8,
+    "date": "2026.10.27",
+    "slides": [
+      {
+        "type": "cover",
+        "title": "왜 한국 아파트 이름은 점점 길어질까?",
+        "subtitle": "지역명·브랜드·펫네임이 이어 붙은 이름의 비밀",
+        "image": {
+          "url": "https://images.unsplash.com/photo-1725507203512-70287f5f9dbd?ixid=M3wxMTExOTQ5fDB8MXxzZWFyY2h8MXx8S29yZWFuJTIwYXBhcnRtZW50JTIwY29tcGxleCUyMGJ1aWxkaW5nc3xlbnwxfDF8fHwxNzkzMDk3MDY2fDA&ixlib=rb-4.1.0&w=1080&q=85&fm=jpg",
+          "credit": "Photo by WooSang Lee on Unsplash"
+        }
+      },
+      {
+        "type": "body",
+        "title": "4.2자에서 9.84자로",
+        "body": "1990년대 아파트 이름은 평균 4.2자였어요. 2019년 분양 단지는 평균 9.84자로 두 배 넘게 늘었어요. 최장 사례는 전남 나주의 25자 이름이에요.",
+        "image": {
+          "url": "https://images.unsplash.com/photo-1719306625402-8d645ba2c6ec?ixid=M3wxMTExOTQ5fDB8MXxzZWFyY2h8MXx8bG9uZyUyMGFwYXJ0bWVudCUyMG5hbWUlMjBzaWduJTIwS29yZWF8ZW58MXwxfHx8MTc5MzA5NzA2N3ww&ixlib=rb-4.1.0&w=1080&q=85&fm=jpg",
+          "credit": "Photo by YMA on Unsplash"
+        }
+      },
+      {
+        "type": "body",
+        "title": "이름이 조립식이 됐어요",
+        "body": "예전엔 '압구정 현대'처럼 지역명과 건설사 이름이면 충분했어요. 지금은 지역명, 건설사, 브랜드, 펫네임(애칭), 차수를 이어 붙여요. 이 구조 변화가 길어진 가장 큰 이유예요.",
+        "image": {
+          "url": "https://images.unsplash.com/photo-1770816306380-c6516c6dbbb1?ixid=M3wxMTExOTQ5fDB8MXxzZWFyY2h8MXx8YXBhcnRtZW50JTIwZW50cmFuY2UlMjBuYW1lJTIwc2lnbmJvYXJkfGVufDF8MXx8fDE3OTMwOTcwNjd8MA&ixlib=rb-4.1.0&w=1080&q=85&fm=jpg",
+          "credit": "Photo by Tim Schmidbauer on Unsplash"
+        }
+      },
+      {
+        "type": "body",
+        "title": "펫네임으로 입지를 홍보",
+        "body": "공원 근처면 '파크뷰', 숲이 있으면 '포레', 학군이 좋으면 '에듀'를 붙여요. 업계는 단지 차별화·고급화 전략으로 봐요. 다만 길게 지으면 분양이 잘된다는 실증 자료는 확인하지 못했어요.",
+        "image": {
+          "url": "https://images.unsplash.com/photo-1777209583063-5347b5960e86?ixid=M3wxMTExOTQ5fDB8MXxzZWFyY2h8MXx8YXBhcnRtZW50JTIwcGFyayUyMHZpZXclMjBmb3Jlc3R8ZW58MXwxfHx8MTc5MzA5NzA2OHww&ixlib=rb-4.1.0&w=1080&q=85&fm=jpg",
+          "credit": "Photo by Felix on Unsplash"
+        }
+      },
+      {
+        "type": "body",
+        "title": "건설사가 모이면 길어져요",
+        "body": "건설사가 둘만 돼도 이름이 이어져요. 월드건설과 반도건설이 함께 지은 동탄 단지는 이름이 20자를 넘겼어요. 컨소시엄(여러 건설사의 공동시공)이 이름을 길게 만든 요인이에요.",
+        "image": {
+          "url": "https://images.unsplash.com/photo-1760450020488-f612fc5689d9?ixid=M3wxMTExOTQ5fDB8MXxzZWFyY2h8MXx8Y29uc3RydWN0aW9uJTIwY29tcGFueSUyMGFwYXJ0bWVudCUyMHNpdGV8ZW58MXwxfHx8MTc5MzA5NzA2OHww&ixlib=rb-4.1.0&w=1080&q=85&fm=jpg",
+          "credit": "Photo by Haberdoedas on Unsplash"
+        }
+      },
+      {
+        "type": "body",
+        "title": "이름이 집값을 올릴까",
+        "body": "애칭 있는 아파트일수록 값이 오른다는 분위기가 있어요. 더 알려진 브랜드로 이름을 바꾼 아파트는 안 바꾼 주변 아파트보다 약 7.8% 올랐다는 연구가 있어요. 하지만 이는 브랜드 효과이고, 효과도 약 1년의 단기예요.",
+        "image": {
+          "url": "https://images.unsplash.com/photo-1745270917331-787c80129680?ixid=M3wxMTExOTQ5fDB8MXxzZWFyY2h8MXx8YXBhcnRtZW50JTIwcHJpY2UlMjByaXNpbmclMjBjaGFydHxlbnwxfDF8fHwxNzkzMDk3MDY5fDA&ixlib=rb-4.1.0&w=1080&q=85&fm=jpg",
+          "credit": "Photo by Arturo Añez on Unsplash"
+        }
+      },
+      {
+        "type": "body",
+        "title": "결론적으로 요인이 겹쳤어요",
+        "body": "결론적으로 조립식 작명, 펫네임 홍보, 컨소시엄, 브랜드 인식 요인이 겹쳐 이름이 길어졌어요. 다만 서울 10대 건설사 분양 단지는 9.53자에서 7자로 줄었고, 서울시 가이드라인은 강제가 아닌 권고예요.",
+        "image": {
+          "url": "https://images.unsplash.com/photo-1768006241304-6b833ee11611?ixid=M3wxMTExOTQ5fDB8MXxzZWFyY2h8MXx8U2VvdWwlMjBhcGFydG1lbnQlMjBza3lsaW5lfGVufDF8MXx8fDE3OTMwOTcwNjl8MA&ixlib=rb-4.1.0&w=1080&q=85&fm=jpg",
+          "credit": "Photo by zero take on Unsplash"
+        }
+      },
+      {
+        "type": "signature"
+      }
+    ]
+  }
+}
