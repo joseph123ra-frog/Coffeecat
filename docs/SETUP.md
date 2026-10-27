@@ -48,6 +48,7 @@
 6. 토큰 자동 갱신용: Fine-grained 개인 접근 토큰(저장소 Coffeecat만, 권한 Secrets: Read and write)을 만들어 `SECRETS_PAT`로 등록한다. 이 토큰에도 만료일이 있으니 만료 전에 새로 만들어 바꾼다.
 
 ## 동작 규칙 요약
+- Instagram API로는 게시물 삭제가 안 된다(2026-10-27 확인: `Unsupported delete request`). 삭제는 앱에서 직접 한다.
 - 매일 09:00, 13:00, 19:00 (KST) 실행. 한 번에 1개, 하루 최대 3개.
 - 대기 질문이 없거나 월 예산이 남지 않으면 아무것도 하지 않는다.
 - 인스타그램 아이디: @kkaphwi.cat (`src/config.js`의 `HANDLE`)
