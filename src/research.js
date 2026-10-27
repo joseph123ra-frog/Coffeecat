@@ -62,8 +62,8 @@ const Draft = z.object({
       }),
     )
     .describe(`정확히 ${BODY_SLIDES}개. 하나의 흐름으로 이어지고, 마지막 장은 요약이라는 표시 없이 내용으로 마무리`),
-  caption: z.string().describe('게시물 본문. 질문 한 줄 + 빈 줄 + 답의 단서 한 줄의 짧은 후킹. 슬라이드 결론을 반복하지 않음. 해시태그·출처·고지 문구는 넣지 않음'),
-  hashtags: z.array(z.string()).describe('해시태그 10~15개. # 없이'),
+  caption: z.string().describe('게시물 본문 두 줄. 첫 줄: 사람들이 실제로 검색할 핵심 검색어 문구 + 질문. 둘째 줄(빈 줄 없이 바로): 답의 단서 한 줄. 슬라이드 결론을 반복하지 않음. 해시태그·출처·고지 문구는 넣지 않음'),
+  hashtags: z.array(z.string()).describe('해시태그 정확히 4개: 넓은 주제 1개 + 구체적인 주제 3개. # 없이. 계정 이름(깝휘캣)은 넣지 않음'),
   sources: z
     .array(
       z.object({
