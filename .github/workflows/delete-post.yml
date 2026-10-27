@@ -1,0 +1,36 @@
+name: 게시물 삭제
+
+# 게시 URL로 인스타 게시물을 찾아 삭제한다. API가 삭제를 지원하지 않으면 오류 내용을 그대로 남긴다.
+on:
+  workflow_dispatch:
+    inputs:
+      permalinks:
+        description: '삭제할 게시물 URL (여러 개면 공백으로 구분)'
+        required: true
+
+permissions:
+  contents: read
+
+jobs:
+  delete:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    env:
+      IG_USER_ID: ${{ secrets.IG_USER_ID }}
+      IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+      PERMALINKS: ${{ inputs.permalinks }}
+    steps:
+      - name: 삭제
+        run: |
+          api=https://graph.instagram.com/v25.0
+          media=$(curl -sS --get "$api/$IG_USER_ID/media" --data-urlencode "fields=id,permalink" \
+            --data-urlencode "limit=50" --data-urlencode "access_token=$IG_ACCESS_TOKEN")
+          status=0
+          for link in $PERMALINKS; do
+            id=$(jq -r --arg l "$link" '.data[] | select(.permalink == $l) | .id' <<<"$media")
+            if [ -z "$id" ]; then echo "못 찾음: $link"; status=1; continue; fi
+            res=$(curl -sS -X DELETE "$api/$id" --data-urlencode "access_token=$IG_ACCESS_TOKEN")
+            echo "$link → $res"
+            jq -e '.success == true' <<<"$res" >/dev/null || status=1
+          done
+          exit $status
