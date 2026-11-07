@@ -22,7 +22,7 @@ permissions:
   id-token: write
 
 concurrency:
-  group: publish
+  group: pages-deploy
   cancel-in-progress: false
 
 jobs:
@@ -44,6 +44,8 @@ jobs:
       IGNORE_DAILY_LIMIT: ${{ inputs.ignore_daily_limit }}
       PAGES_BASE_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}
       GITHUB_RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+      SUPABASE_URL: ${{ vars.SUPABASE_URL }}
+      SUPABASE_ANON_KEY: ${{ secrets.SUPABASE_ANON_KEY }}
     steps:
       - uses: actions/checkout@v4
 
@@ -60,12 +62,15 @@ jobs:
         id: prepare
         run: node src/pipeline.js prepare
 
-      # 이번 호 이미지만 GitHub Pages에 배포한다 (이전 호 이미지는 게시 후 필요 없으므로 덮어씀)
+      - name: 게시물 이미지와 게임 사이트 합치기
+        if: steps.prepare.outputs.skip == 'false'
+        run: node scripts/build-pages.js out/post/slides
+
       - name: Pages 배포 준비
         if: steps.prepare.outputs.skip == 'false'
         uses: actions/upload-pages-artifact@v3
         with:
-          path: out/post/slides
+          path: out/pages
 
       - name: GitHub Pages에 이미지 올리기
         if: steps.prepare.outputs.skip == 'false'

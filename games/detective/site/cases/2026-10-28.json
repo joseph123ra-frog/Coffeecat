@@ -1,0 +1,70 @@
+{
+  "no": 2,
+  "date": "2026-10-28",
+  "title": "옮겨진 책갈피 사건",
+  "intro": "도서관 창가의 책갈피 5장이 쿠션 아래로 옮겨졌다. 오후 2시에는 책상 위에 있었고, 2시 10분에 자리를 지키던 사서가 발견했다. 그 사이 도서관에 있던 고양이는 네 마리뿐이다.",
+  "suspects": [
+    {
+      "id": "A",
+      "name": "나비",
+      "fur": "삼색",
+      "desc": "반짝이는 물건을 모으는 고양이"
+    },
+    {
+      "id": "B",
+      "name": "후추",
+      "fur": "턱시도",
+      "desc": "쿠션을 좋아하는 낮잠 대장"
+    },
+    {
+      "id": "C",
+      "name": "감자",
+      "fur": "갈색",
+      "desc": "사서와 함께 일하는 고양이"
+    },
+    {
+      "id": "D",
+      "name": "은비",
+      "fur": "고등어",
+      "desc": "창가에서 새를 구경하는 고양이"
+    }
+  ],
+  "clues": [
+    {
+      "id": "c1",
+      "label": "휴게실 확인",
+      "text": "후추는 1시 55분에 잠긴 휴게실에 들어갔다. 사서가 2시 15분에 열어 줄 때까지 방 안 영상에 계속 찍혔다."
+    },
+    {
+      "id": "c2",
+      "label": "책상 살펴보기",
+      "text": "책상에서 쿠션까지 책갈피와 같은 금색 종이 조각 3개가 이어진다. 쿠션 옆에는 턱시도 무늬 인형이 놓여 있다."
+    },
+    {
+      "id": "c3",
+      "label": "나비에게 묻기",
+      "text": "나비가 빈 수집 상자를 꼭 안고 있다. “상자가 비면 허전하다냥. 책갈피가 예뻐서 구경은 했다냥.”"
+    },
+    {
+      "id": "c4",
+      "label": "반납대 기록",
+      "text": "사서는 2시부터 2시 10분까지 감자를 안고 반납대에 있었다. 두 마리가 함께 찍힌 연속 영상에도 감자는 한 번도 내려가지 않는다."
+    },
+    {
+      "id": "c5",
+      "label": "쿠션 뒤지기",
+      "text": "쿠션 아래에서 책갈피 5장과 빈 수집 상자 뚜껑이 나왔다. 뚜껑에는 새로 묻은 금색 종이 가루가 있다."
+    },
+    {
+      "id": "c6",
+      "label": "인형 확인",
+      "text": "턱시도 인형은 사서가 1시부터 쿠션 옆에 둔 것이다. 인형 주변 종이 조각에도 금색 가루가 묻어 있다."
+    },
+    {
+      "id": "c7",
+      "label": "창가 영상",
+      "text": "2시부터 2시 10분까지 찍힌 연속 영상에서 은비는 잠긴 투명 새 구경방 안에 있다. 문은 사서가 2시 11분에 열어 주었다."
+    }
+  ],
+  "answer": "EEkCBQQHG0RGEggUbBMcD1FNBxsTGRw7AENXEggUwbKxwayoh/zxUIP83cGujNmWidq7iRLU1MuN9fCb9JkS27+iDdyhlN6zy4b0xITz9Q3YgYLclYEQxpiQh/75m+PTgq6XERAaD0JfQUdMAgQPUlJVhLa23ISixrukDd6my4HZxEia9ZnYgr7appUcDdiI+4f/4IP9/Q3esp7aqa3csKoYhvnpXEib9K3Zibbdp6UQwayYgdPVUIT04Q3YhZ7cn4zbnZvU/PtBQoT89caEsN+ynRECwbmkS1pRm97zg5S+3JW2Dd2upd6v44Dq1EZXgq+a3K+2DdqytdmB74HR8Eib2KjYgLrbuY3biI4Yh/PPmtrLgqaWHhLapanciqMYh+jgnPbnScaorNiNvNuDkRLUye6N7dxXg52y25Gexr60Dd6l34DEzEic+5rZgKnalJnduK7T4M9PUIXz2MG5rNm5qRHcsIrV8/6N7ehXha+e2oOCDd2QqdmO64blwEib96XZvaoWwa+Vwbmlh/bVm+PTRw9P"
+}

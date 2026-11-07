@@ -1,0 +1,63 @@
+name: 탐정 게임 새 사건 준비
+
+on:
+  schedule:
+    - cron: '7 12 * * *' # 한국 시간 21:07
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages-deploy
+  cancel-in-progress: false
+
+jobs:
+  daily:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    env:
+      GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+      GEMINI_FREE_TIER_CONFIRMED: ${{ vars.GEMINI_FREE_TIER_CONFIRMED }}
+      SUPABASE_URL: ${{ vars.SUPABASE_URL }}
+      SUPABASE_ANON_KEY: ${{ secrets.SUPABASE_ANON_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: games/detective/package-lock.json
+
+      - run: npm ci --prefix games/detective
+      - run: npm run check --prefix games/detective
+      - run: npm test --prefix games/detective
+
+      - name: 오늘과 내일 사건 준비
+        run: npm run generate --prefix games/detective
+
+      - name: 사건 기록 저장
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add games/detective/site/cases games/detective/data/usage.json
+          if ! git diff --cached --quiet; then
+            git commit -m "탐정 게임 사건 갱신"
+            git push
+          fi
+
+      - run: node scripts/build-pages.js
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: out/pages
+
+      - name: GitHub Pages 배포
+        id: deployment
+        uses: actions/deploy-pages@v4

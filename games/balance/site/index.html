@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>깝휘캣 밸런스</title>
+  <meta name="description" content="매일 하나씩 열리는 깝휘캣 밸런스 게임. 고르고 실시간 결과를 확인하세요.">
+  <meta name="theme-color" content="#151413">
+  <meta property="og:title" content="깝휘캣 밸런스">
+  <meta property="og:description" content="오늘은 어느 쪽? 투표하고 실시간 결과를 확인해 보세요.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top">
+    <a class="brand" href="./" aria-label="깝휘캣 밸런스 처음으로">깝휘캣 <span>밸런스</span></a>
+    <a class="detective-link" href="../detective/">오늘의 사건 →</a>
+  </header>
+
+  <main id="app" aria-live="polite">
+    <p class="loading">오늘의 질문을 고르는 중…</p>
+  </main>
+
+  <footer>
+    <a href="https://www.instagram.com/kkaphwi.cat/" target="_blank" rel="noopener">@kkaphwi.cat</a>
+    <span>매일 밤 12시에 새 질문</span>
+  </footer>
+
+  <script src="config.js"></script>
+  <script src="questions.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>

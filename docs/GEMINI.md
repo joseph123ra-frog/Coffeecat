@@ -23,4 +23,4 @@ API 응답에는 결제 등급이 보장되지 않습니다. 코드는 키가 �
 - [결제와 무료 등급](https://ai.google.dev/gemini-api/docs/billing)
 - [콘텐츠 생성 REST](https://ai.google.dev/api/generate-content)
 
-위 공식 문서는 2026-11-07 열어 확인했습니다. 기존 PLAN·SETUP·HANDOVER에 남은 유료 모델·예산 설명은 과거 기록입니다. 현행 공급자와 설정은 본 문서 및 코드가 기준입니다.
+위 공식 문서는 2026-11-07 열어 확인했습니다. 현행 공급자와 설정은 본 문서 및 코드가 기준입니다.

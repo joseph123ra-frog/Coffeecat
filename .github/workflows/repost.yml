@@ -32,7 +32,7 @@ permissions:
   actions: read
 
 concurrency:
-  group: publish
+  group: pages-deploy
   cancel-in-progress: false
 
 jobs:
@@ -47,6 +47,8 @@ jobs:
       GH_TOKEN: ${{ github.token }}
       CAPTION: ${{ inputs.caption }}
       QUESTION: ${{ inputs.question }}
+      SUPABASE_URL: ${{ vars.SUPABASE_URL }}
+      SUPABASE_ANON_KEY: ${{ secrets.SUPABASE_ANON_KEY }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -63,9 +65,12 @@ jobs:
           mv "/tmp/pages/${{ inputs.source_dir }}" "out/post/slides/${{ inputs.new_dir }}"
           ls "out/post/slides/${{ inputs.new_dir }}"
 
+      - name: 게시물 이미지와 게임 사이트 합치기
+        run: node scripts/build-pages.js out/post/slides
+
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: out/post/slides
+          path: out/pages
       - uses: actions/deploy-pages@v4
 
       - name: 재게시

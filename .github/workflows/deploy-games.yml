@@ -1,0 +1,52 @@
+name: 게임 사이트 배포
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [claude/brave-archimedes-77048b]
+    paths:
+      - 'games/**'
+      - 'scripts/build-pages.js'
+      - '.github/workflows/deploy-games.yml'
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages-deploy
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    env:
+      SUPABASE_URL: ${{ vars.SUPABASE_URL }}
+      SUPABASE_ANON_KEY: ${{ secrets.SUPABASE_ANON_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: games/detective/package-lock.json
+
+      - run: npm ci --prefix games/detective
+      - run: npm test --prefix games/balance
+      - run: npm run check --prefix games/detective
+      - run: npm test --prefix games/detective
+      - run: node scripts/build-pages.js
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: out/pages
+
+      - name: GitHub Pages 배포
+        id: deployment
+        uses: actions/deploy-pages@v4

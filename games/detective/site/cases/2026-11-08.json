@@ -1,0 +1,70 @@
+{
+  "no": 4,
+  "date": "2026-11-08",
+  "title": "찢어진 배달상자 사건",
+  "intro": "세탁소의 빈 배달상자 옆면에 둥근 구멍이 났다. 오후 4시에는 멀쩡했고 4시 6분에 발견했다. 세탁소에는 네 마리 고양이만 있었고 집사는 밖에 있었다.",
+  "suspects": [
+    {
+      "id": "A",
+      "name": "콩이",
+      "fur": "회색",
+      "desc": "종이상자에 숨는 걸 좋아한다"
+    },
+    {
+      "id": "B",
+      "name": "두리",
+      "fur": "고등어",
+      "desc": "빨래 구경을 좋아한다"
+    },
+    {
+      "id": "C",
+      "name": "까미",
+      "fur": "검정",
+      "desc": "수건 위에서 자는 걸 좋아한다"
+    },
+    {
+      "id": "D",
+      "name": "복실",
+      "fur": "삼색",
+      "desc": "뭐든 발로 꾹꾹 누른다"
+    }
+  ],
+  "clues": [
+    {
+      "id": "c1",
+      "label": "종이 비교하기",
+      "text": "상자는 겉이 흰색이고 안이 회색이다. 복실 발의 종이는 점심의 갈색 봉투와 색과 두께가 같다."
+    },
+    {
+      "id": "c2",
+      "label": "콩이 꼬리 확인",
+      "text": "콩이 꼬리 끝에 상자와 같은 흰 종이 조각이 2개 붙어 있다. “동그란 창문이 있으면 좋을 것 같았다냥…”"
+    },
+    {
+      "id": "c3",
+      "label": "복실 자리 영상",
+      "text": "복실은 4시부터 4시 6분까지 잠긴 휴게방의 카메라에 계속 찍혔다. 문은 집사가 돌아온 4시 10분까지 닫혀 있었다."
+    },
+    {
+      "id": "c4",
+      "label": "수건방 확인",
+      "text": "까미는 3시 50분부터 잠긴 수건방에 있었다. 4시 6분까지의 연속 영상에도 계속 보이고, 문은 4시 10분에 열렸다."
+    },
+    {
+      "id": "c5",
+      "label": "보관방 영상",
+      "text": "4시부터 4시 6분까지 두리는 잠긴 유리 보관방에서 내내 빨래를 보고 있다. 집사가 4시 10분에 돌아와 문을 열었다."
+    },
+    {
+      "id": "c6",
+      "label": "복실에게 묻기",
+      "text": "복실의 앞발에 갈색 종잇조각이 붙어 있다. “점심에 종이봉투를 꾹꾹 눌렀다냥.” 봉투는 아직 복실 자리 옆에 있다."
+    },
+    {
+      "id": "c7",
+      "label": "상자 살피기",
+      "text": "상자 구멍 아래에 회색 털과 새 종이 조각이 있다. 안쪽에는 작은 발톱 긁힌 자국 6개가 있다."
+    }
+  ],
+  "answer": "EEkCBQQHG0RGEggUbBMdD1NNBxsTGRw7AENXEggUxoGBxruUh+jgnPbnhbqiENm0mRHdu4zS3t+K1+RXhLiuEN6GkNqdldyl70uK1+Sc+onYg5IWwbqHwaewgODFm+vSSA8eEkFZQURFRF9WSVFDm/nngoue8oXclL3agoj63IDSxYT8zcGvsBLdh5navKAYX4fq7IPB6cC2gBICwbqtDQbT3e+LyeSbzq0S3KyWx4mFDduIwkuN5eCb/r0S3Ky+waa5xrucRUuK8sCb9K0S3I+fwayFx4C4S4fi8YTp+caXjBLanZPdurjT4M9PUILCxcabvd6rtRHct7zU6OJBnezPg56OENiKgdqXgdyv+0uKxvGb9K0S3a+GDd2TqNyl34HR8Eibz7DYgYLdppUfDduL3ofq1Eic2bHeraoWx4G5wbOxS4fD9YTq3ca4pBLajaHdppwYgN/oneDbScGTgNiGrN2smdul10uN7dyc26US3LCax4CFx4OES4HV8IPXwQ3ep7TdppUfD00="
+}

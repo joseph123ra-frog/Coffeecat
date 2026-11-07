@@ -1,9 +1,7 @@
-> 2026-11-07: 유료 생성 API를 해제하고 무료 API로 전환했습니다. 현행 설정·운영 상태는 [GEMINI.md](GEMINI.md)를 확인하세요. 아래의 이전 공급자·예산 설명은 과거 기록입니다.
-
 # 설정 가이드
 
 코드는 준비돼 있고, 아래 계정·키를 만들어 GitHub Secrets에 넣으면 동작한다.
-이 작업 환경에서는 Meta·Notion·사진 사이트 접속이 막혀 있어 **실제 연동 테스트는 아직 하지 못했다.** 모의(mock) 테스트만 통과했다.
+Gemini 무료 키를 사용하는 실제 자동 게시 검사는 아직 하지 않았다. 모의 검사는 통과했다.
 
 ## 1. Notion
 1. Notion에서 새 데이터베이스(표)를 만든다. 속성 이름은 정확히 아래와 같아야 한다.
@@ -36,14 +34,17 @@
 - Pexels: 2026-10 현재 신규 API 키 발급이 중단돼 있어 건너뛴다. 발급이 재개되면 `PEXELS_API_KEY`만 추가하면 자동으로 쓰인다.
 - Wikimedia Commons: 키 불필요
 
-## 4. Claude API
-- https://platform.claude.com 에서 이 프로젝트 전용 API 키를 만든다 → `ANTHROPIC_API_KEY`
-- 코드에 월 $40 상한이 들어가 있다 (월 $100 중 ZGOO AI Cortex $50, 개인 프로젝트 $50 = 깝휘캣 $40 + 게임 2개 $10)(`src/config.js`). 콘솔에서도 별도 한도를 걸 수 있는지 확인 권장.
+## 4. Gemini API 무료 등급
+- https://aistudio.google.com/apikey 에서 결제 계정이 연결되지 않은 프로젝트의 API 키를 만든다 → `GEMINI_API_KEY`.
+- 키는 채팅이나 코드에 넣지 않고 GitHub Secret에 직접 등록한다.
+- GitHub Variable `GEMINI_FREE_TIER_CONFIRMED`를 `true`로 등록한다. 무료 프로젝트임을 확인하기 전에는 설정하지 않는다.
+- 키 없음·무료 프로젝트 미확인·429·호출 오류에는 재시도하거나 유료 모델로 바꾸지 않는다. 자세한 내용은 [GEMINI.md](GEMINI.md)를 확인한다.
 
 ## 5. GitHub
 1. 저장소를 공개(Public)로 둔다.
-2. Settings → Secrets and variables → Actions 에 위 6개 값을 등록한다.
-   `ANTHROPIC_API_KEY`, `NOTION_TOKEN`, `NOTION_DATABASE_ID`, `IG_USER_ID`, `IG_ACCESS_TOKEN`, `UNSPLASH_ACCESS_KEY` (선택: `PEXELS_API_KEY`)
+2. Settings → Secrets and variables → Actions에 다음 값을 등록한다.
+   - Secrets: `GEMINI_API_KEY`, `NOTION_TOKEN`, `NOTION_DATABASE_ID`, `IG_USER_ID`, `IG_ACCESS_TOKEN`, `UNSPLASH_ACCESS_KEY`, `SUPABASE_ANON_KEY`, `SECRETS_PAT` (선택: `PEXELS_API_KEY`)
+   - Variables: `GEMINI_FREE_TIER_CONFIRMED=true`, `SUPABASE_URL`
 3. Settings → Pages → Source를 **GitHub Actions**로 바꾼다.
 4. 정기 실행(cron)은 기본 브랜치에서만 동작한다. 현재 기본 브랜치는 `claude/brave-archimedes-77048b`.
 5. Actions 탭 → '깝휘캣 자동 게시' → Run workflow로 첫 실행을 수동으로 해 본다.
@@ -52,5 +53,5 @@
 ## 동작 규칙 요약
 - Instagram API로는 게시물 삭제가 안 된다(2026-10-27 확인: `Unsupported delete request`). 삭제는 앱에서 직접 한다.
 - 매일 09:00, 13:00, 19:00 (KST) 실행. 한 번에 1개, 하루 최대 3개.
-- 대기 질문이 없거나 월 예산이 남지 않으면 아무것도 하지 않는다.
+- 대기 질문이 없거나 무료 호출을 쓸 수 없으면 게시하지 않는다.
 - 인스타그램 아이디: @kkaphwi.cat (`src/config.js`의 `HANDLE`)
