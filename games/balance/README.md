@@ -4,6 +4,8 @@
 
 ## 투표 저장소 연결
 
+2026-11-07 `kkaphwi-balance` 무료 프로젝트 연결과 투표 함수 설치를 완료했습니다.
+
 1. Supabase SQL Editor에서 `backend/supabase.sql`을 실행합니다.
 2. GitHub 저장소 변수 `SUPABASE_URL`을 등록합니다.
 3. GitHub 저장소 Secret `SUPABASE_ANON_KEY`를 등록합니다.
