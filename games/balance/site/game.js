@@ -39,13 +39,17 @@
   }
 
   async function rpc(name, body) {
+    const headers = {
+      apikey: config.supabaseAnonKey,
+      'Content-Type': 'application/json'
+    };
+    // 기존 JWT형 anon 키만 Authorization에 넣는다. 새 sb_publishable 키는 apikey로만 보낸다.
+    if (!config.supabaseAnonKey.startsWith('sb_publishable_')) {
+      headers.Authorization = `Bearer ${config.supabaseAnonKey}`;
+    }
     const response = await fetch(`${config.supabaseUrl}/rest/v1/rpc/${name}`, {
       method: 'POST',
-      headers: {
-        apikey: config.supabaseAnonKey,
-        Authorization: `Bearer ${config.supabaseAnonKey}`,
-        'Content-Type': 'application/json'
-      },
+      headers,
       body: JSON.stringify(body)
     });
     if (!response.ok) throw new Error(`집계 오류 ${response.status}`);

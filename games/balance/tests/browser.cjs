@@ -10,14 +10,17 @@ const base = process.env.TEST_BASE_URL || 'http://127.0.0.1:8000/balance/';
   page.on('pageerror', error => errors.push(error.message));
   await page.route('**/config.js', route => route.fulfill({
     contentType: 'text/javascript',
-    body: `window.BALANCE_CONFIG={supabaseUrl:'https://vote.test',supabaseAnonKey:'public-test-key'};`
+    body: `window.BALANCE_CONFIG={supabaseUrl:'https://vote.test',supabaseAnonKey:'sb_publishable_test-key'};`
   }));
   await page.route('https://vote.test/rest/v1/rpc/get_balance_results', route => route.fulfill({
     contentType: 'application/json', body: JSON.stringify([{ choice: 'A', total: 2 }, { choice: 'B', total: 1 }])
   }));
-  await page.route('https://vote.test/rest/v1/rpc/cast_balance_vote', route => route.fulfill({
-    contentType: 'application/json', body: JSON.stringify({ choice: 'A', a_count: 3, b_count: 1 })
-  }));
+  await page.route('https://vote.test/rest/v1/rpc/cast_balance_vote', route => {
+    assert.equal(route.request().headers().authorization, undefined);
+    return route.fulfill({
+      contentType: 'application/json', body: JSON.stringify({ choice: 'A', a_count: 3, b_count: 1 })
+    });
+  });
 
   await page.goto(base);
   await page.getByRole('button', { name: /^A / }).click();
