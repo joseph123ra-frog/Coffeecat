@@ -10,6 +10,7 @@
   const index = Math.floor((Date.parse(`${date}T00:00:00+09:00`) - Date.parse('2026-11-08T00:00:00+09:00')) / 86400000);
   const question = questions[((index % questions.length) + questions.length) % questions.length];
   const storageKey = `kkaphwi-balance:${date}`;
+  const debug = new URLSearchParams(location.search).get('debug') === '1';
   let selected = localStorage.getItem(storageKey);
   let counts = { A: 0, B: 0 };
   let refreshTimer;
@@ -52,7 +53,10 @@
       headers,
       body: JSON.stringify(body)
     });
-    if (!response.ok) throw new Error(`집계 오류 ${response.status}`);
+    if (!response.ok) {
+      const detail = (await response.text()).replace(/[\r\n]+/g, ' ').slice(0, 300);
+      throw new Error(`집계 오류 ${response.status}${detail ? ` · ${detail}` : ''}`);
+    }
     return response.json();
   }
 
@@ -81,8 +85,8 @@
       localStorage.setItem(storageKey, selected);
       counts = { A: Number(result.a_count) || 0, B: Number(result.b_count) || 0 };
       paintResults();
-    } catch {
-      setStatus('투표를 저장하지 못했습니다. 잠시 뒤 다시 눌러 주세요.');
+    } catch (error) {
+      setStatus(debug ? error.message : '투표를 저장하지 못했습니다. 잠시 뒤 다시 눌러 주세요.');
       document.querySelectorAll('.choice').forEach(node => { node.disabled = false; });
     }
   }
