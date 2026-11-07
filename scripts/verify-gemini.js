@@ -5,9 +5,8 @@ try {
   const result = await generate({
     contents: [{ role: 'user', parts: [{ text: '다음 글자 하나만 답하세요: 확인' }] }],
     generationConfig: {
-      maxOutputTokens: 512,
+      maxOutputTokens: 4096,
       temperature: 0,
-      thinkingConfig: { thinkingBudget: 0 },
     },
   });
 
@@ -18,9 +17,8 @@ try {
     contents: [{ role: 'user', parts: [{ text: '오늘 날짜를 웹에서 확인하고 근거가 있는 한 문장으로 답하세요.' }] }],
     tools: [{ google_search: {} }],
     generationConfig: {
-      maxOutputTokens: 1024,
+      maxOutputTokens: 4096,
       temperature: 0,
-      thinkingConfig: { thinkingBudget: 0 },
     },
   });
   responseText(searchResult);

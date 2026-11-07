@@ -16,7 +16,7 @@
 - Notion 질문을 조사해 8장 카드뉴스를 만들고 `@kkaphwi.cat`에 게시합니다.
 - 예약: 매일 09:00 / 13:00 / 19:00 KST.
 - 게시물 No.01~08이 발행됐고 `data/usage.json`의 issue는 8입니다.
-- 유료 Claude API 코드는 제거했습니다. `src/gemini.js`와 `src/research.js`가 `gemini-2.5-flash-lite` 무료 등급만 호출합니다.
+- 유료 Claude API 코드는 제거했습니다. `src/gemini.js`와 `src/research.js`가 `gemini-3.5-flash-lite` 무료 등급만 호출합니다.
 - `GEMINI_API_KEY`와 `GEMINI_FREE_TIER_CONFIRMED=true`를 등록하기 전까지 자동 게시 워크플로는 멈춰 있습니다.
 - 전환 방법과 무료 등급 제한은 [GEMINI.md](GEMINI.md)에 기록돼 있습니다.
 
