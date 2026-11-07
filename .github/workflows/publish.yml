@@ -32,6 +32,8 @@ jobs:
     timeout-minutes: 30
     environment: github-pages
     env:
+      GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+      GEMINI_FREE_TIER_CONFIRMED: ${{ vars.GEMINI_FREE_TIER_CONFIRMED }}
       NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
       NOTION_DATABASE_ID: ${{ secrets.NOTION_DATABASE_ID }}
       IG_USER_ID: ${{ secrets.IG_USER_ID }}
