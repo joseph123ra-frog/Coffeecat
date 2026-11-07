@@ -1,5 +1,5 @@
 // 무료 프로젝트의 키만 사용. 유료 제공자 대체 없음.
-export const MODEL = 'gemini-2.5-flash';
+export const MODEL = 'gemini-2.5-flash-lite';
 export const MONTHLY_BUDGET_USD = 0;
 export const MAX_RUN_COST_USD = 0;
 export const MAX_ATTEMPTS = 3;

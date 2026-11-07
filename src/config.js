@@ -2,7 +2,7 @@
 
 // 무료 등급의 검색·생성 지원을 공식 요금표에서 확인. 다른 모델로 자동 전환하지 않는다.
 // https://ai.google.dev/gemini-api/docs/pricing
-export const MODEL = 'gemini-2.5-flash';
+export const MODEL = 'gemini-2.5-flash-lite';
 export const MONTHLY_BUDGET_USD = 0;
 export const MAX_RUN_COST_USD = 0;
 export const MAX_POSTS_PER_DAY = 3;

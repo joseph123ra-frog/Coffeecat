@@ -17,7 +17,7 @@ test('무료 모델만 호출하고 한도 초과에는 재시도하지 않으�
   let calls = 0;
   await assert.rejects(generate({}, { env, fetchImpl: async (url, init) => {
     calls++;
-    assert.equal(url, 'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent');
+    assert.equal(url, 'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent');
     assert.equal(init.headers['x-goog-api-key'], env.GEMINI_API_KEY);
     return new Response('비밀 응답', { status: 429 });
   } }), { message: /HTTP 429/ });
