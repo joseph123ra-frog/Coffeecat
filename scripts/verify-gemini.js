@@ -1,5 +1,6 @@
 import { generate, groundedSources, responseText } from '../src/gemini.js';
 
+let stage = '기본 생성';
 try {
   const result = await generate({
     contents: [{ role: 'user', parts: [{ text: '다음 글자 하나만 답하세요: 확인' }] }],
@@ -12,6 +13,7 @@ try {
 
   if (!responseText(result).includes('확인')) throw new Error('Gemini 응답 확인 실패');
 
+  stage = 'Google 검색';
   const searchResult = await generate({
     contents: [{ role: 'user', parts: [{ text: '오늘 날짜를 웹에서 확인하고 근거가 있는 한 문장으로 답하세요.' }] }],
     tools: [{ google_search: {} }],
@@ -25,7 +27,7 @@ try {
   if (groundedSources(searchResult).size === 0) throw new Error('Google 검색 근거 확인 실패');
   console.log('Gemini 무료 프로젝트 키 연결 확인 완료');
 } catch (error) {
-  let detail = error.message;
+  let detail = `${stage}: ${error.message}`;
   if (detail.includes('HTTP 404') && process.env.GEMINI_API_KEY) {
     try {
       const response = await fetch('https://generativelanguage.googleapis.com/v1beta/models?pageSize=1000', {

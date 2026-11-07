@@ -13,7 +13,14 @@ export async function generate(body, { fetchImpl = globalThis.fetch, env = proce
   } catch {
     throw new Error('무료 생성 API 연결 실패. 재시도와 유료 전환 없이 중단합니다.');
   }
-  if (!response.ok) throw new Error(`무료 생성 API HTTP ${response.status}. 재시도와 유료 전환 없이 중단합니다.`);
+  if (!response.ok) {
+    let detail = '';
+    try {
+      const payload = await response.json();
+      detail = String(payload.error?.message ?? '').replaceAll(env.GEMINI_API_KEY, '[숨김]').slice(0, 500);
+    } catch { /* 응답 본문을 읽을 수 없으면 상태 코드만 기록한다. */ }
+    throw new Error(`무료 생성 API HTTP ${response.status}${detail ? `: ${detail}` : ''}. 재시도와 유료 전환 없이 중단합니다.`);
+  }
   const result = await response.json();
   responseText(result); // 거절·잘림·빈 결과를 다음 단계에 넘기지 않는다.
   return result;
