@@ -1,19 +1,7 @@
-// 전체 설정. API 키는 GitHub Secrets → 환경 변수(ANTHROPIC_API_KEY)로 들어온다.
-
-export const MODEL = 'claude-sonnet-5-5';
-
-// Claude API 단가 (USD, 2026-10 확인: https://platform.claude.com/docs/en/about-claude/pricing)
-export const PRICE = {
-  inputPerMTok: 2,
-  outputPerMTok: 10,
-  cacheWritePerMTok: 2.5,
-  cacheReadPerMTok: 0.1,
-};
-
-// 깝휘캣 저장소 src/config.js: 개인 프로젝트 몫 중 게임 2개에 $10. 이 게임은 $5.
-export const MONTHLY_BUDGET_USD = 5;
-// 사건 1개를 만드는 데 들 수 있는 최대 비용 추정치(재시도 포함). 남은 예산이 이보다 적으면 예비 사건을 쓴다.
-export const MAX_RUN_COST_USD = 0.5;
+// 무료 프로젝트의 키만 사용. 유료 제공자 대체 없음.
+export const MODEL = 'gemini-2.5-flash';
+export const MONTHLY_BUDGET_USD = 0;
+export const MAX_RUN_COST_USD = 0;
 export const MAX_ATTEMPTS = 3;
 
 export const SUSPECTS = 4;

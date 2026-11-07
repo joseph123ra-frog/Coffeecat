@@ -4,19 +4,17 @@
 
 import { readFile, writeFile, readdir, mkdir } from 'node:fs/promises';
 import { existsSync } from 'node:fs';
-import Anthropic from '@anthropic-ai/sdk';
-import { betaZodOutputFormat } from '@anthropic-ai/sdk/helpers/beta/zod';
+import { generate, responseText } from './gemini.js';
 import { z } from 'zod';
-import { MODEL, PRICE, MONTHLY_BUDGET_USD, MAX_RUN_COST_USD, MAX_ATTEMPTS, PICKS, PATHS, kstDate, addDays } from './config.js';
+import { MAX_ATTEMPTS, PICKS, PATHS, kstDate, addDays } from './config.js';
 import { Case, IDS, checkCase, playerText, toPublic } from './case.js';
 
-const client = process.env.ANTHROPIC_API_KEY ? new Anthropic({ maxRetries: 0, timeout: 120000 }) : null;
+const enabled = Boolean(process.env.GEMINI_API_KEY) && process.env.GEMINI_FREE_TIER_CONFIRMED === 'true';
 let activeLedger;
-let reserved = 0;
-let charged = 0;
 let apiUnavailable = false;
+let calls = 0;
+const MAX_CALLS_PER_RUN = 12;
 const runMonth = kstDate().month;
-const roundUp = n => Math.ceil(n * 1e6) / 1e6;
 async function saveLedger() {
   await writeFile(PATHS.ledger, `${JSON.stringify(activeLedger, null, 2)}\n`);
 }
@@ -48,49 +46,31 @@ const Verdict = z.object({
   culprit: z.enum([...IDS, '모름']).describe('주어진 내용만으로 범인이 한 마리로 확정되면 그 id, 아니면 "모름"'),
 });
 
-let usage = { input: 0, output: 0, cacheWrite: 0, cacheRead: 0 };
-const record = (u) => {
-  usage.input += u.input_tokens ?? 0;
-  usage.output += u.output_tokens ?? 0;
-  usage.cacheWrite += u.cache_creation_input_tokens ?? 0;
-  usage.cacheRead += u.cache_read_input_tokens ?? 0;
-};
-const costOf = (u) =>
-  (u.input * PRICE.inputPerMTok + u.output * PRICE.outputPerMTok + u.cacheWrite * PRICE.cacheWritePerMTok + u.cacheRead * PRICE.cacheReadPerMTok) / 1e6;
-
-async function ask(system, content, format, effort) {
-  const output_config = { effort, format: betaZodOutputFormat(format) };
-  const messages = [{ role: 'user', content }];
-  const max_tokens = format === Case ? 6000 : 2000;
-  // 응답 전에 중단되더라도 비용이 사라지지 않게 호출 최대액을 먼저 기록한다.
-  const count = await client.beta.messages.countTokens({ model: MODEL, system, messages, output_config });
-  const reserve = roundUp(((count.input_tokens + 1024) * PRICE.inputPerMTok + max_tokens * PRICE.outputPerMTok) / 1e6);
-  const month = activeLedger.months[runMonth];
-  if (month.usd + reserve > MONTHLY_BUDGET_USD || charged + reserved + reserve > MAX_RUN_COST_USD) {
-    throw new Error('예산 상한으로 예비 사건 사용');
-  }
-  reserved += reserve;
-  month.usd = roundUp(month.usd + reserve);
+const costOf = () => 0;
+const usage = {};
+async function ask(system, content, format) {
+  if (calls >= MAX_CALLS_PER_RUN) throw new Error('실행당 무료 호출 상한 → 예비 사건 사용');
+  calls += 1;
+  const free = activeLedger.geminiFree ??= { months: {} };
+  const month = free.months[runMonth] ??= { calls: 0, input_tokens: 0, output_tokens: 0 };
+  month.calls += 1;
   await saveLedger();
   let response;
   try {
-    // 다른 모델로 자동 전환하면 단가가 바뀌므로 지정한 모델만 호출한다.
-    response = await client.beta.messages.create({ model: MODEL, max_tokens, output_config, system, messages });
-  } catch (error) {
+    response = await generate({
+      systemInstruction: { parts: [{ text: system }] },
+      contents: [{ role: 'user', parts: [{ text: content }] }],
+      generationConfig: { maxOutputTokens: format === Case ? 10000 : 4000,
+        responseMimeType: 'application/json', responseJsonSchema: z.toJSONSchema(format) },
+    });
+  } catch {
     apiUnavailable = true;
-    // 청구 여부가 불확실하면 예약액을 유지하고 이 실행에서는 재전송하지 않는다.
-    throw new Error(`API 응답을 확인하지 못함 (${error.status ?? '연결 오류'}). 예약 비용 유지`);
+    throw new Error('무료 API 사용 불가. 재전송 없이 예비 사건 사용');
   }
-  record(response.usage);
-  const actual = costOf({ input: response.usage.input_tokens ?? 0, output: response.usage.output_tokens ?? 0,
-    cacheWrite: response.usage.cache_creation_input_tokens ?? 0, cacheRead: response.usage.cache_read_input_tokens ?? 0 });
-  reserved = Math.max(0, reserved - reserve);
-  charged += actual;
-  month.usd = roundUp(Math.max(0, month.usd - reserve + actual));
+  month.input_tokens += response.usageMetadata?.promptTokenCount ?? 0;
+  month.output_tokens += (response.usageMetadata?.candidatesTokenCount ?? 0) + (response.usageMetadata?.thoughtsTokenCount ?? 0);
   await saveLedger();
-  if (response.stop_reason !== 'end_turn') throw new Error(`생성 중단: ${response.stop_reason}`);
-  const text = response.content.filter(block => block.type === 'text').map(block => block.text).join('');
-  return format.parse(JSON.parse(text));
+  return format.parse(JSON.parse(responseText(response)));
 }
 
 const solve = (c, clueIdx) =>
@@ -145,16 +125,11 @@ async function pickBackup(ledger) {
 }
 
 async function caseFor(date, ledger) {
-  const spent = () => ledger.months[runMonth]?.usd ?? 0;
   const recent = ledger.history.slice(-14).map((h) => h.title);
   let feedback = '';
   for (let i = 1; i <= MAX_ATTEMPTS; i++) {
-    if (!client || apiUnavailable) {
+    if (!enabled || apiUnavailable) {
       console.log('API 사용 불가 → 예비 사건 사용');
-      break;
-    }
-    if (spent() >= MONTHLY_BUDGET_USD || charged + reserved >= MAX_RUN_COST_USD) {
-      console.log(`이번 달 예산 부족 ($${spent().toFixed(2)} / $${MONTHLY_BUDGET_USD}) → 예비 사건 사용`);
       break;
     }
     try {
@@ -176,9 +151,6 @@ async function caseFor(date, ledger) {
 
 async function main() {
   const ledger = activeLedger = await loadLedger();
-  const monthRecord = ledger.months[runMonth] ??= { usd: 0, runs: 0 };
-  if (!Number.isFinite(monthRecord.usd) || monthRecord.usd < 0) throw new Error('비용 기록 오류');
-  monthRecord.runs += 1;
   await saveLedger();
   const today = kstDate().day;
   await mkdir(PATHS.cases, { recursive: true });
@@ -201,9 +173,8 @@ async function main() {
   const todayPath = latest ?? `${PATHS.cases}/${today}.json`;
   if (existsSync(todayPath)) await writeFile(`${PATHS.cases}/latest.json`, await readFile(todayPath));
 
-  const m = ledger.months[runMonth];
   await writeFile(PATHS.ledger, `${JSON.stringify(ledger, null, 2)}\n`);
-  console.log(`이번 실행 비용 $${costOf(usage).toFixed(4)} · 미확인 예약 포함 이번 달 기록 $${m.usd.toFixed(4)} / $${MONTHLY_BUDGET_USD}`);
+  console.log(`무료 API ${calls}회 호출 · 유료 API 사용 없음`);
 }
 
 main().catch((err) => {

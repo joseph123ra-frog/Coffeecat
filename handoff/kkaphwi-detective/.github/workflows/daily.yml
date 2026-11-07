@@ -39,7 +39,8 @@ jobs:
         id: generate
         run: npm run generate
         env:
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_FREE_TIER_CONFIRMED: ${{ vars.GEMINI_FREE_TIER_CONFIRMED }}
       - name: 사건과 비용 기록 저장
         if: always() && steps.generate.outcome != 'skipped'
         run: |

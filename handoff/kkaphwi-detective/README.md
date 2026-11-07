@@ -1,3 +1,5 @@
+> 2026-11-07: 유료 생성 API를 제거했습니다. 무료 프로젝트 키와 `GEMINI_FREE_TIER_CONFIRMED=true`가 있어야 생성합니다. 키·확인이 없거나 무료 한도에 걸리면 예비 사건을 사용합니다. 이전 예산·모델 설명은 과거 기록입니다. 실제 API 검사는 아직 하지 않았습니다.
+
 # 깝휘캣 탐정
 
 하루 한 판, 고양이 탐정이 되어 푸는 모바일 추리 게임이다냥.
@@ -17,7 +19,7 @@
 **Coffeecat Pages에는 배포하지 않습니다.** 자동 실행에도 전용 저장소 이름 확인 장치가 있습니다.
 
 1. 저장소 **Settings → Pages → Build and deployment → Source → GitHub Actions**를 선택합니다.
-2. **Settings → Secrets and variables → Actions → Secrets → New repository secret**에서 이름 `ANTHROPIC_API_KEY`와 API 키를 등록합니다. 키를 채팅이나 코드에 적지 마세요.
+2. **Settings → Secrets and variables → Actions → Secrets → New repository secret**에서 이름 `GEMINI_API_KEY`와 API 키를 등록합니다. 키를 채팅이나 코드에 적지 마세요.
 3. **Actions → 매일 새 사건과 게임 배포 → Run workflow**로 실행합니다. 처음 실제 API 검사는 비용이 드므로 사용자 확인 후 한 번만 진행합니다.
 
 이미 오늘·내일 사건이 있으면 생성 호출을 하지 않습니다. 첫 유료 검사도 필요한 날짜의 사건이 없을 때 진행합니다. 설정 전에도 예비 사건으로 게임을 열 수 있습니다.
