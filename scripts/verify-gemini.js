@@ -1,4 +1,4 @@
-import { generate, responseText } from '../src/gemini.js';
+import { generate, groundedSources, responseText } from '../src/gemini.js';
 
 try {
   const result = await generate({
@@ -11,6 +11,18 @@ try {
   });
 
   if (!responseText(result).includes('확인')) throw new Error('Gemini 응답 확인 실패');
+
+  const searchResult = await generate({
+    contents: [{ role: 'user', parts: [{ text: '오늘 날짜를 웹에서 확인하고 근거가 있는 한 문장으로 답하세요.' }] }],
+    tools: [{ google_search: {} }],
+    generationConfig: {
+      maxOutputTokens: 1024,
+      temperature: 0,
+      thinkingConfig: { thinkingBudget: 0 },
+    },
+  });
+  responseText(searchResult);
+  if (groundedSources(searchResult).size === 0) throw new Error('Google 검색 근거 확인 실패');
   console.log('Gemini 무료 프로젝트 키 연결 확인 완료');
 } catch (error) {
   let detail = error.message;
