@@ -27,7 +27,6 @@ concurrency:
 
 jobs:
   publish:
-    if: ${{ false }} # 무료 API 전환과 키 등록 확인까지 중지
     runs-on: ubuntu-latest
     timeout-minutes: 30
     environment: github-pages
