@@ -3,12 +3,10 @@
 // 구조화 출력(output_config.format)은 인용과 같이 쓸 수 없다.
 
 import { readFileSync } from 'node:fs';
-import Anthropic from '@anthropic-ai/sdk';
-import { zodOutputFormat } from '@anthropic-ai/sdk/helpers/zod';
+import { generate, responseText, groundedSources } from './gemini.js';
 import { z } from 'zod';
-import { MODEL, WEB_SEARCH_MAX_USES, BODY_SLIDES, MIN_SOURCES } from './config.js';
+import { BODY_SLIDES, MIN_SOURCES } from './config.js';
 
-const client = new Anthropic();
 
 // 질문 칸은 '질문 - 궁금한 점·꼭 넣을 내용' 형태로 적힐 수 있다. 두 단계 모두에 같은 규칙을 준다.
 const REQUEST_RULES = `질문 칸에는 질문 뒤에 독자의 궁금한 점이나 꼭 넣을 내용이 함께 적혀 있을 수 있습니다.
@@ -85,93 +83,46 @@ const BROADEN = `앞선 조사로는 근거가 부족했습니다. 검색 범위
 - 영어 자료, 업계·전문가 자료, 다른 표현의 검색어를 함께 써 봅니다.
 - 질문에 직접 답하는 근거(이유, 원인, 수치)를 우선 찾습니다.`;
 
-const sumUsage = (a, b) => ({
-  input_tokens: (a.input_tokens ?? 0) + (b.input_tokens ?? 0),
-  output_tokens: (a.output_tokens ?? 0) + (b.output_tokens ?? 0),
-  cache_creation_input_tokens: (a.cache_creation_input_tokens ?? 0) + (b.cache_creation_input_tokens ?? 0),
-  cache_read_input_tokens: (a.cache_read_input_tokens ?? 0) + (b.cache_read_input_tokens ?? 0),
-  server_tool_use: {
-    web_search_requests:
-      (a.server_tool_use?.web_search_requests ?? 0) + (b.server_tool_use?.web_search_requests ?? 0),
-  },
-});
-
-// 실패해도 이미 쓴 비용은 기록해야 하므로 호출마다 누적해 둔다.
-let total = {};
-export const totalUsage = () => total;
-const record = (u) => {
-  total = sumUsage(total, u);
+// 호출 한도는 별도 사용 기록에 남긴다. 이전 유료 비용 장부는 보존한다.
+let total = { provider: 'gemini-free', calls: 0, input_tokens: 0, output_tokens: 0 };
+export const totalUsage = () => ({ ...total });
+const record = (r) => {
+  total.input_tokens += r.usageMetadata?.promptTokenCount ?? 0;
+  total.output_tokens += (r.usageMetadata?.candidatesTokenCount ?? 0) + (r.usageMetadata?.thoughtsTokenCount ?? 0);
 };
-
-function assertNotRefused(response) {
-  if (response.stop_reason === 'refusal') {
-    throw new Error(`Claude가 요청을 거절했습니다: ${response.stop_details?.explanation ?? '사유 없음'}`);
-  }
+async function call(body) {
+  total.calls += 1;
+  const r = await generate(body);
+  record(r);
+  return r;
 }
 
 async function researchNotes(question, hint = '') {
-  const messages = [{ role: 'user', content: `질문 칸: ${question}${hint ? `\n\n${hint}` : ''}` }];
-  let response;
-  // 서버 쪽 검색 루프가 길어지면 pause_turn으로 끊긴다. 같은 대화를 다시 보내 이어간다.
-  for (let i = 0; i < 4; i++) {
-    response = await client.beta.messages.create({
-      model: MODEL,
-      max_tokens: 16000,
-      betas: ['server-side-fallback-2026-07-01'],
-      fallbacks: 'default',
-      output_config: { effort: 'medium' },
-      system: RESEARCH_SYSTEM,
-      tools: [{ type: 'web_search_20260209', name: 'web_search', max_uses: WEB_SEARCH_MAX_USES }],
-      messages,
-    });
-    record(response.usage);
-    assertNotRefused(response);
-    if (response.stop_reason !== 'pause_turn') break;
-    messages.push({ role: 'assistant', content: response.content });
-  }
-
-  const urls = new Map();
-  const texts = [];
-  for (const msg of [...messages.slice(1).map((m) => m.content).flat(), ...response.content]) {
-    if (msg.type === 'web_search_tool_result' && Array.isArray(msg.content)) {
-      for (const r of msg.content) if (r.url) urls.set(r.url, r.title ?? r.url);
-    }
-    if (msg.type === 'text') {
-      texts.push(msg.text);
-      for (const c of msg.citations ?? []) if (c.url) urls.set(c.url, c.title ?? c.url);
-    }
-  }
-  return { notes: texts.join('\n'), urls };
+  const response = await call({
+    systemInstruction: { parts: [{ text: RESEARCH_SYSTEM }] },
+    contents: [{ role: 'user', parts: [{ text: `질문 칸: ${question}${hint ? `\n\n${hint}` : ''}` }] }],
+    tools: [{ google_search: {} }],
+    generationConfig: { maxOutputTokens: 16000 },
+  });
+  return { notes: responseText(response), urls: groundedSources(response) };
 }
 
 async function writeDraft(question, notes, urls) {
   const allowed = [...urls].map(([url, title]) => `- ${title} | ${url}`).join('\n');
-  const response = await client.messages.parse({
-    model: MODEL,
-    max_tokens: 16000,
-    output_config: { effort: 'medium', format: zodOutputFormat(Draft) },
-    system: `당신은 한국어 인스타그램 매거진 '깝휘캣'의 에디터입니다.
+  const response = await call({
+    systemInstruction: { parts: [{ text: `당신은 한국어 인스타그램 매거진 '깝휘캣'의 에디터입니다.
 조사 노트만을 근거로 카드뉴스 원고를 씁니다. 노트에 없는 사실은 쓰지 않습니다.
 말투는 친근하지만 정확하게, 문장은 짧게 씁니다. 글자 수 제한을 반드시 지킵니다.
-${REQUEST_RULES}
-
-${GUIDELINES}`,
-    messages: [
-      {
-        role: 'user',
-        content: `질문 칸: ${question}\n\n## 조사 노트\n${notes}\n\n## 허용된 출처 URL\n${allowed}`,
-      },
-    ],
+${REQUEST_RULES}\n\n${GUIDELINES}` }] },
+    contents: [{ role: 'user', parts: [{ text: `질문 칸: ${question}\n\n## 조사 노트\n${notes}\n\n## 허용된 출처 URL\n${allowed}` }] }],
+    generationConfig: { maxOutputTokens: 16000, responseMimeType: 'application/json', responseJsonSchema: z.toJSONSchema(Draft) },
   });
-  record(response.usage);
-  assertNotRefused(response);
-  const draft = response.parsed_output;
-  if (!draft) throw new Error('원고 JSON을 해석하지 못했습니다.');
+  const draft = Draft.parse(JSON.parse(responseText(response)));
   if (draft.bodies.length !== BODY_SLIDES) {
     throw new Error(`본문이 ${BODY_SLIDES}장이 아닙니다 (${draft.bodies.length}장).`);
   }
   // 지어낸 출처를 막기 위해 실제 검색 결과에 나온 URL만 남긴다.
-  draft.sources = draft.sources.filter((s) => urls.has(s.url));
+  draft.sources = [...new Map(draft.sources.filter((s) => urls.has(s.url)).map(s => [s.url, s])).values()];
   // 피드백 때 조사 문제인지 원고 문제인지 가릴 수 있게 노트도 함께 남긴다.
   draft.notes = notes;
   return draft;

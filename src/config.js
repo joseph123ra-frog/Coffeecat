@@ -1,23 +1,11 @@
 // 전체 설정. 비밀값은 GitHub Secrets → 환경 변수로 들어온다.
 
-export const MODEL = 'claude-sonnet-5-5';
-
-// Claude API 단가 (USD, 2026-10 확인: https://platform.claude.com/docs/en/about-claude/pricing)
-export const PRICE = {
-  inputPerMTok: 2,
-  outputPerMTok: 10,
-  cacheWritePerMTok: 2.5,
-  cacheReadPerMTok: 0.1,
-  perWebSearch: 10 / 1000,
-};
-
-// Claude API 월 $100을 ZGOO AI Cortex와 $50씩 나눈다. 개인 프로젝트 몫 $50 중 깝휘캣 $40, 나머지 $10은 밸런스 게임·탐정 게임.
-export const MONTHLY_BUDGET_USD = 40;
-// 한 번 실행에 들 수 있는 최대 비용 추정치. 남은 예산이 이보다 적으면 실행하지 않는다.
-export const MAX_RUN_COST_USD = 1;
+// 무료 등급의 검색·생성 지원을 공식 요금표에서 확인. 다른 모델로 자동 전환하지 않는다.
+// https://ai.google.dev/gemini-api/docs/pricing
+export const MODEL = 'gemini-2.5-flash';
+export const MONTHLY_BUDGET_USD = 0;
+export const MAX_RUN_COST_USD = 0;
 export const MAX_POSTS_PER_DAY = 3;
-export const WEB_SEARCH_MAX_USES = 12;
-// 검증된 출처가 이보다 적으면 한 번 더 넓게 조사하고, 그래도 부족하면 게시를 보류한다.
 export const MIN_SOURCES = 3;
 
 export const BODY_SLIDES = 6;

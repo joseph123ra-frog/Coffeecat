@@ -27,11 +27,13 @@ concurrency:
 
 jobs:
   publish:
+    if: ${{ false }} # 무료 API 전환과 키 등록 확인까지 중지
     runs-on: ubuntu-latest
     timeout-minutes: 30
     environment: github-pages
     env:
-      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+      GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+      GEMINI_FREE_TIER_CONFIRMED: ${{ vars.GEMINI_FREE_TIER_CONFIRMED }}
       NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
       NOTION_DATABASE_ID: ${{ secrets.NOTION_DATABASE_ID }}
       IG_USER_ID: ${{ secrets.IG_USER_ID }}

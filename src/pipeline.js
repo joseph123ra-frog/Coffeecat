@@ -9,7 +9,7 @@ import { join } from 'node:path';
 import { createHash } from 'node:crypto';
 import { chromium } from 'playwright';
 import { PATHS, STATUS, STYLE, env, kstDate } from './config.js';
-import { loadLedger, saveLedger, blockReason, addCost, addPost, costOf } from './budget.js';
+import { loadLedger, saveLedger, blockReason, addGeminiUsage, addPost, costOf } from './budget.js';
 import { nextQuestion, updateQuestion } from './notion.js';
 import { research, totalUsage, HoldError } from './research.js';
 import { pickImages } from './images.js';
@@ -64,9 +64,9 @@ async function prepare() {
     return output({ skip: 'true' });
   } finally {
     const usd = costOf(totalUsage());
-    addCost(ledger, usd, now);
+    addGeminiUsage(ledger, totalUsage(), now);
     await saveLedger(ledger);
-    console.log(`Claude 비용: $${usd.toFixed(4)}`);
+    console.log(`무료 API 비용: $${usd.toFixed(4)}`);
   }
 
   const images = await pickImages([draft.cover.imageQuery, ...draft.bodies.map((b) => b.imageQuery)]);
@@ -75,7 +75,7 @@ async function prepare() {
     issue: ledger.issue + 1,
     date: kstDate(now).dotted,
     slides: [
-      // 표지 제목은 Claude가 바꾸지 않도록 질문 칸의 질문 부분(' - ' 앞)을 그대로 쓴다.
+      // 표지 제목은 생성 모델이 바꾸지 않도록 질문 칸의 질문 부분(' - ' 앞)을 그대로 쓴다.
       { type: 'cover', title: coverTitle(item.question), subtitle: draft.cover.subtitle, image: images[0] },
       ...draft.bodies.map((b, i) => ({ type: 'body', title: b.title, body: b.body, image: images[i + 1] })),
       { type: 'signature' },
@@ -156,7 +156,7 @@ async function fail() {
   await updateQuestion(meta.pageId, { status: STATUS.failed, note: `실패. 로그: ${run}` });
 }
 
-// 이미 만든 슬라이드를 다시 게시한다 (예: 잘못 올라간 게시물 교체). Claude를 부르지 않는다.
+// 이미 만든 슬라이드를 다시 게시한다 (예: 잘못 올라간 게시물 교체). 생성 API를 부르지 않는다.
 //   node src/pipeline.js repost <archive 파일> <슬라이드 폴더 이름>
 async function repost() {
   const [archiveFile, dir] = process.argv.slice(3);
@@ -177,7 +177,7 @@ async function repost() {
   console.log(`재게시 완료: ${permalink}`);
 }
 
-// 저장된 원고로 슬라이드를 다시 렌더링한다 (번호 정리 등). Claude를 부르지 않는다.
+// 저장된 원고로 슬라이드를 다시 렌더링한다 (번호 정리 등). 생성 API를 부르지 않는다.
 //   node src/pipeline.js rerender <archive 파일> <슬라이드 폴더 이름>
 async function rerender() {
   const [archiveFile, dir] = process.argv.slice(3);
