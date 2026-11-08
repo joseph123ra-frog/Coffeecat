@@ -1,0 +1,70 @@
+{
+  "no": 5,
+  "date": "2026-11-09",
+  "title": "옥상 정원 사건",
+  "intro": "오늘 오후 2시, 아파트 옥상 정원의 예쁜 꽃 장식이 엉망이 됐다냥! 꽃잎이 사방으로 흩날리고, 정성껏 쌓아둔 화분 탑이 무너져 내렸다.",
+  "suspects": [
+    {
+      "id": "A",
+      "name": "나비",
+      "fur": "삼색",
+      "desc": "낮잠을 좋아하는 얌전한 고양이"
+    },
+    {
+      "id": "B",
+      "name": "치즈",
+      "fur": "주황",
+      "desc": "장난꾸러기 대장 고양이"
+    },
+    {
+      "id": "C",
+      "name": "까망",
+      "fur": "검정",
+      "desc": "발걸음이 소리 없는 닌자 고양이"
+    },
+    {
+      "id": "D",
+      "name": "모찌",
+      "fur": "흰색",
+      "desc": "겁이 많고 뚱뚱한 고양이"
+    }
+  ],
+  "clues": [
+    {
+      "id": "c1",
+      "label": "관리인 아저씨 노트",
+      "text": "A는 지난주에 털갈이를 하느라 털을 사방에 날리고 다녔다고 적혀 있다냥."
+    },
+    {
+      "id": "c2",
+      "label": "CCTV 확인",
+      "text": "오후 2시 정각, A는 1층 로비 소파 위에서 낮잠을 자고 있었다냥."
+    },
+    {
+      "id": "c3",
+      "label": "발자국 분석",
+      "text": "사건 현장에 남은 발자국은 아주 작은 아기 고양이 발자국이다. C는 발이 훨씬 크다냥."
+    },
+    {
+      "id": "c4",
+      "label": "엘리베이터 기록",
+      "text": "뚱뚱한 D는 오후 내내 1층을 벗어난 적이 없다냥. 옥상 계단은 절대 못 올라간다."
+    },
+    {
+      "id": "c5",
+      "label": "화분 뒤 털뭉치",
+      "text": "무너진 화분 옆에서 삼색 고양이의 털뭉치가 발견되었다냥! A의 털 같다."
+    },
+    {
+      "id": "c6",
+      "label": "비둘기 증언",
+      "text": "비둘기 아저씨가 말했다. \"주황색 고양이가 신나서 뛰어다니다가 화분을 건드렸지!\""
+    },
+    {
+      "id": "c7",
+      "label": "현장 발바닥 너비",
+      "text": "범인의 발바닥 너비는 3cm로, B의 발바닥 크기와 완벽하게 일치한다냥."
+    }
+  ],
+  "answer": "EEkCBQQHG0RGEggUbxMdD1NMBxsTGRw7AENXEggUwKaVwKedR0uK8vCc0KnYgLIWxqeZwaaNgPfJm87HScC2iBLduL3agYjV/PtBnPHzgp+P3aeWDd2VqRDV/ueN5fCc47nZvYIWxqKVwYyJgODFm+vSSA8eEkFZQURFRF9XSVFDMYP9/Q0D3IqDDdqzg9yny0uN5eScz4HZgKbasIXdtLAZgd/hm87bhbCKENmzldy7ldyk80uM9NCd2aXerYYWwZesx4GJgMr9UITX9cGriNmmhNq6pduyz0VBM4P9/Q3fsYIWxoGtwa6pgd7MUIX2xceKgNmXsR0Raduz/0tQnNDChbqi25W6DdqZlduV14D+3ITz9Q3ekK7atInavZnS4OOK+8xZScC2iNmbpN2ItRDS4MON9PSc47kScd6rtRHdtavS6ctBnezPhbCG26+KDdymmtqJ44DH3ILF5Q3Zl77dvpXdirDSzOdNUIPO7cajqNiOnRHah5nT2cKK+9yd2pES24KqxoGlxrucS4Dl+IPO7Q0BU18WwZesx4GJgMr9UCqd2a0S24CiwayJwa69h/bVUIXu/MG5lN+jmd2WvNuy44Dq1EZVFA=="
+}
