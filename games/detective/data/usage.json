@@ -46,14 +46,21 @@
       "title": "옥상 정원 사건",
       "source": "ai",
       "usd": 0
+    },
+    {
+      "no": 6,
+      "date": "2026-11-10",
+      "title": "알록달록 낙서 사건",
+      "source": "ai",
+      "usd": 0
     }
   ],
   "geminiFree": {
     "months": {
       "2026-11": {
-        "calls": 3,
-        "input_tokens": 1281,
-        "output_tokens": 1146
+        "calls": 6,
+        "input_tokens": 2546,
+        "output_tokens": 2344
       }
     }
   }

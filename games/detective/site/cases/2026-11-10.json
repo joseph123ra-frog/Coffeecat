@@ -1,0 +1,70 @@
+{
+  "no": 6,
+  "date": "2026-11-10",
+  "title": "알록달록 낙서 사건",
+  "intro": "오늘 아침 동네 문구점 화이트보드에 정체불명의 분홍색 고양이 발자국 낙서가 그려져 있었다. 과연 누가 장난을 친 걸까냥?",
+  "suspects": [
+    {
+      "id": "A",
+      "name": "치즈",
+      "fur": "주황",
+      "desc": "낮잠을 좋아하는 의자 지킴이"
+    },
+    {
+      "id": "B",
+      "name": "모래",
+      "fur": "회색",
+      "desc": "키가 아주 작은 아기 고양이"
+    },
+    {
+      "id": "C",
+      "name": "호두",
+      "fur": "검정",
+      "desc": "높은 곳을 좋아하는 탐험가"
+    },
+    {
+      "id": "D",
+      "name": "나비",
+      "fur": "삼색",
+      "desc": "깔끔 떨기 좋아하는 녀석"
+    }
+  ],
+  "clues": [
+    {
+      "id": "c1",
+      "label": "발바닥 검사",
+      "text": "나비(D)의 발바닥은 아주 깨끗해서 분홍 물감이 전혀 없다냥."
+    },
+    {
+      "id": "c2",
+      "label": "발자국 높이",
+      "text": "화이트보드의 낙서는 바닥에서 150cm 높이에 있다냥. 모래(B)는 키가 30cm라 절대 닿지 않는다냥."
+    },
+    {
+      "id": "c3",
+      "label": "문구점 주인 증언",
+      "text": "호두(C)가 오전 9시 50분에 사다리 위로 올라가는 걸 봤다냥."
+    },
+    {
+      "id": "c4",
+      "label": "CCTV 확인",
+      "text": "오전 10시 정각, 치즈(A)는 문구점 바깥 벤치에서 곤히 자고 있었다냥."
+    },
+    {
+      "id": "c5",
+      "label": "분홍 물감통",
+      "text": "모래(B)의 털에 분홍 물감이 묻어 있어 범인처럼 보이지만, 이건 어제 가지고 놀던 분홍색 고무공 색소라냥!"
+    },
+    {
+      "id": "c6",
+      "label": "창고 구석 조사",
+      "text": "창고 구석에서 분홍색 물감이 묻은 호두(C)의 꼬리털이 발견되었다냥."
+    },
+    {
+      "id": "c7",
+      "label": "영수증 뒷면",
+      "text": "영수증 뒷면에 '호두(C) 다녀감'이라고 적혀 있었다냥."
+    }
+  ],
+  "answer": "EEkCBQQHG0RGEggUbhMdD1JFBxsTGRw7AENXEggUwKaVwKaUR0uK9vqb9K0S2oGFwaahwbWsS4HWyIPR1Q3Yh4rdi53blYHa2+tBm+z/goGGEN6ogdqBod2m30uKw9yb/oHetK4Wx4aJxq+cgODFm+vSSA8eEkFZQURFRF5eSVFDMysjP8aTrBJ3x4GxDdqA/Yf24ITz9Q3erpbasL3dsIUQgNv8nfD3hY2KEN6Wsd2oldqg84HS0ERXhK+W2oK2Dd2vvN2t60sjm+LjSRwHAFFbDdq3v92t34f24Eic4pLel7IWwaS7waS0S4fB7ITu0caiqNmfnR0Radq6/0uKwPSc2bnZu5fasIURx4iYgOr2nf3DScGSrN6vldqhhNq744Dq1EZXK8a4pBLdgY3bnaEQgP7tm8TPhbqiEN6rtd26gdqA8If06ITr1cawqBLas5Tar63a2/tBmtvCScanvNmald2vqd2t30uKwPWa8a3el6PdprnappUeS4HTwILCxA3esp7dppXai53c/PtBnPDbgrCO2oKyDd2XsNuB24f48EicxZHYgKLasIURxp2Lh/bhUIXv0cajoBp1BNuBrRHb2f+N7dCb96jZu7rdppUQD0w="
+}
