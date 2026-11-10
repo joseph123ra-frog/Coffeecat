@@ -1,0 +1,70 @@
+{
+  "no": 7,
+  "date": "2026-11-11",
+  "title": "사라진 호박꿀단지 사건",
+  "intro": "할머니 집 부엌 식탁 위에서 달콤한 호박꿀단지가 감쪽같이 사라졌다냥! 꿀을 훔쳐간 범인은 누구일까?",
+  "suspects": [
+    {
+      "id": "A",
+      "name": "나비",
+      "fur": "흰색",
+      "desc": "낮잠을 좋아하는 뚱뚱이 고양이"
+    },
+    {
+      "id": "B",
+      "name": "치즈",
+      "fur": "주황",
+      "desc": "장난기가 넘치는 꼬마 고양이"
+    },
+    {
+      "id": "C",
+      "name": "쿠키",
+      "fur": "갈색",
+      "desc": "단 것을 좋아하는 탐욕스러운 고양이"
+    },
+    {
+      "id": "D",
+      "name": "먹구",
+      "fur": "회색",
+      "desc": "부엌 문지기 시크한 고양이"
+    }
+  ],
+  "clues": [
+    {
+      "id": "c1",
+      "label": "치즈의 증언",
+      "text": "치즈는 목에 방울을 달고 있지만, 범행 시간엔 마당에서 나비와 놀고 있었다냥."
+    },
+    {
+      "id": "c2",
+      "label": "창가 방울 소리",
+      "text": "범행 시간에 방울 단 고양이가 창가로 뛰어가는 걸 보았다는 증언이 있다냥."
+    },
+    {
+      "id": "c3",
+      "label": "나비의 알리바이",
+      "text": "나비는 오후 2시부터 4시까지 거실 마루에서 깊은 낮잠을 자고 있었다냥."
+    },
+    {
+      "id": "c4",
+      "label": "식탁 밑 발자국",
+      "text": "식탁 밑에 작은 발자국이 남았는데 갈색 털이 조금 떨어져 있다냥."
+    },
+    {
+      "id": "c5",
+      "label": "싱크대 흔적",
+      "text": "싱크대 위에서 갈색 털뭉치가 발견되었다냥."
+    },
+    {
+      "id": "c6",
+      "label": "쓰레기통 조사",
+      "text": "쓰레기통 안에서 꿀이 묻은 숟가락이 발견됐다냥."
+    },
+    {
+      "id": "c7",
+      "label": "먹구의 알리바이",
+      "text": "먹구는 범행 시간 동안 부엌이 아니라 바깥 담벼락에 있었다냥."
+    }
+  ],
+  "answer": "EEkCBQQHG0RGEggUbhMdD1JEBxsTGRw7AENXEggUxrqdwYyVhv79UIP07cGxuNmTkRHdnYnd9u9BnODvScGltt6hpdq6idqyzkVPXkpbS15dXEdCRF5fDwsTgOn5m9HzgqemENm0g92vjRHd/ueK1sSc2bnerYbdjK0ZbBHdy/eN6dBeRQ3eiarai7nap6URgMHInP/nScaCmd6sld2smRHd9eON1+iczqES25W+xrqIwaahS4f/+ITg4ca5lNm8uRHdi6zd/dON7NScyLEachLaja3dtIkYR0uK2NGd3IHZuqYWxrqFxoONgPbcnP/nScGsuN6hpdq6idq7/0uN5eScz4HZgKbasIXajK0ZL0uN0PSb8JUbENmEud2sld2m+4fl7EibybHeqYrdva3appUfS4Dj2ITq6Q3ej5Lbr5Xap6URgdvpnOv+ScC2iNiFkRHbkrERhvb1nMj2ScahgRLaup3asp0RgODJnOzrg52yENiGrdqXgdyzz4Dr5Eibzqnel64WxoOlwayJh/bVm+PTgq6XERBL"
+}

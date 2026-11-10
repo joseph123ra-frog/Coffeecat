@@ -1,70 +1,70 @@
 {
-  "no": 5,
-  "date": "2026-11-09",
-  "title": "옥상 정원 사건",
-  "intro": "오늘 오후 2시, 아파트 옥상 정원의 예쁜 꽃 장식이 엉망이 됐다냥! 꽃잎이 사방으로 흩날리고, 정성껏 쌓아둔 화분 탑이 무너져 내렸다.",
+  "no": 6,
+  "date": "2026-11-10",
+  "title": "알록달록 낙서 사건",
+  "intro": "오늘 아침 동네 문구점 화이트보드에 정체불명의 분홍색 고양이 발자국 낙서가 그려져 있었다. 과연 누가 장난을 친 걸까냥?",
   "suspects": [
     {
       "id": "A",
-      "name": "나비",
-      "fur": "삼색",
-      "desc": "낮잠을 좋아하는 얌전한 고양이"
+      "name": "치즈",
+      "fur": "주황",
+      "desc": "낮잠을 좋아하는 의자 지킴이"
     },
     {
       "id": "B",
-      "name": "치즈",
-      "fur": "주황",
-      "desc": "장난꾸러기 대장 고양이"
+      "name": "모래",
+      "fur": "회색",
+      "desc": "키가 아주 작은 아기 고양이"
     },
     {
       "id": "C",
-      "name": "까망",
+      "name": "호두",
       "fur": "검정",
-      "desc": "발걸음이 소리 없는 닌자 고양이"
+      "desc": "높은 곳을 좋아하는 탐험가"
     },
     {
       "id": "D",
-      "name": "모찌",
-      "fur": "흰색",
-      "desc": "겁이 많고 뚱뚱한 고양이"
+      "name": "나비",
+      "fur": "삼색",
+      "desc": "깔끔 떨기 좋아하는 녀석"
     }
   ],
   "clues": [
     {
       "id": "c1",
-      "label": "관리인 아저씨 노트",
-      "text": "A는 지난주에 털갈이를 하느라 털을 사방에 날리고 다녔다고 적혀 있다냥."
+      "label": "발바닥 검사",
+      "text": "나비(D)의 발바닥은 아주 깨끗해서 분홍 물감이 전혀 없다냥."
     },
     {
       "id": "c2",
-      "label": "CCTV 확인",
-      "text": "오후 2시 정각, A는 1층 로비 소파 위에서 낮잠을 자고 있었다냥."
+      "label": "발자국 높이",
+      "text": "화이트보드의 낙서는 바닥에서 150cm 높이에 있다냥. 모래(B)는 키가 30cm라 절대 닿지 않는다냥."
     },
     {
       "id": "c3",
-      "label": "발자국 분석",
-      "text": "사건 현장에 남은 발자국은 아주 작은 아기 고양이 발자국이다. C는 발이 훨씬 크다냥."
+      "label": "문구점 주인 증언",
+      "text": "호두(C)가 오전 9시 50분에 사다리 위로 올라가는 걸 봤다냥."
     },
     {
       "id": "c4",
-      "label": "엘리베이터 기록",
-      "text": "뚱뚱한 D는 오후 내내 1층을 벗어난 적이 없다냥. 옥상 계단은 절대 못 올라간다."
+      "label": "CCTV 확인",
+      "text": "오전 10시 정각, 치즈(A)는 문구점 바깥 벤치에서 곤히 자고 있었다냥."
     },
     {
       "id": "c5",
-      "label": "화분 뒤 털뭉치",
-      "text": "무너진 화분 옆에서 삼색 고양이의 털뭉치가 발견되었다냥! A의 털 같다."
+      "label": "분홍 물감통",
+      "text": "모래(B)의 털에 분홍 물감이 묻어 있어 범인처럼 보이지만, 이건 어제 가지고 놀던 분홍색 고무공 색소라냥!"
     },
     {
       "id": "c6",
-      "label": "비둘기 증언",
-      "text": "비둘기 아저씨가 말했다. \"주황색 고양이가 신나서 뛰어다니다가 화분을 건드렸지!\""
+      "label": "창고 구석 조사",
+      "text": "창고 구석에서 분홍색 물감이 묻은 호두(C)의 꼬리털이 발견되었다냥."
     },
     {
       "id": "c7",
-      "label": "현장 발바닥 너비",
-      "text": "범인의 발바닥 너비는 3cm로, B의 발바닥 크기와 완벽하게 일치한다냥."
+      "label": "영수증 뒷면",
+      "text": "영수증 뒷면에 '호두(C) 다녀감'이라고 적혀 있었다냥."
     }
   ],
-  "answer": "EEkCBQQHG0RGEggUbxMdD1NMBxsTGRw7AENXEggUwKaVwKedR0uK8vCc0KnYgLIWxqeZwaaNgPfJm87HScC2iBLduL3agYjV/PtBnPHzgp+P3aeWDd2VqRDV/ueN5fCc47nZvYIWxqKVwYyJgODFm+vSSA8eEkFZQURFRF9XSVFDMYP9/Q0D3IqDDdqzg9yny0uN5eScz4HZgKbasIXdtLAZgd/hm87bhbCKENmzldy7ldyk80uM9NCd2aXerYYWwZesx4GJgMr9UITX9cGriNmmhNq6pduyz0VBM4P9/Q3fsYIWxoGtwa6pgd7MUIX2xceKgNmXsR0Raduz/0tQnNDChbqi25W6DdqZlduV14D+3ITz9Q3ekK7atInavZnS4OOK+8xZScC2iNmbpN2ItRDS4MON9PSc47kScd6rtRHdtavS6ctBnezPhbCG26+KDdymmtqJ44DH3ILF5Q3Zl77dvpXdirDSzOdNUIPO7cajqNiOnRHah5nT2cKK+9yd2pES24KqxoGlxrucS4Dl+IPO7Q0BU18WwZesx4GJgMr9UCqd2a0S24CiwayJwa69h/bVUIXu/MG5lN+jmd2WvNuy44Dq1EZVFA=="
+  "answer": "EEkCBQQHG0RGEggUbhMdD1JFBxsTGRw7AENXEggUwKaVwKaUR0uK9vqb9K0S2oGFwaahwbWsS4HWyIPR1Q3Yh4rdi53blYHa2+tBm+z/goGGEN6ogdqBod2m30uKw9yb/oHetK4Wx4aJxq+cgODFm+vSSA8eEkFZQURFRF5eSVFDMysjP8aTrBJ3x4GxDdqA/Yf24ITz9Q3erpbasL3dsIUQgNv8nfD3hY2KEN6Wsd2oldqg84HS0ERXhK+W2oK2Dd2vvN2t60sjm+LjSRwHAFFbDdq3v92t34f24Eic4pLel7IWwaS7waS0S4fB7ITu0caiqNmfnR0Radq6/0uKwPSc2bnZu5fasIURx4iYgOr2nf3DScGSrN6vldqhhNq744Dq1EZXK8a4pBLdgY3bnaEQgP7tm8TPhbqiEN6rtd26gdqA8If06ITr1cawqBLas5Tar63a2/tBmtvCScanvNmald2vqd2t30uKwPWa8a3el6PdprnappUeS4HTwILCxA3esp7dppXai53c/PtBnPDbgrCO2oKyDd2XsNuB24f48EicxZHYgKLasIURxp2Lh/bhUIXv0cajoBp1BNuBrRHb2f+N7dCb96jZu7rdppUQD0w="
 }

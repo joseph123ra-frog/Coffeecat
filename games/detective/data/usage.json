@@ -53,14 +53,21 @@
       "title": "알록달록 낙서 사건",
       "source": "ai",
       "usd": 0
+    },
+    {
+      "no": 7,
+      "date": "2026-11-11",
+      "title": "사라진 호박꿀단지 사건",
+      "source": "ai",
+      "usd": 0
     }
   ],
   "geminiFree": {
     "months": {
       "2026-11": {
-        "calls": 6,
-        "input_tokens": 2546,
-        "output_tokens": 2344
+        "calls": 9,
+        "input_tokens": 3764,
+        "output_tokens": 3443
       }
     }
   }
