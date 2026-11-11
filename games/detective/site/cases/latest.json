@@ -1,70 +1,70 @@
 {
-  "no": 6,
-  "date": "2026-11-10",
-  "title": "알록달록 낙서 사건",
-  "intro": "오늘 아침 동네 문구점 화이트보드에 정체불명의 분홍색 고양이 발자국 낙서가 그려져 있었다. 과연 누가 장난을 친 걸까냥?",
+  "no": 7,
+  "date": "2026-11-11",
+  "title": "사라진 호박꿀단지 사건",
+  "intro": "할머니 집 부엌 식탁 위에서 달콤한 호박꿀단지가 감쪽같이 사라졌다냥! 꿀을 훔쳐간 범인은 누구일까?",
   "suspects": [
     {
       "id": "A",
-      "name": "치즈",
-      "fur": "주황",
-      "desc": "낮잠을 좋아하는 의자 지킴이"
+      "name": "나비",
+      "fur": "흰색",
+      "desc": "낮잠을 좋아하는 뚱뚱이 고양이"
     },
     {
       "id": "B",
-      "name": "모래",
-      "fur": "회색",
-      "desc": "키가 아주 작은 아기 고양이"
+      "name": "치즈",
+      "fur": "주황",
+      "desc": "장난기가 넘치는 꼬마 고양이"
     },
     {
       "id": "C",
-      "name": "호두",
-      "fur": "검정",
-      "desc": "높은 곳을 좋아하는 탐험가"
+      "name": "쿠키",
+      "fur": "갈색",
+      "desc": "단 것을 좋아하는 탐욕스러운 고양이"
     },
     {
       "id": "D",
-      "name": "나비",
-      "fur": "삼색",
-      "desc": "깔끔 떨기 좋아하는 녀석"
+      "name": "먹구",
+      "fur": "회색",
+      "desc": "부엌 문지기 시크한 고양이"
     }
   ],
   "clues": [
     {
       "id": "c1",
-      "label": "발바닥 검사",
-      "text": "나비(D)의 발바닥은 아주 깨끗해서 분홍 물감이 전혀 없다냥."
+      "label": "치즈의 증언",
+      "text": "치즈는 목에 방울을 달고 있지만, 범행 시간엔 마당에서 나비와 놀고 있었다냥."
     },
     {
       "id": "c2",
-      "label": "발자국 높이",
-      "text": "화이트보드의 낙서는 바닥에서 150cm 높이에 있다냥. 모래(B)는 키가 30cm라 절대 닿지 않는다냥."
+      "label": "창가 방울 소리",
+      "text": "범행 시간에 방울 단 고양이가 창가로 뛰어가는 걸 보았다는 증언이 있다냥."
     },
     {
       "id": "c3",
-      "label": "문구점 주인 증언",
-      "text": "호두(C)가 오전 9시 50분에 사다리 위로 올라가는 걸 봤다냥."
+      "label": "나비의 알리바이",
+      "text": "나비는 오후 2시부터 4시까지 거실 마루에서 깊은 낮잠을 자고 있었다냥."
     },
     {
       "id": "c4",
-      "label": "CCTV 확인",
-      "text": "오전 10시 정각, 치즈(A)는 문구점 바깥 벤치에서 곤히 자고 있었다냥."
+      "label": "식탁 밑 발자국",
+      "text": "식탁 밑에 작은 발자국이 남았는데 갈색 털이 조금 떨어져 있다냥."
     },
     {
       "id": "c5",
-      "label": "분홍 물감통",
-      "text": "모래(B)의 털에 분홍 물감이 묻어 있어 범인처럼 보이지만, 이건 어제 가지고 놀던 분홍색 고무공 색소라냥!"
+      "label": "싱크대 흔적",
+      "text": "싱크대 위에서 갈색 털뭉치가 발견되었다냥."
     },
     {
       "id": "c6",
-      "label": "창고 구석 조사",
-      "text": "창고 구석에서 분홍색 물감이 묻은 호두(C)의 꼬리털이 발견되었다냥."
+      "label": "쓰레기통 조사",
+      "text": "쓰레기통 안에서 꿀이 묻은 숟가락이 발견됐다냥."
     },
     {
       "id": "c7",
-      "label": "영수증 뒷면",
-      "text": "영수증 뒷면에 '호두(C) 다녀감'이라고 적혀 있었다냥."
+      "label": "먹구의 알리바이",
+      "text": "먹구는 범행 시간 동안 부엌이 아니라 바깥 담벼락에 있었다냥."
     }
   ],
-  "answer": "EEkCBQQHG0RGEggUbhMdD1JFBxsTGRw7AENXEggUwKaVwKaUR0uK9vqb9K0S2oGFwaahwbWsS4HWyIPR1Q3Yh4rdi53blYHa2+tBm+z/goGGEN6ogdqBod2m30uKw9yb/oHetK4Wx4aJxq+cgODFm+vSSA8eEkFZQURFRF5eSVFDMysjP8aTrBJ3x4GxDdqA/Yf24ITz9Q3erpbasL3dsIUQgNv8nfD3hY2KEN6Wsd2oldqg84HS0ERXhK+W2oK2Dd2vvN2t60sjm+LjSRwHAFFbDdq3v92t34f24Eic4pLel7IWwaS7waS0S4fB7ITu0caiqNmfnR0Radq6/0uKwPSc2bnZu5fasIURx4iYgOr2nf3DScGSrN6vldqhhNq744Dq1EZXK8a4pBLdgY3bnaEQgP7tm8TPhbqiEN6rtd26gdqA8If06ITr1cawqBLas5Tar63a2/tBmtvCScanvNmald2vqd2t30uKwPWa8a3el6PdprnappUeS4HTwILCxA3esp7dppXai53c/PtBnPDbgrCO2oKyDd2XsNuB24f48EicxZHYgKLasIURxp2Lh/bhUIXv0cajoBp1BNuBrRHb2f+N7dCb96jZu7rdppUQD0w="
+  "answer": "EEkCBQQHG0RGEggUbhMdD1JEBxsTGRw7AENXEggUxrqdwYyVhv79UIP07cGxuNmTkRHdnYnd9u9BnODvScGltt6hpdq6idqyzkVPXkpbS15dXEdCRF5fDwsTgOn5m9HzgqemENm0g92vjRHd/ueK1sSc2bnerYbdjK0ZbBHdy/eN6dBeRQ3eiarai7nap6URgMHInP/nScaCmd6sld2smRHd9eON1+iczqES25W+xrqIwaahS4f/+ITg4ca5lNm8uRHdi6zd/dON7NScyLEachLaja3dtIkYR0uK2NGd3IHZuqYWxrqFxoONgPbcnP/nScGsuN6hpdq6idq7/0uN5eScz4HZgKbasIXajK0ZL0uN0PSb8JUbENmEud2sld2m+4fl7EibybHeqYrdva3appUfS4Dj2ITq6Q3ej5Lbr5Xap6URgdvpnOv+ScC2iNiFkRHbkrERhvb1nMj2ScahgRLaup3asp0RgODJnOzrg52yENiGrdqXgdyzz4Dr5Eibzqnel64WxoOlwayJh/bVm+PTgq6XERBL"
 }
