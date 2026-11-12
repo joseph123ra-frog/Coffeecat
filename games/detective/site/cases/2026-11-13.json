@@ -1,0 +1,70 @@
+{
+  "no": 9,
+  "date": "2026-11-13",
+  "title": "생선가게 장식 사건",
+  "intro": "어느 날 오후, 골목 생선가게 앞의 예쁜 크리스마스 장식이 와르르 무너졌다. 반짝이는 방울과 리본이 온통 엉망이 되었는데, 범인은 누구일까냥?",
+  "suspects": [
+    {
+      "id": "A",
+      "name": "치즈",
+      "fur": "주황",
+      "desc": "낮잠을 사랑하는 느긋한 냥이"
+    },
+    {
+      "id": "B",
+      "name": "모자",
+      "fur": "턱시도",
+      "desc": "깔끔 떨기를 좋아하는 신사 냥이"
+    },
+    {
+      "id": "C",
+      "name": "호두",
+      "fur": "갈색",
+      "desc": "호기심이 하늘을 찌르는 장난꾸러기"
+    },
+    {
+      "id": "D",
+      "name": "콩이",
+      "fur": "흰색",
+      "desc": "발걸음이 아주 가벼운 댄서 냥이"
+    }
+  ],
+  "clues": [
+    {
+      "id": "c1",
+      "label": "범인의 흔적",
+      "text": "무너진 장식 가닥 사이에 호두의 옷에 달려있던 갈색 실밥이 뜯겨져 걸려 있었다."
+    },
+    {
+      "id": "c2",
+      "label": "2층 창가 확인",
+      "text": "집사는 말했다. \"치즈는 범행 시각인 오후 3시에 내 무릎 위에서 쿨쿨 자고 있었어냥!\""
+    },
+    {
+      "id": "c3",
+      "label": "가게 주인 증언",
+      "text": "주인 아저씨가 말했다. \"모자는 생선 비린내를 질색해서 우리 가게 근처에는 얼씬도 안 한다네.\""
+    },
+    {
+      "id": "c4",
+      "label": "떨어진 털 조사",
+      "text": "장식 더미 속에서 턱시도 무늬의 검은 털 한 가닥이 발견되었다."
+    },
+    {
+      "id": "c5",
+      "label": "생선가게 CCTV",
+      "text": "오후 3시 5분, 갈색 꼬리를 가진 고양이가 장식에 매달려 장난치는 모습이 흐릿하게 찍혔다."
+    },
+    {
+      "id": "c6",
+      "label": "발자국 분석",
+      "text": "현장 바닥의 발자국은 콩이의 것보다 훨씬 작고 뭉툭한 모양이었다. 콩이는 무죄다냥!"
+    },
+    {
+      "id": "c7",
+      "label": "참기름 병 조사",
+      "text": "장식 옆에 놓인 참기름 병은 전혀 건드려지지 않았다. 기름 냄새는 범인의 관심사가 아니었다."
+    }
+  ],
+  "answer": "EEkCBQQHG0RGEggUbhMdD1JGBxsTGRw7AENXEggUxoGpwZauh/bVm+LjScaCmd6sld2smRHY7+OK3NxXhbW624mmwbWtDduE04DG/Ir3zw3Zo5baka3an7XYy9OK9Myc6ogTEh4UXl5dWEVaBAVDSkqc4oXetK4WHNqQsRHf0vON1uCd2a0eENm9hd21sREBgMr9UIPdwcGsoNiGrR0Rxrqbh+/9UFycyLES3I+fwayFx4GzS4b45YT8zcCsuBLdn6XdsInf/PuN9PRXhY2u3KuOxqGYxrq7gODFXkic4oXetK4WHt2mvd2390uK2sCb973eraoWwLWJwayHS4Dj6ITu6Q3fp4Xcnbnai53Z2edBnf3vhYqy25W6Ddqbhd2t+4Dr5Eic0KnZloLdr4URwaS/gMvpm83Dg5WC25OqDduBrduB54f24Eib8Ynel7IWwaS7waS3S4DNxITU7cGstdm9pdq6iR8TgdnRnMjihY2z3K6KxpCtDdq4w4fl7EhChbSyEATauqHdqa0TgdvpnOv+SceOnNmQgd2orRHf4M+KwM2b9JkS3aqOxqChxpSPS4HR8IPRxcCwlNiFjRHds7nf4d6K++Cc4okTEk8="
+}
