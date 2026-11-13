@@ -6,10 +6,10 @@
     }
   },
   "usedBackups": [
-    "002.json",
     "003.json",
     "004.json",
-    "001.json"
+    "001.json",
+    "002.json"
   ],
   "history": [
     {
@@ -74,12 +74,19 @@
       "title": "생선가게 장식 사건",
       "source": "ai",
       "usd": 0
+    },
+    {
+      "no": 10,
+      "date": "2026-11-14",
+      "title": "옮겨진 책갈피 사건",
+      "source": "backup",
+      "usd": 0
     }
   ],
   "geminiFree": {
     "months": {
       "2026-11": {
-        "calls": 14,
+        "calls": 15,
         "input_tokens": 5647,
         "output_tokens": 5624
       }

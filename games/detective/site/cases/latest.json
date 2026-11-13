@@ -1,70 +1,70 @@
 {
-  "no": 8,
-  "date": "2026-11-12",
-  "title": "사라진 참치 츄르 사건",
-  "intro": "할머니 집 부엌 찬장 위 상자에서 참치맛 츄르 3개가 사라졌다. 밤 10시에는 분명히 있었는데, 아침 7시에 보니 없었다. 용의자는 이 집 고양이 네 마리.",
+  "no": 9,
+  "date": "2026-11-13",
+  "title": "생선가게 장식 사건",
+  "intro": "어느 날 오후, 골목 생선가게 앞의 예쁜 크리스마스 장식이 와르르 무너졌다. 반짝이는 방울과 리본이 온통 엉망이 되었는데, 범인은 누구일까냥?",
   "suspects": [
     {
       "id": "A",
       "name": "치즈",
       "fur": "주황",
-      "desc": "동네에서 유명한 먹보 뚱냥이"
+      "desc": "낮잠을 사랑하는 느긋한 냥이"
     },
     {
       "id": "B",
-      "name": "루나",
-      "fur": "검정",
-      "desc": "밤 산책을 좋아하는 날렵한 고양이"
+      "name": "모자",
+      "fur": "턱시도",
+      "desc": "깔끔 떨기를 좋아하는 신사 냥이"
     },
     {
       "id": "C",
-      "name": "보리",
-      "fur": "회색",
-      "desc": "이 집에서 가장 나이 많은 고양이"
+      "name": "호두",
+      "fur": "갈색",
+      "desc": "호기심이 하늘을 찌르는 장난꾸러기"
     },
     {
       "id": "D",
-      "name": "모찌",
+      "name": "콩이",
       "fur": "흰색",
-      "desc": "지난달 이 집에 온 아기 고양이"
+      "desc": "발걸음이 아주 가벼운 댄서 냥이"
     }
   ],
   "clues": [
     {
       "id": "c1",
-      "label": "찬장 살펴보기",
-      "text": "찬장 높이는 1.5m. 주변에 딛고 오를 가구가 없다. 옆 커튼에 아래부터 위까지 새 발톱 구멍이 촘촘히 나 있다. 구멍 사이가 좁다. 발이 작은 고양이 같다."
+      "label": "범인의 흔적",
+      "text": "무너진 장식 가닥 사이에 호두의 옷에 달려있던 갈색 실밥이 뜯겨져 걸려 있었다."
     },
     {
       "id": "c2",
-      "label": "소파 밑 살펴보기",
-      "text": "빈 참치맛 츄르 껍질 3개가 나왔다. 껍질에 아주 작은 이빨 자국이 나 있다."
+      "label": "2층 창가 확인",
+      "text": "집사는 말했다. \"치즈는 범행 시각인 오후 3시에 내 무릎 위에서 쿨쿨 자고 있었어냥!\""
     },
     {
       "id": "c3",
-      "label": "보리 심문",
-      "text": "보리 목걸이에 동물병원 진단서가 끼워져 있다. \"뒷다리 관절염. 지난달부터 높이 40cm 소파에도 못 오름.\""
+      "label": "가게 주인 증언",
+      "text": "주인 아저씨가 말했다. \"모자는 생선 비린내를 질색해서 우리 가게 근처에는 얼씬도 안 한다네.\""
     },
     {
       "id": "c4",
-      "label": "치즈 심문",
-      "text": "입가에서 츄르 냄새가 솔솔 난다. \"내가 츄르 먹은 건 맞다냥! 근데 그게 뭐 어때서냥?\""
+      "label": "떨어진 털 조사",
+      "text": "장식 더미 속에서 턱시도 무늬의 검은 털 한 가닥이 발견되었다."
     },
     {
       "id": "c5",
-      "label": "모찌 심문",
-      "text": "\"난 밤새 바구니에서 잤다냥…\" 그런데 앞발 발톱에 커튼과 같은 하늘색 실밥이 걸려 있다."
+      "label": "생선가게 CCTV",
+      "text": "오후 3시 5분, 갈색 꼬리를 가진 고양이가 장식에 매달려 장난치는 모습이 흐릿하게 찍혔다."
     },
     {
       "id": "c6",
-      "label": "루나 심문",
-      "text": "\"밤새 밖에 있었다냥.\" 옆집 강아지 두부: \"맞아, 밤 10시부터 아침 7시까지 담장 위에서 루나랑 같이 별 봤어.\""
+      "label": "발자국 분석",
+      "text": "현장 바닥의 발자국은 콩이의 것보다 훨씬 작고 뭉툭한 모양이었다. 콩이는 무죄다냥!"
     },
     {
       "id": "c7",
-      "label": "할머니 증언",
-      "text": "\"치즈가 밤 10시부터 아침 6시 반까지 내 배 위에서 자서 무거워 몇 번이나 깼지. 6시 반에 연어맛 츄르를 하나 주고 7시까지 같이 있었어.\""
+      "label": "참기름 병 조사",
+      "text": "장식 옆에 놓인 참기름 병은 전혀 건드려지지 않았다. 기름 냄새는 범인의 관심사가 아니었다."
     }
   ],
-  "answer": "EEkCBQQHG0RGEggUaRMdD1JHBxsTGRw7AENXEggUwYqVwLuOS4bi8ILP2Q3ep4Lap4TcuKnZ4M+LwOiV6YsS3IqyxpSFDdqx74fi+ILH6Q3Zsqraqa0Rx4aKgMztkujRScadiN6jpdyktdq5z4Di1UlVRQ9BX15DWVheQxMISYfY6ITR4ca4pBLdnZXdrrkShv7Bm8DPgqa63Ku2DdykhduJ80uN7uCb/qXYg5IaDd2vqNuC60uK8+yb6qXZuqYWwaS1wYiah/zxUIPH8sGvsBLauoHdu4XZzPBBnNDzgoiGENmjodqdld2v34Dq1EZXgo6a27CuxrulDdqj+4DX8ITu6Q3ZgJbarrkRxrqGh/XEUITr7cGloBLas7ndurnZ4M9PUIPE3caUnNm8uRHbmbHey+NBm/37goGK3KWmDd2Kidy414f89Eia6qUS3LquDd2mq9q5z0VBm+rfhbCyENiHmRHana3e9t9BnPbmhbCyENmchd2BoR8Sh9DFneLLhbCqEN6ovN2srRHZ2/eM9tlXg5ie25u7ARHds6De9utBnPXDgpSaEN6ovduEgB0SgNv9ne7GhbqiENiHldqXnRHf/vOK+vCb6qQS3LmSxoGUwayGS4DL2ITH5caXjBLcnbHai53f6cOK+8xZS1A="
+  "answer": "EEkCBQQHG0RGEggUbhMdD1JGBxsTGRw7AENXEggUxoGpwZauh/bVm+LjScaCmd6sld2smRHY7+OK3NxXhbW624mmwbWtDduE04DG/Ir3zw3Zo5baka3an7XYy9OK9Myc6ogTEh4UXl5dWEVaBAVDSkqc4oXetK4WHNqQsRHf0vON1uCd2a0eENm9hd21sREBgMr9UIPdwcGsoNiGrR0Rxrqbh+/9UFycyLES3I+fwayFx4GzS4b45YT8zcCsuBLdn6XdsInf/PuN9PRXhY2u3KuOxqGYxrq7gODFXkic4oXetK4WHt2mvd2390uK2sCb973eraoWwLWJwayHS4Dj6ITu6Q3fp4Xcnbnai53Z2edBnf3vhYqy25W6Ddqbhd2t+4Dr5Eic0KnZloLdr4URwaS/gMvpm83Dg5WC25OqDduBrduB54f24Eib8Ynel7IWwaS7waS3S4DNxITU7cGstdm9pdq6iR8TgdnRnMjihY2z3K6KxpCtDdq4w4fl7EhChbSyEATauqHdqa0TgdvpnOv+SceOnNmQgd2orRHf4M+KwM2b9JkS3aqOxqChxpSPS4HR8IPRxcCwlNiFjRHds7nf4d6K++Cc4okTEk8="
 }
