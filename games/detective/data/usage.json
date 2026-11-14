@@ -81,14 +81,21 @@
       "title": "옮겨진 책갈피 사건",
       "source": "backup",
       "usd": 0
+    },
+    {
+      "no": 11,
+      "date": "2026-11-15",
+      "title": "사라진 생크림 식빵 사건",
+      "source": "ai",
+      "usd": 0
     }
   ],
   "geminiFree": {
     "months": {
       "2026-11": {
-        "calls": 15,
-        "input_tokens": 5647,
-        "output_tokens": 5624
+        "calls": 21,
+        "input_tokens": 8419,
+        "output_tokens": 7821
       }
     }
   }

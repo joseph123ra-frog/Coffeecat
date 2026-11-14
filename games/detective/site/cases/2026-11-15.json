@@ -1,0 +1,70 @@
+{
+  "no": 11,
+  "date": "2026-11-15",
+  "title": "사라진 생크림 식빵 사건",
+  "intro": "오늘 오후 2시, 빵집 진열대에 놓여 있던 가장 폭신한 생크림 식빵이 사라졌다냥! 깝휘캣 탐정이 범인치기 대작전을 시작한다냥.",
+  "suspects": [
+    {
+      "id": "A",
+      "name": "치즈",
+      "fur": "주황",
+      "desc": "식탐 많은 주황고양이"
+    },
+    {
+      "id": "B",
+      "name": "루이",
+      "fur": "회색",
+      "desc": "우아한 회색고양이"
+    },
+    {
+      "id": "C",
+      "name": "초코",
+      "fur": "검정",
+      "desc": "호기심 많은 검은고양이"
+    },
+    {
+      "id": "D",
+      "name": "나비",
+      "fur": "흰색",
+      "desc": "발이 작은 하얀고양이"
+    }
+  ],
+  "clues": [
+    {
+      "id": "c1",
+      "label": "CCTV 확인",
+      "text": "오후 2시 정각, 검은 털을 가진 고양이가 생크림 식빵을 물고 1번 테이블 밑으로 도망치는 모습이 찍혔다냥."
+    },
+    {
+      "id": "c2",
+      "label": "바닥 발자국",
+      "text": "빵집 바닥에 선명한 발자국이 남았는데, 작은 발을 가진 나비(D)의 보폭보다 훨씬 컸다냥."
+    },
+    {
+      "id": "c3",
+      "label": "접시 조사",
+      "text": "사라진 식빵 접시 옆에서 초코(C)가 좋아하는 생선 모양 쿠키 부스러기가 발견되었다냥."
+    },
+    {
+      "id": "c4",
+      "label": "집사 증언",
+      "text": "치즈(A)는 오후 2시부터 3시까지 2층 침대 위에서 숙면을 취하고 있었다냥."
+    },
+    {
+      "id": "c5",
+      "label": "꼬리 흔적",
+      "text": "범인 자리에 남은 크림에 길고 우아한 회색 털이 묻어 있어 루이(B)가 의심스럽다냥."
+    },
+    {
+      "id": "c6",
+      "label": "영수증 확인",
+      "text": "초코(C)는 알리바이가 전혀 없고 빵 냄새만 맡으면 눈이 반짝인다고 한다냥."
+    },
+    {
+      "id": "c7",
+      "label": "목격자 앵무새",
+      "text": "루이(B)는 오후 2시에 창가에서 낮잠을 자느라 꼬리가 길게 늘어져 있었을 뿐, 빵 쪽엔 가지 않았다냥."
+    }
+  ],
+  "answer": "EEkCBQQHG0RGEggUbhMdD1JABxsTGRw7AENXEggUwLCdxpeJh/bVUIPz4caehBLdpp3dkJXY/t+N9PRXg5qK25W6DduIsdqMyob3+IP8zcaxlRMUARNCQl1AHwIOHkpNS8GVod60gRHdi6zZ/dON7NScyLES3IuuwZe5BXAcgOH1UFqb0Zjep6IWwa+5waeBS4fB7ITu0caiqNiFjR0RwaSAgMfVnOv/ScGUrd6gld2tkdqU90uK08Cb9Jkachvdp6URwYGIgdvhnP/nScGsuN6gmRHdja3Z8tOK4PSc4okcENmGsd2vvduAxkuK+8Cb7bHZka4WxrOpxoixQy9Im+LjScaBhN+5gN2smRHe4MeK7dRXhY2u3KuOxqGtxrqRRUuK8sCb9K0S3Ia+wYylBXIcgdvhUCs0PXveqbIWwY6RwLORS4DX8IT9zcatnNiOnR0RwaS5gM3Nm9jjhbCGENmArd2vgdqU90uKwvyb9JXerYbdppUfDdqWw4f8xITq8Q3YjJ7di50RwKyhh8vgnPX3ScClh9iGpdqXgdq//0uK+8Cb7bHeqLLasY3ar6kVgMHImtrehbOiEN6QsN2nld2p14DA7Eia/Jnetr7dva3appUbSRY="
+}
