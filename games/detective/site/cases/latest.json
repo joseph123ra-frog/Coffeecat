@@ -1,70 +1,70 @@
 {
-  "no": 10,
-  "date": "2026-11-14",
-  "title": "옮겨진 책갈피 사건",
-  "intro": "도서관 창가의 책갈피 5장이 쿠션 아래로 옮겨졌다. 오후 2시에는 책상 위에 있었고, 2시 10분에 자리를 지키던 사서가 발견했다. 그 사이 도서관에 있던 고양이는 네 마리뿐이다.",
+  "no": 11,
+  "date": "2026-11-15",
+  "title": "사라진 생크림 식빵 사건",
+  "intro": "오늘 오후 2시, 빵집 진열대에 놓여 있던 가장 폭신한 생크림 식빵이 사라졌다냥! 깝휘캣 탐정이 범인치기 대작전을 시작한다냥.",
   "suspects": [
     {
       "id": "A",
-      "name": "나비",
-      "fur": "삼색",
-      "desc": "반짝이는 물건을 모으는 고양이"
+      "name": "치즈",
+      "fur": "주황",
+      "desc": "식탐 많은 주황고양이"
     },
     {
       "id": "B",
-      "name": "후추",
-      "fur": "턱시도",
-      "desc": "쿠션을 좋아하는 낮잠 대장"
+      "name": "루이",
+      "fur": "회색",
+      "desc": "우아한 회색고양이"
     },
     {
       "id": "C",
-      "name": "감자",
-      "fur": "갈색",
-      "desc": "사서와 함께 일하는 고양이"
+      "name": "초코",
+      "fur": "검정",
+      "desc": "호기심 많은 검은고양이"
     },
     {
       "id": "D",
-      "name": "은비",
-      "fur": "고등어",
-      "desc": "창가에서 새를 구경하는 고양이"
+      "name": "나비",
+      "fur": "흰색",
+      "desc": "발이 작은 하얀고양이"
     }
   ],
   "clues": [
     {
       "id": "c1",
-      "label": "인형 확인",
-      "text": "턱시도 인형은 사서가 1시부터 쿠션 옆에 둔 것이다. 인형 주변 종이 조각에도 금색 가루가 묻어 있다."
+      "label": "CCTV 확인",
+      "text": "오후 2시 정각, 검은 털을 가진 고양이가 생크림 식빵을 물고 1번 테이블 밑으로 도망치는 모습이 찍혔다냥."
     },
     {
       "id": "c2",
-      "label": "창가 영상",
-      "text": "2시부터 2시 10분까지 찍힌 연속 영상에서 은비는 잠긴 투명 새 구경방 안에 있다. 문은 사서가 2시 11분에 열어 주었다."
+      "label": "바닥 발자국",
+      "text": "빵집 바닥에 선명한 발자국이 남았는데, 작은 발을 가진 나비(D)의 보폭보다 훨씬 컸다냥."
     },
     {
       "id": "c3",
-      "label": "반납대 기록",
-      "text": "사서는 2시부터 2시 10분까지 감자를 안고 반납대에 있었다. 두 마리가 함께 찍힌 연속 영상에도 감자는 한 번도 내려가지 않는다."
+      "label": "접시 조사",
+      "text": "사라진 식빵 접시 옆에서 초코(C)가 좋아하는 생선 모양 쿠키 부스러기가 발견되었다냥."
     },
     {
       "id": "c4",
-      "label": "휴게실 확인",
-      "text": "후추는 1시 55분에 잠긴 휴게실에 들어갔다. 사서가 2시 15분에 열어 줄 때까지 방 안 영상에 계속 찍혔다."
+      "label": "집사 증언",
+      "text": "치즈(A)는 오후 2시부터 3시까지 2층 침대 위에서 숙면을 취하고 있었다냥."
     },
     {
       "id": "c5",
-      "label": "쿠션 뒤지기",
-      "text": "쿠션 아래에서 책갈피 5장과 빈 수집 상자 뚜껑이 나왔다. 뚜껑에는 새로 묻은 금색 종이 가루가 있다."
+      "label": "꼬리 흔적",
+      "text": "범인 자리에 남은 크림에 길고 우아한 회색 털이 묻어 있어 루이(B)가 의심스럽다냥."
     },
     {
       "id": "c6",
-      "label": "나비에게 묻기",
-      "text": "나비가 빈 수집 상자를 꼭 안고 있다. “상자가 비면 허전하다냥. 책갈피가 예뻐서 구경은 했다냥.”"
+      "label": "영수증 확인",
+      "text": "초코(C)는 알리바이가 전혀 없고 빵 냄새만 맡으면 눈이 반짝인다고 한다냥."
     },
     {
       "id": "c7",
-      "label": "책상 살펴보기",
-      "text": "책상에서 쿠션까지 책갈피와 같은 금색 종이 조각 3개가 이어진다. 쿠션 옆에는 턱시도 무늬 인형이 놓여 있다."
+      "label": "목격자 앵무새",
+      "text": "루이(B)는 오후 2시에 창가에서 낮잠을 자느라 꼬리가 길게 늘어져 있었을 뿐, 빵 쪽엔 가지 않았다냥."
     }
   ],
-  "answer": "EEkCBQQHG0RGEggUbBMdD1JBBxsTGRw7AENXEggUwbKwwa+kh/zxUIP83cGujNmWidq6iRHY1MuN9fCb9JkS27+iDdyglN2/y4b0xITz9Q3YgYLclYERxpuch/75m+PTgq6XERAaD0JeQURAAgQPUlJVhLa23ISixrulDd2qy4HZxEia9ZnYgr7appUdDduE+4f/4IP9/Q3esp7aqa3dsKkUhvnpXEib9K3Zibbdp6URwa+UgdPVUIT04Q3YhZ7cn4zanZjY/PtBQoT89caEsN+ynREDwbqoS1pRm97zg5S+3JW2Dd2vpd2j44Dq1EZXgq+a3K+2DdqztdqN74HR8Eib2KjYgLrbuY3aiI0Uh/PPmtrLgqaWHhLapandiqAUh+jgnPbnScaorNiNvNuCkRHYye6N7dxXg52y25Gexr61Dd2p34DEzEic+5rZgKnalJncuK3f4M9PUIXz2MG5rNm5qRHdsInZ8/6N7ehXha+e2oOCDd2RqdqC64blwEib96XZvaoWwa+Uwbqph/bVm+PTRw9P"
+  "answer": "EEkCBQQHG0RGEggUbhMdD1JABxsTGRw7AENXEggUwLCdxpeJh/bVUIPz4caehBLdpp3dkJXY/t+N9PRXg5qK25W6DduIsdqMyob3+IP8zcaxlRMUARNCQl1AHwIOHkpNS8GVod60gRHdi6zZ/dON7NScyLES3IuuwZe5BXAcgOH1UFqb0Zjep6IWwa+5waeBS4fB7ITu0caiqNiFjR0RwaSAgMfVnOv/ScGUrd6gld2tkdqU90uK08Cb9Jkachvdp6URwYGIgdvhnP/nScGsuN6gmRHdja3Z8tOK4PSc4okcENmGsd2vvduAxkuK+8Cb7bHZka4WxrOpxoixQy9Im+LjScaBhN+5gN2smRHe4MeK7dRXhY2u3KuOxqGtxrqRRUuK8sCb9K0S3Ia+wYylBXIcgdvhUCs0PXveqbIWwY6RwLORS4DX8IT9zcatnNiOnR0RwaS5gM3Nm9jjhbCGENmArd2vgdqU90uKwvyb9JXerYbdppUfDdqWw4f8xITq8Q3YjJ7di50RwKyhh8vgnPX3ScClh9iGpdqXgdq//0uK+8Cb7bHeqLLasY3ar6kVgMHImtrehbOiEN6QsN2nld2p14DA7Eia/Jnetr7dva3appUbSRY="
 }

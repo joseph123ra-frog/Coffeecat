@@ -88,14 +88,21 @@
       "title": "사라진 생크림 식빵 사건",
       "source": "ai",
       "usd": 0
+    },
+    {
+      "no": 12,
+      "date": "2026-11-16",
+      "title": "사라진 연어 트레이 사건",
+      "source": "ai",
+      "usd": 0
     }
   ],
   "geminiFree": {
     "months": {
       "2026-11": {
-        "calls": 21,
-        "input_tokens": 8419,
-        "output_tokens": 7821
+        "calls": 30,
+        "input_tokens": 12565,
+        "output_tokens": 11346
       }
     }
   }

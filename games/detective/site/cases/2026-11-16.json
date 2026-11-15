@@ -1,0 +1,70 @@
+{
+  "no": 12,
+  "date": "2026-11-16",
+  "title": "사라진 연어 트레이 사건",
+  "intro": "따스한 봄날, 아파트 옥상 정원에 준비해 둔 특별 연어 트레이가 감쪽같이 사라졌다냥! 깝휘캣 탐정이 범인을 찾아 나섰다.",
+  "suspects": [
+    {
+      "id": "A",
+      "name": "나비",
+      "fur": "흰색",
+      "desc": "낮잠을 좋아하는 하얀 고양이"
+    },
+    {
+      "id": "B",
+      "name": "초코",
+      "fur": "갈색",
+      "desc": "재빠르고 호기심 많은 갈색 고양이"
+    },
+    {
+      "id": "C",
+      "name": "구름",
+      "fur": "회색",
+      "desc": "간식이라면 사족을 못 쓰는 회색 고양이"
+    },
+    {
+      "id": "D",
+      "name": "치즈",
+      "fur": "주황",
+      "desc": "덩치가 큰 주황색 고양이"
+    }
+  ],
+  "clues": [
+    {
+      "id": "c1",
+      "label": "발자국 측정",
+      "text": "트레이 주변에 남은 발자국 너비는 3센티미터다. 발 너비가 5센티미터인 치즈는 지나갈 수 없다냥."
+    },
+    {
+      "id": "c2",
+      "label": "참새의 증언",
+      "text": "참새 짹짹이는 \"회색 털을 가진 고양이가 연어를 물고 창고 쪽으로 갔다\"고 말했다냥."
+    },
+    {
+      "id": "c3",
+      "label": "쓰레기통 조사",
+      "text": "쓰레기통 안에는 연어 포장지가 들어 있었고 회색 털이 몇 가닥 붙어 있었다냥."
+    },
+    {
+      "id": "c4",
+      "label": "초코 심문",
+      "text": "초코는 \"오후 1시부터 3시까지 지하 창고에서 박스를 정리하고 있었다\"고 증언했다냥."
+    },
+    {
+      "id": "c5",
+      "label": "화분 뒤 털뭉치",
+      "text": "화분 뒤에서 갈색 털뭉치가 발견되었다! 초코가 범인일까냥?"
+    },
+    {
+      "id": "c6",
+      "label": "벤치 밑 쪽지",
+      "text": "벤치 밑에서 구름의 이름표가 달린 방울이 발견되었다냥!"
+    },
+    {
+      "id": "c7",
+      "label": "CCTV 확인",
+      "text": "CCTV 화면을 보니 사건 시각인 오후 2시에 나비는 1층 로비에 있었다냥!"
+    }
+  ],
+  "answer": "EEkCBQQHG0RGEggUbhMdD1JDBxsTGRw7AENXEggUxqKVwY2GgODFm+vSSA3ep4Lau4XbnbEWgO/pm8TDScaVq96opd2nmRHd2N+N58Sb7bES2oWOxpa9Ax8YSUdDAwcbHFlbX1wUFxPar6nd0u+K+vxXKm5mZtmXsREAwYmDh/zxUITp4ca/qBLcn7LdsIUWhvL0nPXPgr2q3KSCDd2Rsd2v04Dx6ILEyQES3IuuwZe5xruiS4DR7ITp+ceHnRLbrJ3blYHc2+tBm8/phYqyEN6jp92kqRHay/eN6dCc+bHZu5YYDd2Fpd2L/4Dr5Eibzq3fpaoWwYGMx4KWS4f0/IPRxcaCpN6rmduBrRHb8v6N+8ya/LXZmYIaDdyoudqA70uK4syb9LUS2oK+wbK4Ddyy04f88Eia/prYgLrdi53bn70Whv75m8jTgqemENiGrd2WsRHd4MON9PSb8a3Zu5YYDdqDid2P80uKwPlXhbCG25SywKCtARHa29ON8+Cb9LUS25ifx4OYxrqCR0uN49icyaXYiILbq4TdsKkWhvHtnOv+ScC2iN6rqRHcq4Tb/t9Bm9rjhbCK3K+2Ddyrod214kuLw8ib/7zerYYWx4Sdxpeyh/fdm8nrScCrpd6WuNqhsdq9z4Di1UlVFA=="
+}
