@@ -1,70 +1,70 @@
 {
-  "no": 11,
-  "date": "2026-11-15",
-  "title": "사라진 생크림 식빵 사건",
-  "intro": "오늘 오후 2시, 빵집 진열대에 놓여 있던 가장 폭신한 생크림 식빵이 사라졌다냥! 깝휘캣 탐정이 범인치기 대작전을 시작한다냥.",
+  "no": 13,
+  "date": "2026-11-17",
+  "title": "뒤바뀐 꽃리본 사건",
+  "intro": "꽃집 온실의 화분 4개에 달린 분홍 리본이 모두 파란 리본으로 바뀌었다. 오전 9시에는 분홍이었고 9시 5분에 바뀐 것을 발견했다. 온실에는 고양이 네 마리만 드나들었다.",
   "suspects": [
     {
       "id": "A",
-      "name": "치즈",
-      "fur": "주황",
-      "desc": "식탐 많은 주황고양이"
+      "name": "호두",
+      "fur": "갈색",
+      "desc": "파란색을 좋아하는 고양이"
     },
     {
       "id": "B",
-      "name": "루이",
-      "fur": "회색",
-      "desc": "우아한 회색고양이"
+      "name": "구름",
+      "fur": "흰색",
+      "desc": "따뜻한 온실을 좋아하는 고양이"
     },
     {
       "id": "C",
-      "name": "초코",
+      "name": "단추",
       "fur": "검정",
-      "desc": "호기심 많은 검은고양이"
+      "desc": "리본 매듭을 잘 푸는 고양이"
     },
     {
       "id": "D",
-      "name": "나비",
-      "fur": "흰색",
-      "desc": "발이 작은 하얀고양이"
+      "name": "망고",
+      "fur": "주황",
+      "desc": "집사 곁을 지키는 고양이"
     }
   ],
   "clues": [
     {
       "id": "c1",
-      "label": "CCTV 확인",
-      "text": "오후 2시 정각, 검은 털을 가진 고양이가 생크림 식빵을 물고 1번 테이블 밑으로 도망치는 모습이 찍혔다냥."
+      "label": "집사에게 묻기",
+      "text": "집사는 8시 55분부터 9시 10분까지 망고를 품에 안고 계산대에 있었다. 계산대 영상에도 망고가 계속 안겨 있다."
     },
     {
       "id": "c2",
-      "label": "바닥 발자국",
-      "text": "빵집 바닥에 선명한 발자국이 남았는데, 작은 발을 가진 나비(D)의 보폭보다 훨씬 컸다냥."
+      "label": "포장 주문 읽기",
+      "text": "주문서에는 “분홍 리본 4개, 파란 리본은 보관”이라고 적혀 있다. 파란 리본으로 바꿔 달라는 주문은 없다."
     },
     {
       "id": "c3",
-      "label": "접시 조사",
-      "text": "사라진 식빵 접시 옆에서 초코(C)가 좋아하는 생선 모양 쿠키 부스러기가 발견되었다냥."
+      "label": "구름의 낮잠",
+      "text": "9시부터 9시 5분까지 연속 영상에 구름이 잠긴 휴게방에서 자는 모습이 나온다. 휴게방은 9시 8분까지 열리지 않았다."
     },
     {
       "id": "c4",
-      "label": "집사 증언",
-      "text": "치즈(A)는 오후 2시부터 3시까지 2층 침대 위에서 숙면을 취하고 있었다냥."
+      "label": "단추의 발 확인",
+      "text": "단추의 앞발 발톱 사이에 잘린 파란 실 2가닥이 끼어 있다. 화분의 새 리본 끝도 같은 모양으로 풀려 있다."
     },
     {
       "id": "c5",
-      "label": "꼬리 흔적",
-      "text": "범인 자리에 남은 크림에 길고 우아한 회색 털이 묻어 있어 루이(B)가 의심스럽다냥."
+      "label": "작업실 영상",
+      "text": "9시부터 9시 5분까지 호두는 잠긴 작업실의 유리문 안에 계속 찍혔다. 집사는 9시 10분에 문을 열었다."
     },
     {
       "id": "c6",
-      "label": "영수증 확인",
-      "text": "초코(C)는 알리바이가 전혀 없고 빵 냄새만 맡으면 눈이 반짝인다고 한다냥."
+      "label": "호두에게 묻기",
+      "text": "호두는 파란 리본을 목에 매고 있다. “파란색이 제일 좋다냥!” 집사는 이 목리본을 어제 직접 매 주었다고 한다."
     },
     {
       "id": "c7",
-      "label": "목격자 앵무새",
-      "text": "루이(B)는 오후 2시에 창가에서 낮잠을 자느라 꼬리가 길게 늘어져 있었을 뿐, 빵 쪽엔 가지 않았다냥."
+      "label": "리본함 열기",
+      "text": "분홍 리본 4개가 파란 리본함 안에 있다. 리본함에서 화분까지 검은 털 몇 가닥이 이어진다."
     }
   ],
-  "answer": "EEkCBQQHG0RGEggUbhMdD1JABxsTGRw7AENXEggUwLCdxpeJh/bVUIPz4caehBLdpp3dkJXY/t+N9PRXg5qK25W6DduIsdqMyob3+IP8zcaxlRMUARNCQl1AHwIOHkpNS8GVod60gRHdi6zZ/dON7NScyLES3IuuwZe5BXAcgOH1UFqb0Zjep6IWwa+5waeBS4fB7ITu0caiqNiFjR0RwaSAgMfVnOv/ScGUrd6gld2tkdqU90uK08Cb9Jkachvdp6URwYGIgdvhnP/nScGsuN6gmRHdja3Z8tOK4PSc4okcENmGsd2vvduAxkuK+8Cb7bHZka4WxrOpxoixQy9Im+LjScaBhN+5gN2smRHe4MeK7dRXhY2u3KuOxqGtxrqRRUuK8sCb9K0S3Ia+wYylBXIcgdvhUCs0PXveqbIWwY6RwLORS4DX8IT9zcatnNiOnR0RwaS5gM3Nm9jjhbCGENmArd2vgdqU90uKwvyb9JXerYbdppUfDdqWw4f8xITq8Q3YjJ7di50RwKyhh8vgnPX3ScClh9iGpdqXgdq//0uK+8Cb7bHeqLLasY3ar6kVgMHImtrehbOiEN6QsN2nld2p14DA7Eia/Jnetr7dva3appUbSRY="
+  "answer": "EEkCBQQHG0RGEggUbhMdD1JCBxsTGRw7AENXEggUxoe1wKi6S4Hc84Tg+Q3fvL7ds7ERxpebgNjZnPXDgoSGEN+jtdq7tRHd2/KN7exXhYm2EN6jod2ktdq8z4Di1Yr3zwwQHBBFQl1EWVhYBUlbUoXv0cajoNm8uRHds5Hd099BnPbmhbq33LmSARHbmJ3cze+N7ehXhbOS2oqCDdytmduF54DR2YTg+Q3esp7cnIURwbqrgdvlUIP13cawhBLas7ndurnc4M9PUIPQ9MeBkNm8uRHdiqDb6cdBnfr/hbqiENiFqd23oBHb9eON5+Cc4okcENm0hd2srRHc4MONxvyd2a0S25SaxoKJwayzS4DR5ILIwca5lBwWx4Oxway3S4blyILE1Q3ZgK7bq4DdsKkXhuftm/b3ScG5lN6rmRHappnb3f+K1dRXg52y25SawLOZxrqTRUuM6NCc+L3eraoWxpuYxpebgNjZnPX3ScGkhN6WsRHaipUXh8/hUILF6sGvhN6gmd21sRHb9t+KwuBXha+e2oOCx4KNDdqb34HV8IXi8ca5lBwUUA=="
 }
