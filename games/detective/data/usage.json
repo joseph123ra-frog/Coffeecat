@@ -116,14 +116,21 @@
       "title": "사라진 참치 츄르 사건",
       "source": "backup",
       "usd": 0
+    },
+    {
+      "no": 16,
+      "date": "2026-11-20",
+      "title": "깨진 유리잔 사건",
+      "source": "ai",
+      "usd": 0
     }
   ],
   "geminiFree": {
     "months": {
       "2026-11": {
-        "calls": 35,
-        "input_tokens": 13934,
-        "output_tokens": 12437
+        "calls": 38,
+        "input_tokens": 15307,
+        "output_tokens": 13609
       }
     }
   }
