@@ -123,14 +123,21 @@
       "title": "깨진 유리잔 사건",
       "source": "ai",
       "usd": 0
+    },
+    {
+      "no": 17,
+      "date": "2026-11-21",
+      "title": "칠판 분필 낙서 사건",
+      "source": "ai",
+      "usd": 0
     }
   ],
   "geminiFree": {
     "months": {
       "2026-11": {
-        "calls": 38,
-        "input_tokens": 15307,
-        "output_tokens": 13609
+        "calls": 41,
+        "input_tokens": 16498,
+        "output_tokens": 14720
       }
     }
   }

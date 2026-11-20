@@ -1,0 +1,70 @@
+{
+  "no": 17,
+  "date": "2026-11-21",
+  "title": "칠판 분필 낙서 사건",
+  "intro": "오후 3시, 학교 과학실 칠판에 정체불명의 고양이 얼굴 낙서가 그려졌다. 범인은 누구일까?",
+  "suspects": [
+    {
+      "id": "A",
+      "name": "치즈",
+      "fur": "주황",
+      "desc": "오른손잡이 예술가 고양이"
+    },
+    {
+      "id": "B",
+      "name": "코코",
+      "fur": "검정",
+      "desc": "왼손잡이 장난꾸러기"
+    },
+    {
+      "id": "C",
+      "name": "모모",
+      "fur": "흰색",
+      "desc": "독서를 사랑하는 모범생"
+    },
+    {
+      "id": "D",
+      "name": "초코",
+      "fur": "고등어",
+      "desc": "낮잠을 즐기는 뚱뚱보"
+    }
+  ],
+  "clues": [
+    {
+      "id": "c1",
+      "label": "물품 검사",
+      "text": "코코의 앞발에 파란색 분필 가루가 잔뜩 묻어 있다냥."
+    },
+    {
+      "id": "c2",
+      "label": "CCTV 확인",
+      "text": "모모는 오후 1시부터 3시까지 도서관에서 책을 읽고 있었다냥."
+    },
+    {
+      "id": "c3",
+      "label": "낙서 분석",
+      "text": "낙서는 완벽한 왼손잡이 솜씨로 그려져 있었다냥."
+    },
+    {
+      "id": "c4",
+      "label": "도구 조사",
+      "text": "치즈의 자리에는 분필이 전혀 묻어 있지 않았다냥."
+    },
+    {
+      "id": "c5",
+      "label": "바닥 발자국",
+      "text": "칠판 앞에는 검은색 털 한 가닥이 떨어져 있었다냥."
+    },
+    {
+      "id": "c6",
+      "label": "당번 일지",
+      "text": "초코는 오후 2시부터 4시까지 창고에서 박스를 지키고 있었다냥."
+    },
+    {
+      "id": "c7",
+      "label": "목격자 증언",
+      "text": "모모가 2시 50분에 과학실 근처를 서성였다는 제보가 있다냥."
+    }
+  ],
+  "answer": "EEkCBQQHG0RGEggUbxMdD1FEBxsTGRw7AENXEggUxqKVwY6BgODFm+vSSA3eiZLboaHdsIYRgO/pm8TDScCluN6Wqdykmd6190uLx9CcyZXZu5bdrpQQDx4TGAQNBRweBkMQChDdh5nah5ra4f9BMysjP8aTrBLauL3ai57a2/+N7dyd2a0S3JSrxpu0xqKph/3VUITX9cGriNmmhNq6pdm6z0VBnNz/hZCm27iiDdq6lNmD40uN7dSbzq3Zka4WwZGtwauJgPvIm+P/gqaWHhLalKndi7ra4f9BnPDTgoiK3LSmwa+Qwa+FgPbdUITu1cG0oBLaq63duZrd9tNBm+ruhamu25eKDdykjRLd4/NBnP/xhbuGEN6Wsd2oldmhwoDq+IP8zQMS25ifx4OYxrmFh/fdm8nrScaYmNmchduBrRLd9vON+8Sb44nZr57atpHdirLazOdBMysjPw3YiILdjKzdsY7ayvdBnf3DhY2u26Kfxrq5xrmVRUuLwtid3IAS2oC2wayxDd+104HSzEib8JHetqLas5DdsIYdS4DX9IXi7Q3YgLLdjpnbnbIRgNv9mtrbgr2uEN6Lud2MudiB60uKwvyb9JXerrfdprnappYfSRY="
+}
