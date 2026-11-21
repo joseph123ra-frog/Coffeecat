@@ -1,70 +1,70 @@
 {
-  "no": 16,
-  "date": "2026-11-20",
-  "title": "깨진 유리잔 사건",
-  "intro": "캠핑장 텐트 안에서 반짝이는 유리잔이 깨져 있었다냥! 삐삐 집사가 아끼던 주스 잔이 깨진 범인을 찾아달라며 깝휘캣 탐정을 찾았다냥.",
+  "no": 17,
+  "date": "2026-11-21",
+  "title": "칠판 분필 낙서 사건",
+  "intro": "오후 3시, 학교 과학실 칠판에 정체불명의 고양이 얼굴 낙서가 그려졌다. 범인은 누구일까?",
   "suspects": [
     {
       "id": "A",
       "name": "치즈",
       "fur": "주황",
-      "desc": "낮잠을 좋아하는 참견쟁이"
+      "desc": "오른손잡이 예술가 고양이"
     },
     {
       "id": "B",
-      "name": "나비",
-      "fur": "흰색",
-      "desc": "걸음걸이가 우아한 고양이"
+      "name": "코코",
+      "fur": "검정",
+      "desc": "왼손잡이 장난꾸러기"
     },
     {
       "id": "C",
-      "name": "호두",
-      "fur": "고등어",
-      "desc": "호기심이 아주 많은 장난꾸러기"
+      "name": "모모",
+      "fur": "흰색",
+      "desc": "독서를 사랑하는 모범생"
     },
     {
       "id": "D",
-      "name": "루이",
-      "fur": "검정",
-      "desc": "텐트 구경이 취미인 신사"
+      "name": "초코",
+      "fur": "고등어",
+      "desc": "낮잠을 즐기는 뚱뚱보"
     }
   ],
   "clues": [
     {
       "id": "c1",
-      "label": "높은 선반 확인",
-      "text": "유리잔이 있던 선반은 바닥에서 150cm 높이다냥. 다리가 짧은 나비는 절대 닿지 않는다냥!"
+      "label": "물품 검사",
+      "text": "코코의 앞발에 파란색 분필 가루가 잔뜩 묻어 있다냥."
     },
     {
       "id": "c2",
-      "label": "CCTV 돌려보기",
-      "text": "사건 당시 오후 3시, 호두가 선반 위로 뛰어올라가다가 유리잔을 쳤다는 영상이 찍혔다냥!"
+      "label": "CCTV 확인",
+      "text": "모모는 오후 1시부터 3시까지 도서관에서 책을 읽고 있었다냥."
     },
     {
       "id": "c3",
-      "label": "모닥불터 탐색",
-      "text": "치즈는 오후 2시부터 4시까지 모닥불터 옆에서 꿀잠을 자고 있었다고 증언했다냥."
+      "label": "낙서 분석",
+      "text": "낙서는 완벽한 왼손잡이 솜씨로 그려져 있었다냥."
     },
     {
       "id": "c4",
-      "label": "텐트 수첩 읽기",
-      "text": "루이는 먼지 알레르기가 있어서 유리잔이 있는 북쪽 구역에는 발도 안 디뎠다냥!"
+      "label": "도구 조사",
+      "text": "치즈의 자리에는 분필이 전혀 묻어 있지 않았다냥."
     },
     {
       "id": "c5",
-      "label": "캠핑 의자 조사",
-      "text": "의자 위에 올라간 나비의 털이 발견되어 나비가 범인처럼 보이지만, 높이 조건에 맞지 않는다냥."
+      "label": "바닥 발자국",
+      "text": "칠판 앞에는 검은색 털 한 가닥이 떨어져 있었다냥."
     },
     {
       "id": "c6",
-      "label": "텐트 주인 심문",
-      "text": "집사는 오전 내내 텐트 밖에 있었고, 안에서 '와랑창!' 소리를 들었다고 한다냥."
+      "label": "당번 일지",
+      "text": "초코는 오후 2시부터 4시까지 창고에서 박스를 지키고 있었다냥."
     },
     {
       "id": "c7",
-      "label": "텐트 입구 조사",
-      "text": "입구 바닥에 호두의 발자국과 깨진 유리 조각이 흩어져 있다냥!"
+      "label": "목격자 증언",
+      "text": "모모가 2시 50분에 과학실 근처를 서성였다는 제보가 있다냥."
     }
   ],
-  "answer": "EEkCBQQHG0RGEggUbhMdD1FFBxsTGRw7AENXEggUwKaVwKWUR0uKwPCbzrDYgYLdjZXdqa4QgdzZm8/7SceDhNmlsdqRidmEz4Dq1IP0zAwQHBBFQl1EWVtfBUlbUoTO8cGUuNm8uRHah5rb4M6KxuCa7Z0S3Ke6xpedxoKkh/bVm8nrSWwS3JKqwaiJARLb6fOKyeyc47kSAQcGTlwRwbaQgNv5nP/nSca5j96RrRHduLjc/u9BMkibybHeqYoaDdqShd6t34Dr5Eib/KHZkLrdiIXblYLbyvdBNILH6Q3ekK7atInavZvb4OOK+8xZScawqNmPqdq7uRLc9vON7vhXhKmKENmjodqdld6n+0uN7fCb4oHeupbdsozdirLbzOdBm+7lhbCGEN6XnduAmd6n+0uN5tyd0abZspvdprnappYeS4HTwITX/MGSsd6qkdqQsRJzKD83nPH3ScaCrN6ovduEgBLb4MON9PSd2a0S3aqOxqChBXEZgM7dUILH6caUnN+0mNq6pdm7z0pDDQ=="
+  "answer": "EEkCBQQHG0RGEggUbxMdD1FEBxsTGRw7AENXEggUxqKVwY6BgODFm+vSSA3eiZLboaHdsIYRgO/pm8TDScCluN6Wqdykmd6190uLx9CcyZXZu5bdrpQQDx4TGAQNBRweBkMQChDdh5nah5ra4f9BMysjP8aTrBLauL3ai57a2/+N7dyd2a0S3JSrxpu0xqKph/3VUITX9cGriNmmhNq6pdm6z0VBnNz/hZCm27iiDdq6lNmD40uN7dSbzq3Zka4WwZGtwauJgPvIm+P/gqaWHhLalKndi7ra4f9BnPDTgoiK3LSmwa+Qwa+FgPbdUITu1cG0oBLaq63duZrd9tNBm+ruhamu25eKDdykjRLd4/NBnP/xhbuGEN6Wsd2oldmhwoDq+IP8zQMS25ifx4OYxrmFh/fdm8nrScaYmNmchduBrRLd9vON+8Sb44nZr57atpHdirLazOdBMysjPw3YiILdjKzdsY7ayvdBnf3DhY2u26Kfxrq5xrmVRUuLwtid3IAS2oC2wayxDd+104HSzEib8JHetqLas5DdsIYdS4DX9IXi7Q3YgLLdjpnbnbIRgNv9mtrbgr2uEN6Lud2MudiB60uKwvyb9JXerrfdprnappYfSRY="
 }

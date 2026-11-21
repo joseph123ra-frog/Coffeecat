@@ -1,0 +1,70 @@
+{
+  "no": 18,
+  "date": "2026-11-22",
+  "title": "옥상 털뭉치 사건",
+  "intro": "어제 오후 아파트 옥상 정원에서 의문의 보라색 털 뭉치들이 잔뜩 발견됐다냥! 누군가 캣닢을 다 뽑아놓은 모양이다.",
+  "suspects": [
+    {
+      "id": "A",
+      "name": "치즈",
+      "fur": "주황",
+      "desc": "1층 그늘에서 낮잠을 자는 고양이"
+    },
+    {
+      "id": "B",
+      "name": "나비",
+      "fur": "회색",
+      "desc": "보라색 털 스카프를 맨 멋쟁이"
+    },
+    {
+      "id": "C",
+      "name": "까망",
+      "fur": "검정",
+      "desc": "털 색이 아주 까만 고양이"
+    },
+    {
+      "id": "D",
+      "name": "쪼꼬",
+      "fur": "갈색",
+      "desc": "키가 20cm로 아주 작은 아기 고양이"
+    }
+  ],
+  "clues": [
+    {
+      "id": "c1",
+      "label": "CCTV 확인",
+      "text": "\"사건 발생 시각인 오후 3시에 치즈는 1층 분수대 옆에 있었어냥.\""
+    },
+    {
+      "id": "c2",
+      "label": "키 측정",
+      "text": "\"쪼꼬는 키가 20cm라 높이 60cm인 난간 위 캣닢 화분에 절대 닿을 수 없어냥.\""
+    },
+    {
+      "id": "c3",
+      "label": "털뭉치 대조",
+      "text": "\"화분 옆에 남은 털은 쪼꼬의 갈색 털이 아니라 나비의 보라빛 털이다냥.\""
+    },
+    {
+      "id": "c4",
+      "label": "스카프 증언",
+      "text": "\"나비가 오후 3시 정원 구석에서 털 스카프를 벗어놓고 뛰어노는 걸 봤어냥.\""
+    },
+    {
+      "id": "c5",
+      "label": "털 분석",
+      "text": "\"발견된 털 뭉치는 검은색이 아니라 회색 스카프에서 나온 보라빛 털이다냥!\""
+    },
+    {
+      "id": "c6",
+      "label": "난간 발자국",
+      "text": "\"높이 60cm인 옥상 난간 아래 작은 발자국이 있어서 쪼꼬의 범행처럼 보여냥.\""
+    },
+    {
+      "id": "c7",
+      "label": "경비견 증언",
+      "text": "\"치즈는 오전 10시부터 저녁까지 1층을 떠난 적이 없다멍!\""
+    }
+  ],
+  "answer": "EEkCBQQHG0RGEggUbxMdD1FHBxsTGRw7AENXEggUwbuVwYuGhv/lmtj3ScCgsNmQnRHdibYSgMHRm/bngqaW27GTAx8fDx4QGAQNBRweBkMQChDalKndi7oaKkKK+vxXKm5mZt6vrRHbn4/Z0u+LwsRXhYuv3KSOwa2NxpOuS1qNyN2b/r0S3Ky+waa5wa++h/bVUITR9MaYtdmmtd2nmRLey/eN6dCc+YTZu7rdppUfDdiL54DG7UA0QMGvsBLcn7HdsLIShu/ZnPXDgrCOENmFmdqskdmL8EuM9NCd2pES27maxqyNDd6S94f4yIPnwMa5uNm9iR8RwZiOgdfNWCxegqemEN+0iduBrRIAWwgMm/XLSRsCU18WxrOtx4K2h/zxUIP81sGVsBLdh4rcuKrY2MtBnezPScGxudm5qRHapp7Z9tdBnMjrhbSK26Kfxrq5xrmWRUuK5Nic9JHetK4WxoOlwa+Kh/bhUIP18caLtBp0BN2vqNm544Dq1ElVFA=="
+}
