@@ -137,14 +137,21 @@
       "title": "옥상 털뭉치 사건",
       "source": "ai",
       "usd": 0
+    },
+    {
+      "no": 19,
+      "date": "2026-11-23",
+      "title": "털 뭉치 사건",
+      "source": "ai",
+      "usd": 0
     }
   ],
   "geminiFree": {
     "months": {
       "2026-11": {
-        "calls": 47,
-        "input_tokens": 19363,
-        "output_tokens": 16994
+        "calls": 50,
+        "input_tokens": 20736,
+        "output_tokens": 18129
       }
     }
   }

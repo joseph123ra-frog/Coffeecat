@@ -1,0 +1,70 @@
+{
+  "no": 19,
+  "date": "2026-11-23",
+  "title": "털 뭉치 사건",
+  "intro": "오늘 아침, 골목 생선가게 앞마당에 정체 모를 하얗고 긴 털 뭉치가 잔뜩 발견됐다! 생선가게 아저씨는 깜짝 놀라 깝휘캣 탐정을 불렀다.",
+  "suspects": [
+    {
+      "id": "A",
+      "name": "나비",
+      "fur": "주황",
+      "desc": "참치를 좋아하는 주황냥"
+    },
+    {
+      "id": "B",
+      "name": "호두",
+      "fur": "검정",
+      "desc": "생선가게 단골 검은냥"
+    },
+    {
+      "id": "C",
+      "name": "구름",
+      "fur": "흰색",
+      "desc": "털이 아주 긴 흰색냥"
+    },
+    {
+      "id": "D",
+      "name": "보리",
+      "fur": "고등어",
+      "desc": "짧은 털의 장난꾸러기"
+    }
+  ],
+  "clues": [
+    {
+      "id": "c1",
+      "label": "털 뭉치 감식",
+      "text": "털뭉치는 아주 길고 하얀 털이다. 짧은 털을 가진 고등어냥 D는 털이 이렇게 길 수 없다."
+    },
+    {
+      "id": "c2",
+      "label": "생선가게 증언",
+      "text": "아저씨가 말했다. \"검은 고양이 B는 지나가기만 했어. 저 하얗고 긴 털뭉치는 절대 B의 것이 아니야!\""
+    },
+    {
+      "id": "c3",
+      "label": "발자국 분석",
+      "text": "주황색 고양이 A는 오전 7시부터 9시까지 먼 담벼락 위에서 잠을 잤다."
+    },
+    {
+      "id": "c4",
+      "label": "생선 냄새 추적",
+      "text": "가게 구석에서 연어 냄새가 났다. 하지만 이는 모든 고양이가 좋아하는 냄새다."
+    },
+    {
+      "id": "c5",
+      "label": "목격자 까치 증언",
+      "text": "까치가 말했다. \"하얀 털뭉치는 털을 뿜으며 뒹굴던 C가 남긴 거야!\""
+    },
+    {
+      "id": "c6",
+      "label": "구름이 심문",
+      "text": "구름이 C가 말했다. \"앗, 내 털 빗질할 때 된 걸 깜빡했네냥!\""
+    },
+    {
+      "id": "c7",
+      "label": "CCTV 보기",
+      "text": "오전 8시, 검은 고양이 B가 생선가게 앞을 지나간 것이 찍혔다!"
+    }
+  ],
+  "answer": "EEkCBQQHG0RGEggUbhMdD1FGBxsTGRw7AENXEggUwKaVwKWXR0uM9NCb9JkS27a+xp2FDdmU5Yf8xEic0I3ekb7dr6kRxoajgOjEUUpbS15dXEdCRF5fDwgRh8jdnfHegq6XEHPdp6URxrmHgNndm/XKhbqi3LaqDd2vvd6390uM8+Cc9JAeENiErd2srdmwzksjm+LjScGntN6Wrd2lhRLfzfaN5tCb9ZHZka4WwLK5xq+OR0uLw8ic+pzepobdrpQRadm5/0uN18+b9K0S3baOwayFxq+PS4HZxEia7ZXZnbvalKndtLITh/7pUIPQ98GntBLbrrnasI/e/sKK++Cc4okcEHF1eWfduqITh9vsnfb7SW/ZuqYWwKaGx4K7gM3Nm+LjScGomd6rtd2vvd6r64fG8IPQ5Q3epbbajbHduZrf9vNBnM7qhbuK3K6KxpCtDdmB/4f8yITq3Q3epbbdpqndsIYTgNv8nfD3hYqj27m+xrqVAxLZ2duLxcVXhLiq3KShx4KRDdiL30uM9NCcxKTeiardiI0RxrCbgdPVUITQ7cGVrBLdn6XdsIrf9utBmt3bgou23K+CDXLds7fY4OOK+8xWS1A="
+}
