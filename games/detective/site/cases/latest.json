@@ -1,70 +1,70 @@
 {
-  "no": 18,
-  "date": "2026-11-22",
-  "title": "옥상 털뭉치 사건",
-  "intro": "어제 오후 아파트 옥상 정원에서 의문의 보라색 털 뭉치들이 잔뜩 발견됐다냥! 누군가 캣닢을 다 뽑아놓은 모양이다.",
+  "no": 19,
+  "date": "2026-11-23",
+  "title": "털 뭉치 사건",
+  "intro": "오늘 아침, 골목 생선가게 앞마당에 정체 모를 하얗고 긴 털 뭉치가 잔뜩 발견됐다! 생선가게 아저씨는 깜짝 놀라 깝휘캣 탐정을 불렀다.",
   "suspects": [
     {
       "id": "A",
-      "name": "치즈",
+      "name": "나비",
       "fur": "주황",
-      "desc": "1층 그늘에서 낮잠을 자는 고양이"
+      "desc": "참치를 좋아하는 주황냥"
     },
     {
       "id": "B",
-      "name": "나비",
-      "fur": "회색",
-      "desc": "보라색 털 스카프를 맨 멋쟁이"
+      "name": "호두",
+      "fur": "검정",
+      "desc": "생선가게 단골 검은냥"
     },
     {
       "id": "C",
-      "name": "까망",
-      "fur": "검정",
-      "desc": "털 색이 아주 까만 고양이"
+      "name": "구름",
+      "fur": "흰색",
+      "desc": "털이 아주 긴 흰색냥"
     },
     {
       "id": "D",
-      "name": "쪼꼬",
-      "fur": "갈색",
-      "desc": "키가 20cm로 아주 작은 아기 고양이"
+      "name": "보리",
+      "fur": "고등어",
+      "desc": "짧은 털의 장난꾸러기"
     }
   ],
   "clues": [
     {
       "id": "c1",
-      "label": "CCTV 확인",
-      "text": "\"사건 발생 시각인 오후 3시에 치즈는 1층 분수대 옆에 있었어냥.\""
+      "label": "털 뭉치 감식",
+      "text": "털뭉치는 아주 길고 하얀 털이다. 짧은 털을 가진 고등어냥 D는 털이 이렇게 길 수 없다."
     },
     {
       "id": "c2",
-      "label": "키 측정",
-      "text": "\"쪼꼬는 키가 20cm라 높이 60cm인 난간 위 캣닢 화분에 절대 닿을 수 없어냥.\""
+      "label": "생선가게 증언",
+      "text": "아저씨가 말했다. \"검은 고양이 B는 지나가기만 했어. 저 하얗고 긴 털뭉치는 절대 B의 것이 아니야!\""
     },
     {
       "id": "c3",
-      "label": "털뭉치 대조",
-      "text": "\"화분 옆에 남은 털은 쪼꼬의 갈색 털이 아니라 나비의 보라빛 털이다냥.\""
+      "label": "발자국 분석",
+      "text": "주황색 고양이 A는 오전 7시부터 9시까지 먼 담벼락 위에서 잠을 잤다."
     },
     {
       "id": "c4",
-      "label": "스카프 증언",
-      "text": "\"나비가 오후 3시 정원 구석에서 털 스카프를 벗어놓고 뛰어노는 걸 봤어냥.\""
+      "label": "생선 냄새 추적",
+      "text": "가게 구석에서 연어 냄새가 났다. 하지만 이는 모든 고양이가 좋아하는 냄새다."
     },
     {
       "id": "c5",
-      "label": "털 분석",
-      "text": "\"발견된 털 뭉치는 검은색이 아니라 회색 스카프에서 나온 보라빛 털이다냥!\""
+      "label": "목격자 까치 증언",
+      "text": "까치가 말했다. \"하얀 털뭉치는 털을 뿜으며 뒹굴던 C가 남긴 거야!\""
     },
     {
       "id": "c6",
-      "label": "난간 발자국",
-      "text": "\"높이 60cm인 옥상 난간 아래 작은 발자국이 있어서 쪼꼬의 범행처럼 보여냥.\""
+      "label": "구름이 심문",
+      "text": "구름이 C가 말했다. \"앗, 내 털 빗질할 때 된 걸 깜빡했네냥!\""
     },
     {
       "id": "c7",
-      "label": "경비견 증언",
-      "text": "\"치즈는 오전 10시부터 저녁까지 1층을 떠난 적이 없다멍!\""
+      "label": "CCTV 보기",
+      "text": "오전 8시, 검은 고양이 B가 생선가게 앞을 지나간 것이 찍혔다!"
     }
   ],
-  "answer": "EEkCBQQHG0RGEggUbxMdD1FHBxsTGRw7AENXEggUwbuVwYuGhv/lmtj3ScCgsNmQnRHdibYSgMHRm/bngqaW27GTAx8fDx4QGAQNBRweBkMQChDalKndi7oaKkKK+vxXKm5mZt6vrRHbn4/Z0u+LwsRXhYuv3KSOwa2NxpOuS1qNyN2b/r0S3Ky+waa5wa++h/bVUITR9MaYtdmmtd2nmRLey/eN6dCc+YTZu7rdppUfDdiL54DG7UA0QMGvsBLcn7HdsLIShu/ZnPXDgrCOENmFmdqskdmL8EuM9NCd2pES27maxqyNDd6S94f4yIPnwMa5uNm9iR8RwZiOgdfNWCxegqemEN+0iduBrRIAWwgMm/XLSRsCU18WxrOtx4K2h/zxUIP81sGVsBLdh4rcuKrY2MtBnezPScGxudm5qRHapp7Z9tdBnMjrhbSK26Kfxrq5xrmWRUuK5Nic9JHetK4WxoOlwa+Kh/bhUIP18caLtBp0BN2vqNm544Dq1ElVFA=="
+  "answer": "EEkCBQQHG0RGEggUbhMdD1FGBxsTGRw7AENXEggUwKaVwKWXR0uM9NCb9JkS27a+xp2FDdmU5Yf8xEic0I3ekb7dr6kRxoajgOjEUUpbS15dXEdCRF5fDwgRh8jdnfHegq6XEHPdp6URxrmHgNndm/XKhbqi3LaqDd2vvd6390uM8+Cc9JAeENiErd2srdmwzksjm+LjScGntN6Wrd2lhRLfzfaN5tCb9ZHZka4WwLK5xq+OR0uLw8ic+pzepobdrpQRadm5/0uN18+b9K0S3baOwayFxq+PS4HZxEia7ZXZnbvalKndtLITh/7pUIPQ98GntBLbrrnasI/e/sKK++Cc4okcEHF1eWfduqITh9vsnfb7SW/ZuqYWwKaGx4K7gM3Nm+LjScGomd6rtd2vvd6r64fG8IPQ5Q3epbbajbHduZrf9vNBnM7qhbuK3K6KxpCtDdmB/4f8yITq3Q3epbbdpqndsIYTgNv8nfD3hYqj27m+xrqVAxLZ2duLxcVXhLiq3KShx4KRDdiL30uM9NCcxKTeiardiI0RxrCbgdPVUITQ7cGVrBLdn6XdsIrf9utBmt3bgou23K+CDXLds7fY4OOK+8xWS1A="
 }
