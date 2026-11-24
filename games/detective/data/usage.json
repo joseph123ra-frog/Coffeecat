@@ -6,10 +6,10 @@
     }
   },
   "usedBackups": [
-    "003.json",
-    "004.json",
     "001.json",
-    "002.json"
+    "002.json",
+    "003.json",
+    "004.json"
   ],
   "history": [
     {
@@ -151,12 +151,26 @@
       "title": "옮겨진 책갈피 사건",
       "source": "backup",
       "usd": 0
+    },
+    {
+      "no": 21,
+      "date": "2026-11-25",
+      "title": "뒤바뀐 꽃리본 사건",
+      "source": "backup",
+      "usd": 0
+    },
+    {
+      "no": 22,
+      "date": "2026-11-26",
+      "title": "찢어진 배달상자 사건",
+      "source": "backup",
+      "usd": 0
     }
   ],
   "geminiFree": {
     "months": {
       "2026-11": {
-        "calls": 51,
+        "calls": 52,
         "input_tokens": 20736,
         "output_tokens": 18129
       }
