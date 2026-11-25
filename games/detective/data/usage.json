@@ -6,10 +6,10 @@
     }
   },
   "usedBackups": [
-    "001.json",
     "002.json",
     "003.json",
-    "004.json"
+    "004.json",
+    "001.json"
   ],
   "history": [
     {
@@ -165,14 +165,21 @@
       "title": "찢어진 배달상자 사건",
       "source": "backup",
       "usd": 0
+    },
+    {
+      "no": 23,
+      "date": "2026-11-27",
+      "title": "사라진 참치 츄르 사건",
+      "source": "backup",
+      "usd": 0
     }
   ],
   "geminiFree": {
     "months": {
       "2026-11": {
-        "calls": 52,
-        "input_tokens": 20736,
-        "output_tokens": 18129
+        "calls": 55,
+        "input_tokens": 21760,
+        "output_tokens": 19250
       }
     }
   }
