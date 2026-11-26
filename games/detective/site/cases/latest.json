@@ -1,70 +1,70 @@
 {
-  "no": 22,
-  "date": "2026-11-26",
-  "title": "찢어진 배달상자 사건",
-  "intro": "세탁소의 빈 배달상자 옆면에 둥근 구멍이 났다. 오후 4시에는 멀쩡했고 4시 6분에 발견했다. 세탁소에는 네 마리 고양이만 있었고 집사는 밖에 있었다.",
+  "no": 23,
+  "date": "2026-11-27",
+  "title": "사라진 참치 츄르 사건",
+  "intro": "할머니 집 부엌 찬장 위 상자에서 참치맛 츄르 3개가 사라졌다. 밤 10시에는 분명히 있었는데, 아침 7시에 보니 없었다. 용의자는 이 집 고양이 네 마리.",
   "suspects": [
     {
       "id": "A",
-      "name": "콩이",
-      "fur": "회색",
-      "desc": "종이상자에 숨는 걸 좋아한다"
+      "name": "치즈",
+      "fur": "주황",
+      "desc": "동네에서 유명한 먹보 뚱냥이"
     },
     {
       "id": "B",
-      "name": "두리",
-      "fur": "고등어",
-      "desc": "빨래 구경을 좋아한다"
+      "name": "루나",
+      "fur": "검정",
+      "desc": "밤 산책을 좋아하는 날렵한 고양이"
     },
     {
       "id": "C",
-      "name": "까미",
-      "fur": "검정",
-      "desc": "수건 위에서 자는 걸 좋아한다"
+      "name": "보리",
+      "fur": "회색",
+      "desc": "이 집에서 가장 나이 많은 고양이"
     },
     {
       "id": "D",
-      "name": "복실",
-      "fur": "삼색",
-      "desc": "뭐든 발로 꾹꾹 누른다"
+      "name": "모찌",
+      "fur": "흰색",
+      "desc": "지난달 이 집에 온 아기 고양이"
     }
   ],
   "clues": [
     {
       "id": "c1",
-      "label": "복실 자리 영상",
-      "text": "복실은 4시부터 4시 6분까지 잠긴 휴게방의 카메라에 계속 찍혔다. 문은 집사가 돌아온 4시 10분까지 닫혀 있었다."
+      "label": "찬장 살펴보기",
+      "text": "찬장 높이는 1.5m. 주변에 딛고 오를 가구가 없다. 옆 커튼에 아래부터 위까지 새 발톱 구멍이 촘촘히 나 있다. 구멍 사이가 좁다. 발이 작은 고양이 같다."
     },
     {
       "id": "c2",
-      "label": "콩이 꼬리 확인",
-      "text": "콩이 꼬리 끝에 상자와 같은 흰 종이 조각이 2개 붙어 있다. “동그란 창문이 있으면 좋을 것 같았다냥…”"
+      "label": "보리 심문",
+      "text": "보리 목걸이에 동물병원 진단서가 끼워져 있다. \"뒷다리 관절염. 지난달부터 높이 40cm 소파에도 못 오름.\""
     },
     {
       "id": "c3",
-      "label": "종이 비교하기",
-      "text": "상자는 겉이 흰색이고 안이 회색이다. 복실 발의 종이는 점심의 갈색 봉투와 색과 두께가 같다."
+      "label": "루나 심문",
+      "text": "\"밤새 밖에 있었다냥.\" 옆집 강아지 두부: \"맞아, 밤 10시부터 아침 7시까지 담장 위에서 루나랑 같이 별 봤어.\""
     },
     {
       "id": "c4",
-      "label": "복실에게 묻기",
-      "text": "복실의 앞발에 갈색 종잇조각이 붙어 있다. “점심에 종이봉투를 꾹꾹 눌렀다냥.” 봉투는 아직 복실 자리 옆에 있다."
+      "label": "치즈 심문",
+      "text": "입가에서 츄르 냄새가 솔솔 난다. \"내가 츄르 먹은 건 맞다냥! 근데 그게 뭐 어때서냥?\""
     },
     {
       "id": "c5",
-      "label": "수건방 확인",
-      "text": "까미는 3시 50분부터 잠긴 수건방에 있었다. 4시 6분까지의 연속 영상에도 계속 보이고, 문은 4시 10분에 열렸다."
+      "label": "소파 밑 살펴보기",
+      "text": "빈 참치맛 츄르 껍질 3개가 나왔다. 껍질에 아주 작은 이빨 자국이 나 있다."
     },
     {
       "id": "c6",
-      "label": "보관방 영상",
-      "text": "4시부터 4시 6분까지 두리는 잠긴 유리 보관방에서 내내 빨래를 보고 있다. 집사가 4시 10분에 돌아와 문을 열었다."
+      "label": "할머니 증언",
+      "text": "\"치즈가 밤 10시부터 아침 6시 반까지 내 배 위에서 자서 무거워 몇 번이나 깼지. 6시 반에 연어맛 츄르를 하나 주고 7시까지 같이 있었어.\""
     },
     {
       "id": "c7",
-      "label": "상자 살피기",
-      "text": "상자 구멍 아래에 회색 털과 새 종이 조각이 있다. 안쪽에는 작은 발톱 긁힌 자국 6개가 있다."
+      "label": "모찌 심문",
+      "text": "\"난 밤새 바구니에서 잤다냥…\" 그런데 앞발 발톱에 커튼과 같은 하늘색 실밥이 걸려 있다."
     }
   ],
-  "answer": "EEkCBQQHG0RGEggUbBMdD1FDBxsTGRw7AENXEggUxoGBxrmah+jgnPbnhbqiENm0mRHdu47c3t+K1+RXhLiuEN6GkNqdld6r70uK1+Sc+onYg5IWwbqHwaW+gODFm+vSSA8eEkFZQURFRF1YSVFDm/nngoue8oXclL3agor03IDSxYT8zcGvsBLdh5navKIWX4fq7IPB6cC2gBICwbqtDQTd3e+LyeSbzq0S3KyWx4mFDdmGwkuN5eCb/r0S3Ky+waa5xrmSRUuK8sCb9K0S3I+fwayFx4K2S4fi8YTp+caXjBLanZPdurrd4M9PUILCxcabvd6rtRHct77a6OJBnezPg56OENiKgdqXgd6h+0uKxvGb9K0S3a+GDd2TqN6r34HR8Eibz7DYgYLdppUfDdmF3ofq1Eic2bHeraoWx4G5wbG/S4fD9YTq3ca4pBLajaHdpp4WgN/oneDbScGTgNiGrN2smdmr10uN7dyc26US3LCax4CFx4GKS4HV8IPXwQ3ep7TdppUfD08="
+  "answer": "EEkCBQQHG0RGEggUaRMdD1FCBxsTGRw7AENXEggUwYqVwLiLS4bi8ILP2Q3ep4Lap4TcuKrc4M+LwOiV6YsS3IqyxpSFDdm074fi+ILH6Q3Zsqraqa0Rx4WPgMztkujRScadiN6jpdyktdm8z4Di1UlVRQ9BX15DWVheQxANSYfY6ITR4ca4pBLdnZXdrroXhv7Bm8DPgqa63Ku2DdykhdiM80uN7uCb/qXYg5IaDd2vqNiH60uK8+yb6qXZuqYWwaS1wYufh/zxUIPH8sGvsBLauoHdu4bczPBBnNDzgoiGENmjodqdld6q34Dq1EZXgo6a27CuxrulDdmm+4DX8ITu6Q3ZgJbarrkRxrmDh/XEUITr7cGloBLas7ndurrc4M9PUIPE3caUnNm8uRHbmbLby+NBm/37goGK3KWmDd2Kid+914f89Eia6qUS3LquDd2mq9m8z0VBm+rfhbCyENiHmRHana7b9t9BnPbmhbCyENmchd2BoRwXh9DFneLLhbCqEN6ovN2srRLc2/eM9tlXg5ie25u7ARHds6Pb9utBnPXDgpSaEN6ovduEgB4XgNv9ne7GhbqiENiHldqXnRLa/vOK+vCb6qQS3LmSxoGUwa+DS4DL2ITH5caXjBLcnbHai57a6cOK+8xZS1A="
 }

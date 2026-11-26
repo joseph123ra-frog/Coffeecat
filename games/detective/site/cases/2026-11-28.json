@@ -1,0 +1,70 @@
+{
+  "no": 24,
+  "date": "2026-11-28",
+  "title": "깨진 컵 사건",
+  "intro": "캠핑장 텐트 안에서 소중한 유리 머그잔이 깨져 있었다. 깝휘캣 탐정이 범인을 찾아 나선다!",
+  "suspects": [
+    {
+      "id": "A",
+      "name": "모모",
+      "fur": "주황",
+      "desc": "해먹 낮잠을 즐기는 고양이"
+    },
+    {
+      "id": "B",
+      "name": "나비",
+      "fur": "고등어",
+      "desc": "간식 탐색이 특기인 고양이"
+    },
+    {
+      "id": "C",
+      "name": "치즈",
+      "fur": "갈색",
+      "desc": "호기심이 아주 많은 고양이"
+    },
+    {
+      "id": "D",
+      "name": "루이",
+      "fur": "검정",
+      "desc": "발걸음이 조용한 고양이"
+    }
+  ],
+  "clues": [
+    {
+      "id": "c1",
+      "label": "바닥의 털뭉치",
+      "text": "깨진 컵 옆에서 고등어색 털뭉치가 발견되었다. 나비의 털일까?"
+    },
+    {
+      "id": "c2",
+      "label": "발자국 분석",
+      "text": "컵 주변에는 흰색 털을 가진 고양이의 발자국이 선명하게 남아 있었다냥."
+    },
+    {
+      "id": "c3",
+      "label": "C의 발바닥",
+      "text": "치즈의 발바닥 젤리 사이에 깨진 컵의 조각과 똑같은 파란색 반짝이가 묻어 있었다!"
+    },
+    {
+      "id": "c4",
+      "label": "루이의 알리바이",
+      "text": "검은 털의 루이는 사건 시각 집사와 함께 텐트 밖 산책 중이라 텐트에 없었다."
+    },
+    {
+      "id": "c5",
+      "label": "해먹 조사하기",
+      "text": "모모는 사고 당시 텐트 밖 1.5미터 거리의 해먹 위에서 꿀잠을 자고 있었다냥."
+    },
+    {
+      "id": "c6",
+      "label": "옆 텐트 증언",
+      "text": "옆 텐트의 강아지가 말하길, 사건 발생 시각에 나비는 20미터 떨어진 매점에서 간식을 먹고 있었다고 한다."
+    },
+    {
+      "id": "c7",
+      "label": "털뭉치의 진실",
+      "text": "바닥의 고등어색 털뭉치는 며칠 전에 나비가 흘려둔 오래된 털이었다냥."
+    }
+  ],
+  "answer": "EEkCBQQHG0RGEggUbhMdD1FNBxsTGRw7AENXEggUwKaVwKWcR0uNy92b9JkS24KuwZasx4OIgMvFnOzrSceFiNmRoRHbnIbT+PeK0NCbzq0S25+mwaSNxrGdSklNUhsYBVhGWV1YDwsTxpiQgMHJm+LjScCnhNmelN2mvRLU9eON5+Cd2o0acRLaja3dtIoRR0uK8vCc0KnZuqYWxpaVwZKoh/zxUITp4cGluN6qkdqYnRp6S4fB7ITu0QQeENmVhd2smdmy/0uN8tib2KgS3JanwayFwaWwgODFWCxXhY2u3KuOBB8RxoKsgODEnPXvSceBkNmlnN2nmRLV79ON7ehXgoSC3IuWDd2RqRLS2eiN7dyc9JES27Cuxoi1xrisS4DNxILEycCnqNm9iR8Rx4CIgd7MUIP1wcGvsBLalKndi7oQKEKLwOhXgp+m3K+OwayFxrmcSkkc"
+}
