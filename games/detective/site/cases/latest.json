@@ -1,70 +1,70 @@
 {
-  "no": 23,
-  "date": "2026-11-27",
-  "title": "사라진 참치 츄르 사건",
-  "intro": "할머니 집 부엌 찬장 위 상자에서 참치맛 츄르 3개가 사라졌다. 밤 10시에는 분명히 있었는데, 아침 7시에 보니 없었다. 용의자는 이 집 고양이 네 마리.",
+  "no": 24,
+  "date": "2026-11-28",
+  "title": "깨진 컵 사건",
+  "intro": "캠핑장 텐트 안에서 소중한 유리 머그잔이 깨져 있었다. 깝휘캣 탐정이 범인을 찾아 나선다!",
   "suspects": [
     {
       "id": "A",
-      "name": "치즈",
+      "name": "모모",
       "fur": "주황",
-      "desc": "동네에서 유명한 먹보 뚱냥이"
+      "desc": "해먹 낮잠을 즐기는 고양이"
     },
     {
       "id": "B",
-      "name": "루나",
-      "fur": "검정",
-      "desc": "밤 산책을 좋아하는 날렵한 고양이"
+      "name": "나비",
+      "fur": "고등어",
+      "desc": "간식 탐색이 특기인 고양이"
     },
     {
       "id": "C",
-      "name": "보리",
-      "fur": "회색",
-      "desc": "이 집에서 가장 나이 많은 고양이"
+      "name": "치즈",
+      "fur": "갈색",
+      "desc": "호기심이 아주 많은 고양이"
     },
     {
       "id": "D",
-      "name": "모찌",
-      "fur": "흰색",
-      "desc": "지난달 이 집에 온 아기 고양이"
+      "name": "루이",
+      "fur": "검정",
+      "desc": "발걸음이 조용한 고양이"
     }
   ],
   "clues": [
     {
       "id": "c1",
-      "label": "찬장 살펴보기",
-      "text": "찬장 높이는 1.5m. 주변에 딛고 오를 가구가 없다. 옆 커튼에 아래부터 위까지 새 발톱 구멍이 촘촘히 나 있다. 구멍 사이가 좁다. 발이 작은 고양이 같다."
+      "label": "바닥의 털뭉치",
+      "text": "깨진 컵 옆에서 고등어색 털뭉치가 발견되었다. 나비의 털일까?"
     },
     {
       "id": "c2",
-      "label": "보리 심문",
-      "text": "보리 목걸이에 동물병원 진단서가 끼워져 있다. \"뒷다리 관절염. 지난달부터 높이 40cm 소파에도 못 오름.\""
+      "label": "발자국 분석",
+      "text": "컵 주변에는 흰색 털을 가진 고양이의 발자국이 선명하게 남아 있었다냥."
     },
     {
       "id": "c3",
-      "label": "루나 심문",
-      "text": "\"밤새 밖에 있었다냥.\" 옆집 강아지 두부: \"맞아, 밤 10시부터 아침 7시까지 담장 위에서 루나랑 같이 별 봤어.\""
+      "label": "C의 발바닥",
+      "text": "치즈의 발바닥 젤리 사이에 깨진 컵의 조각과 똑같은 파란색 반짝이가 묻어 있었다!"
     },
     {
       "id": "c4",
-      "label": "치즈 심문",
-      "text": "입가에서 츄르 냄새가 솔솔 난다. \"내가 츄르 먹은 건 맞다냥! 근데 그게 뭐 어때서냥?\""
+      "label": "루이의 알리바이",
+      "text": "검은 털의 루이는 사건 시각 집사와 함께 텐트 밖 산책 중이라 텐트에 없었다."
     },
     {
       "id": "c5",
-      "label": "소파 밑 살펴보기",
-      "text": "빈 참치맛 츄르 껍질 3개가 나왔다. 껍질에 아주 작은 이빨 자국이 나 있다."
+      "label": "해먹 조사하기",
+      "text": "모모는 사고 당시 텐트 밖 1.5미터 거리의 해먹 위에서 꿀잠을 자고 있었다냥."
     },
     {
       "id": "c6",
-      "label": "할머니 증언",
-      "text": "\"치즈가 밤 10시부터 아침 6시 반까지 내 배 위에서 자서 무거워 몇 번이나 깼지. 6시 반에 연어맛 츄르를 하나 주고 7시까지 같이 있었어.\""
+      "label": "옆 텐트 증언",
+      "text": "옆 텐트의 강아지가 말하길, 사건 발생 시각에 나비는 20미터 떨어진 매점에서 간식을 먹고 있었다고 한다."
     },
     {
       "id": "c7",
-      "label": "모찌 심문",
-      "text": "\"난 밤새 바구니에서 잤다냥…\" 그런데 앞발 발톱에 커튼과 같은 하늘색 실밥이 걸려 있다."
+      "label": "털뭉치의 진실",
+      "text": "바닥의 고등어색 털뭉치는 며칠 전에 나비가 흘려둔 오래된 털이었다냥."
     }
   ],
-  "answer": "EEkCBQQHG0RGEggUaRMdD1FCBxsTGRw7AENXEggUwYqVwLiLS4bi8ILP2Q3ep4Lap4TcuKrc4M+LwOiV6YsS3IqyxpSFDdm074fi+ILH6Q3Zsqraqa0Rx4WPgMztkujRScadiN6jpdyktdm8z4Di1UlVRQ9BX15DWVheQxANSYfY6ITR4ca4pBLdnZXdrroXhv7Bm8DPgqa63Ku2DdykhdiM80uN7uCb/qXYg5IaDd2vqNiH60uK8+yb6qXZuqYWwaS1wYufh/zxUIPH8sGvsBLauoHdu4bczPBBnNDzgoiGENmjodqdld6q34Dq1EZXgo6a27CuxrulDdmm+4DX8ITu6Q3ZgJbarrkRxrmDh/XEUITr7cGloBLas7ndurrc4M9PUIPE3caUnNm8uRHbmbLby+NBm/37goGK3KWmDd2Kid+914f89Eia6qUS3LquDd2mq9m8z0VBm+rfhbCyENiHmRHana7b9t9BnPbmhbCyENmchd2BoRwXh9DFneLLhbCqEN6ovN2srRLc2/eM9tlXg5ie25u7ARHds6Pb9utBnPXDgpSaEN6ovduEgB4XgNv9ne7GhbqiENiHldqXnRLa/vOK+vCb6qQS3LmSxoGUwa+DS4DL2ITH5caXjBLcnbHai57a6cOK+8xZS1A="
+  "answer": "EEkCBQQHG0RGEggUbhMdD1FNBxsTGRw7AENXEggUwKaVwKWcR0uNy92b9JkS24KuwZasx4OIgMvFnOzrSceFiNmRoRHbnIbT+PeK0NCbzq0S25+mwaSNxrGdSklNUhsYBVhGWV1YDwsTxpiQgMHJm+LjScCnhNmelN2mvRLU9eON5+Cd2o0acRLaja3dtIoRR0uK8vCc0KnZuqYWxpaVwZKoh/zxUITp4cGluN6qkdqYnRp6S4fB7ITu0QQeENmVhd2smdmy/0uN8tib2KgS3JanwayFwaWwgODFWCxXhY2u3KuOBB8RxoKsgODEnPXvSceBkNmlnN2nmRLV79ON7ehXgoSC3IuWDd2RqRLS2eiN7dyc9JES27Cuxoi1xrisS4DNxILEycCnqNm9iR8Rx4CIgd7MUIP1wcGvsBLalKndi7oQKEKLwOhXgp+m3K+OwayFxrmcSkkc"
 }

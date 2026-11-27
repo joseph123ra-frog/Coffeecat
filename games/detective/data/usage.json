@@ -179,14 +179,21 @@
       "title": "깨진 컵 사건",
       "source": "ai",
       "usd": 0
+    },
+    {
+      "no": 25,
+      "date": "2026-11-29",
+      "title": "과학실 장식 파괴 사건",
+      "source": "ai",
+      "usd": 0
     }
   ],
   "geminiFree": {
     "months": {
       "2026-11": {
-        "calls": 59,
-        "input_tokens": 23709,
-        "output_tokens": 21403
+        "calls": 62,
+        "input_tokens": 25063,
+        "output_tokens": 22608
       }
     }
   }
