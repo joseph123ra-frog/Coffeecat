@@ -186,14 +186,21 @@
       "title": "과학실 장식 파괴 사건",
       "source": "ai",
       "usd": 0
+    },
+    {
+      "no": 26,
+      "date": "2026-11-30",
+      "title": "엉망진창 장식장 사건",
+      "source": "ai",
+      "usd": 0
     }
   ],
   "geminiFree": {
     "months": {
       "2026-11": {
-        "calls": 62,
-        "input_tokens": 25063,
-        "output_tokens": 22608
+        "calls": 68,
+        "input_tokens": 27850,
+        "output_tokens": 25010
       }
     }
   }

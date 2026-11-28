@@ -1,70 +1,70 @@
 {
-  "no": 24,
-  "date": "2026-11-28",
-  "title": "깨진 컵 사건",
-  "intro": "캠핑장 텐트 안에서 소중한 유리 머그잔이 깨져 있었다. 깝휘캣 탐정이 범인을 찾아 나선다!",
+  "no": 25,
+  "date": "2026-11-29",
+  "title": "과학실 장식 파괴 사건",
+  "intro": "오늘 오후 2시, 학교 과학실에 전시된 귀여운 별 모양 찰흙 장식이 엉망이 되었다. 과연 누가 이 장식을 망가뜨린 범인일까?",
   "suspects": [
     {
       "id": "A",
-      "name": "모모",
+      "name": "치즈",
       "fur": "주황",
-      "desc": "해먹 낮잠을 즐기는 고양이"
+      "desc": "낮잠을 좋아하는 뚱뚱이 고양이"
     },
     {
       "id": "B",
-      "name": "나비",
-      "fur": "고등어",
-      "desc": "간식 탐색이 특기인 고양이"
+      "name": "초코",
+      "fur": "갈색",
+      "desc": "높은 곳을 아주 싫어한다냥"
     },
     {
       "id": "C",
-      "name": "치즈",
-      "fur": "갈색",
-      "desc": "호기심이 아주 많은 고양이"
+      "name": "구름",
+      "fur": "흰색",
+      "desc": "호기심이 넘치는 장난꾸러기"
     },
     {
       "id": "D",
-      "name": "루이",
-      "fur": "검정",
-      "desc": "발걸음이 조용한 고양이"
+      "name": "모로",
+      "fur": "고등어",
+      "desc": "발걸음이 아주 무거운 고양이"
     }
   ],
   "clues": [
     {
       "id": "c1",
-      "label": "바닥의 털뭉치",
-      "text": "깨진 컵 옆에서 고등어색 털뭉치가 발견되었다. 나비의 털일까?"
+      "label": "과학 선생님 일기",
+      "text": "어제 초코를 쓰다듬다가 빠진 갈색 털을 과학실 책상 위에 그냥 두고 퇴근했다고 적혀 있다냥."
     },
     {
       "id": "c2",
-      "label": "발자국 분석",
-      "text": "컵 주변에는 흰색 털을 가진 고양이의 발자국이 선명하게 남아 있었다냥."
+      "label": "바닥의 털뭉치",
+      "text": "과학실 바닥에서 갈색 털뭉치가 발견되었다! 초코의 털과 똑같아 보인다냥."
     },
     {
       "id": "c3",
-      "label": "C의 발바닥",
-      "text": "치즈의 발바닥 젤리 사이에 깨진 컵의 조각과 똑같은 파란색 반짝이가 묻어 있었다!"
+      "label": "책상 위 발자국",
+      "text": "가장 높은 2미터 천장 선반 위 별 장식 옆에 작고 가벼운 발자국이 선명하게 남아 있었다냥."
     },
     {
       "id": "c4",
-      "label": "루이의 알리바이",
-      "text": "검은 털의 루이는 사건 시각 집사와 함께 텐트 밖 산책 중이라 텐트에 없었다."
+      "label": "당번 일지",
+      "text": "모로는 무게가 7킬로그램이라 선반 위에 올라가면 선반이 바로 무너진다고 기록되어 있다냥."
     },
     {
       "id": "c5",
-      "label": "해먹 조사하기",
-      "text": "모모는 사고 당시 텐트 밖 1.5미터 거리의 해먹 위에서 꿀잠을 자고 있었다냥."
+      "label": "선생님 증언",
+      "text": "초코는 고소공포증이 심해서 절대 높은 과학실 선반 위로 올라가지 못한다고 하셨다냥."
     },
     {
       "id": "c6",
-      "label": "옆 텐트 증언",
-      "text": "옆 텐트의 강아지가 말하길, 사건 발생 시각에 나비는 20미터 떨어진 매점에서 간식을 먹고 있었다고 한다."
+      "label": "CCTV 확인",
+      "text": "오후 1시 50분부터 2시 10분까지 치즈는 도서관에서 쿨쿨 낮잠을 자고 있었다냥."
     },
     {
       "id": "c7",
-      "label": "털뭉치의 진실",
-      "text": "바닥의 고등어색 털뭉치는 며칠 전에 나비가 흘려둔 오래된 털이었다냥."
+      "label": "창가 물감 자국",
+      "text": "창가에 놓인 파란 물감이 구름이의 하얀 발바닥에 살짝 묻어 있는 것을 발견했다냥."
     }
   ],
-  "answer": "EEkCBQQHG0RGEggUbhMdD1FNBxsTGRw7AENXEggUwKaVwKWcR0uNy92b9JkS24KuwZasx4OIgMvFnOzrSceFiNmRoRHbnIbT+PeK0NCbzq0S25+mwaSNxrGdSklNUhsYBVhGWV1YDwsTxpiQgMHJm+LjScCnhNmelN2mvRLU9eON5+Cd2o0acRLaja3dtIoRR0uK8vCc0KnZuqYWxpaVwZKoh/zxUITp4cGluN6qkdqYnRp6S4fB7ITu0QQeENmVhd2smdmy/0uN8tib2KgS3JanwayFwaWwgODFWCxXhY2u3KuOBB8RxoKsgODEnPXvSceBkNmlnN2nmRLV79ON7ehXgoSC3IuWDd2RqRLS2eiN7dyc9JES27Cuxoi1xrisS4DNxILEycCnqNm9iR8Rx4CIgd7MUIP1wcGvsBLalKndi7oQKEKLwOhXgp+m3K+OwayFxrmcSkkc"
+  "answer": "EEkCBQQHG0RGEggUbhMdD1FMBxsTGRw7AENXEggUxoGpwZWkgdrRm8jThamuENiBldqWoRLV7fuN7exXgqGy2oGWDdqWvd6s84Dq1IP0zM+ylhLat5jdqa7U/t9Bm+PbgrCO27GTDBMdD0FWBx4VGQcZSxcQ3IuuwZe5xritSygiJD5Xhbi+25SaxoGlwa+NgMr9XEib3aXejabdp6URx4GZh+3tmtvChKKe3JSrwa2NxpOlS4Dn4oTq6Q3Yg4HauqERx4K5h8zhUIPd0sCnhBLaja3dtIrS+8KK++Cc4okcENmchdqQsdmz/0uK3Nyd2J3eqoYWwYOFwZaogdjdUIPH9cGsoNiDgBHcp4vVzP6N7NScyLES3JKqwaiJxqKQgODpm+PTRw3ZgKbdppTdsKoZgdvpnOv+ScC2iN6rrRHdu4bVy/dBm+rfg5+a3JWyDduDrt6k34D8zIP9/Q3erY7airHajK4Zh9/pnNXjhbCqEN+uvd2stdiJ60uM4uicz5DZu7rdppUfDdmt24D8zITz9Q3YgLLdn43dt4YZgNv9nPbng5if2oGKDdyktd6v60uKwPSc2bnZu5cWxp2Nx4KpS4f/4ILCxMGvhBLcnbHai57U6c+K+vxXg5ie25SywayFx4K5S4fG9ITQ9Q3ZgqbasInds7fS4OOK+8xWS1A="
 }

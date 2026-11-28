@@ -1,0 +1,70 @@
+{
+  "no": 26,
+  "date": "2026-11-30",
+  "title": "엉망진창 장식장 사건",
+  "intro": "고양이 카페의 자랑인 천장 장식장이 엉망이 되었다! 오전 11시, 예쁘게 매달려 있던 리본과 방울들이 바닥에 나뒹굴고 있었다. 범인은 누구일까?",
+  "suspects": [
+    {
+      "id": "A",
+      "name": "모래",
+      "fur": "회색",
+      "desc": "오전 11시에 밖에 있었냥"
+    },
+    {
+      "id": "B",
+      "name": "치즈",
+      "fur": "주황",
+      "desc": "장식장 주변을 서성였다냥"
+    },
+    {
+      "id": "C",
+      "name": "나비",
+      "fur": "삼색",
+      "desc": "발 크기가 7cm인 거인냥"
+    },
+    {
+      "id": "D",
+      "name": "뭉치",
+      "fur": "검정",
+      "desc": "다리가 아주 짧은 뚱냥"
+    }
+  ],
+  "clues": [
+    {
+      "id": "c1",
+      "label": "방울 속 증언",
+      "text": "바닥에 떨어진 방울에서 주황색 털 한 가닥이 발견되었다냥!"
+    },
+    {
+      "id": "c2",
+      "label": "발자국 측정",
+      "text": "현장 바닥에 남은 발자국 크기는 3cm였다냥."
+    },
+    {
+      "id": "c3",
+      "label": "구석 상자 조사",
+      "text": "나비(C)의 발 크기는 7cm로 3cm 발자국과 전혀 맞지 않았다냥."
+    },
+    {
+      "id": "c4",
+      "label": "창가 손님 제보",
+      "text": "치즈(B)가 오전 11시 직전 장식장 위로 뛰어오르는 것을 보았다냥."
+    },
+    {
+      "id": "c5",
+      "label": "장식장 높이",
+      "text": "장식장은 바닥에서 150cm 높이에 있어 점프해야 닿는다냥."
+    },
+    {
+      "id": "c6",
+      "label": "카페CCTV 확인",
+      "text": "모래(A)는 오전 11시 정각에 카페 밖 담벼락에서 낮잠을 자고 있었다냥."
+    },
+    {
+      "id": "c7",
+      "label": "나비의 변명",
+      "text": "나비(C)는 억울하다며 '치즈(B)의 이름표를 주웠을 뿐'이라고 말했다냥."
+    }
+  ],
+  "answer": "EEkCBQQHG0RGEggUbxMdD1BFBxsTGRw7AENXEggUwKaVwKSUR0uK1sSc2pXerYYWxrW5xp+ES4DR6ITQ9MeDgNmWid21sRPa3NOK1+RXhaui3K+yDdq9rdiC74DByIP8zcaxlRMUARNCQl9FHwIOHkpNS8aYmNmotRlwBNi6/0siMzwhhbqi3LaqDdqBu9+s14DA7Eia8LjerYrdvandu4cQh8v9nPHPRQ3ZsqrdlLUZbhrb4f9Bm9jrScCznNiOnduBrRMHCAaK0fRXWk5fENmGsd2vvdmFxoHSzEic4oHZrY4WwZGtwaqIR0uK3eGb0LUadBvdp6URwZSXh/bhUIP8zcaUnNmXsREAGANTBkuK9vqb9Jnep6IWxrqOwZSwS4f0+oTi7Q3ekK7atInava/b4M9PUIP18caLtBp1BNuBrRPc0vON1uCb9LUS3K+Cxpe1wKKsgM7dUILH6cGVsNiFjRHds7vc/d9BnPXvhaae3LiSxq6dwaiQh/fdm+rvScaCrBLbrJ3blYMQgODJnOzrgoyuENmamduCjd6lw4f8xEic2bDfqLLairHbnpMcS4fn4IP88Q3ekK7dnoXdtLMQh8jdnfHeha67EN+yldqQsRPb2f+N7dCb9K0S3IuuwZe5BXEZgMr9UIXu/MGSpdmmsdq6iR0SFg=="
+}
